@@ -1,0 +1,311 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity display is 
+--display usado para mostrar operaçoes
+port(
+Hex : in std_logic_vector(3 downto 0);
+led1 : out std_logic_vector(6 downto 0);
+led2 : out std_logic_vector(6 downto 0);
+led3: out std_logic_vector(6 downto 0);
+led4: out std_logic_vector(6 downto 0));
+
+end display;
+
+architecture estrutura of display is
+
+begin
+
+process(Hex)
+
+begin
+
+case Hex is 
+	-- 0 : acesso, 1: apagado
+	-- 1000000 => 0
+	-- 1111001 => 1
+	
+	when "0000" => --mova
+	led1 <= "1000000";
+	led2 <= "1000000";
+	led3 <= "1000000";
+	led4 <= "1000000";
+	
+	when "0001" => --movrll
+	led1 <= "1000000";
+	led2 <= "1000000";
+	led3 <= "1000000";
+	led4 <= "1111001";
+	
+	when "0010" => --load
+	led1 <= "1000000";
+	led2 <= "1000000";
+	led3 <= "1111001";
+	led4 <= "1000000";
+	
+	when "0011" => --add
+	led1 <= "1000000";
+	led2 <= "1000000";
+	led3 <= "1111001";
+	led4 <= "1111001";
+	
+	when "0100" => -- sub
+	led1 <= "1000000";
+	led2 <= "1111001";
+	led3 <= "1000000";
+	led4 <= "1000000";
+	
+	when "0101" => --andr
+	led1 <= "1000000";
+	led2 <= "1111001";
+	led3 <= "1000000";
+	led4 <= "1111001";
+	
+	when "0110" => --orr
+	led1 <= "1000000";
+	led2 <= "1111001";
+	led3 <= "1111001"; 
+	led4 <= "1000000";
+	
+	when "0111" => --jmp
+	led1 <= "1000000";
+	led2 <= "1111001";
+	led3 <= "1111001";
+	led4 <= "1111001";
+
+	when "1000" => --inv
+	led1 <= "1111001";
+	led2 <= "1000000";
+	led3 <= "1000000";
+	led4 <= "1000000";
+
+	when "1001" => --halt
+	led1 <= "1111001";
+	led2 <= "1000000";
+	led3 <= "1000000";
+	led4 <= "1111001";
+	
+	when others => 
+				led1 <= "1111111";
+				led2 <= "1111111";
+				led3 <= "1111111";
+				led4 <= "1111111";
+
+
+end case;
+
+end process;
+end estrutura;
+
+--conversor para decimal
+library IEEE;
+use ieee.std_LOGIC_1164.all;
+ 
+entity conversor is
+port(
+entradaConv : in std_LOGIC_VECTOR( 3 downto 0);
+saida1dig : out std_LOGIC_VECTOR(6 downto 0);
+saida2dig : out std_LOGIC_VECTOR(6 downto 0));
+
+end;
+
+architecture funcionamento of conversor is
+
+signal saida_1: std_LOGIC_VECTOR(6 downto 0);
+signal saida_2 : std_LOGIC_VECTOR(6 downto 0);
+
+begin 
+
+process( entradaConv)
+
+begin
+
+	case entradaConv is
+
+		when "0000" => --0
+		saida_1 <= "1000000";
+		saida_2 <= "1000000";
+
+		when "0001" => --1
+		saida_1  <= "1000000";
+		saida_2 <= "1111001";
+
+		when "0010" => --2
+		saida_1 <= "1000000";
+		saida_2 <= "0100100";
+
+		when "0011" => --3
+		saida_1 <= "1000000";
+		saida_2 <= "0110000";
+
+		when "0100" => --4 
+		saida_1 <= "1000000";
+		saida_2 <= "0011001";
+
+		when "0101" => --5
+		saida_1 <= "1000000";
+		saida_2 <= "0010010";
+
+		when "0110" => --6
+		saida_1 <= "1000000";
+		saida_2 <= "0000010";
+
+		when "0111" => --7
+		saida_1  <= "1000000";
+		saida_2 <= "1111000";
+
+		when "1000" => --8
+		saida_1  <= "1000000";
+		saida_2 <= "0000000";
+
+		when "1001" => --9
+		saida_1 <= "1000000";
+		saida_2<= "0100000";
+
+		when "1010" => --10
+		saida_1  <= "1111001";
+		saida_2<= "1000000";
+
+		when "1011" => --11
+		saida_1 <= "1111001";
+		saida_2 <= "1111001";
+
+		when "1100" => --12
+		saida_1 <= "1111001";
+		saida_2 <= "0100100";
+
+		when "1101" => --13
+		saida_1  <= "1111001";
+		saida_2 <= "0110000";
+
+		when "1110" => --14
+		saida_1  <= "1111001";
+		saida_2<= "0011001";
+
+		when "1111" => --15
+		saida_1 <= "1111001";
+		saida_2 <= "0010010"; 
+		when others =>
+					saida_1 <= "1111111";
+					saida_2 <= "1111111";
+
+	end case;
+end process;
+
+saida1dig <= saida_1;
+saida2dig <= saida_2;
+
+end funcionamento;
+ 
+-- cpu (top level entity)
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_arith.all;
+
+-- these should probably stay the same
+entity cpu is
+   port ( rst           : in STD_LOGIC;
+    	  start         : in STD_LOGIC;
+          clk           : in STD_LOGIC;
+			display1 : out std_LOGIC_VECTOR(6 downto 0);
+			display2 : out std_LOGIC_VECTOR(6 downto 0);
+			display3: out std_LOGIC_VECTOR(6 downto 0);
+			display4: out std_LOGIC_VECTOR(6 downto 0);
+			conv1 : out std_LOGIC_VECTOR(6 downto 0);
+			conv2 : out std_LOGIC_VECTOR(6 downto 0));
+end cpu;
+
+
+
+architecture struc of cpu is
+
+component dp
+   port ( rst     : in STD_LOGIC;
+          clk     : in STD_LOGIC;
+		  imm     : in std_logic_vector(3 downto 0);
+		  sel_dp: in std_LOGIC_VECTOR(3 downto 0);
+			selrf: in std_LOGIC_VECTOR(1 downto 0);
+			enbrf : in std_LOGIC;
+			enbacc: in std_LOGIC;
+          output_4: out STD_LOGIC_VECTOR (3 downto 0)
+        );
+end component;
+
+
+component ctrl 
+   port ( rst   : in STD_LOGIC;
+    	  start : in STD_LOGIC;
+          clk   : in STD_LOGIC;
+          imm   : out std_logic_vector(3 downto 0);
+			 selc_dp : out std_logic_vector(3 downto 0); -- seleciona operaçao dp
+			selcrf : out std_logic_vector(1 downto 0); -- seleciona o registrador
+			enbcrf : out std_LOGIC; -- habilita registrador
+			enbcacc : out std_LOGIC -- habilita acumulador
+         
+        );
+end component;
+
+
+
+component display 
+
+port(
+Hex : in std_logic_vector(3 downto 0);
+led1 : out std_logic_vector(6 downto 0);
+led2 : out std_logic_vector(6 downto 0);
+led3: out std_logic_vector(6 downto 0);
+led4: out std_logic_vector(6 downto 0));
+
+end component;
+
+component conversor 
+port(
+entradaConv : in std_LOGIC_VECTOR( 3 downto 0);
+saida1dig : out std_LOGIC_VECTOR(6 downto 0);
+saida2dig : out std_LOGIC_VECTOR(6 downto 0));
+
+end component;
+
+signal immediate : std_logic_vector(3 downto 0);
+signal cpu_out : std_logic_vector(3 downto 0);
+signal selcdp : std_logic_vector(3 downto 0);
+signal selc_rf: std_logic_vector(1 downto 0);
+signal enb_rf: std_LOGIC;
+signal enb_acc: std_LOGIC;
+
+signal dis1,dis2,dis3,dis4: std_LOGIC_VECTOR(6 downto 0);
+signal conversor1,conversor2: std_LOGIC_VECTOR(6 downto 0); 
+
+
+begin
+
+	datapath: dp port map(rst, clk, immediate,selcdp,selc_rf,enb_rf,enb_acc,cpu_out);
+	controller: ctrl port map(rst, start, clk,immediate,selcdp,selc_rf,enb_rf,enb_acc);
+	d1: display port map(selcdp,dis1,dis2,dis3,dis4);
+	c1: conversor port map(cpu_out,conversor1,conversor2);
+	
+  process(rst, clk, dis1,dis2,dis3,dis4,conversor1,conversor2)
+  
+  begin
+
+ if(rst='1') then
+	conv1 <=  "1000000";
+	conv2	<= "1000000";
+
+	else
+    if(clk'event and clk='1') then
+	 
+		display1 <= dis1;
+		display2 <= dis2;
+		display3<=dis3;
+		display4<= dis4;
+		conv1<=conversor1;
+		conv2<=conversor2;
+		
+		 end if;
+    end if;
+  end process;							
+
+end struc;
+
+
