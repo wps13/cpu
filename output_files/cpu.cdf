@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP2C35F672) Path("/home/luiza/Documents/cpu-master/output_files/") File("cpu.sof") MfrSpec(OpMask(1));
+		Device PartName(EP2C35F672) Path("/home/willane/cpuv0.2/output_files/") File("cpu.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

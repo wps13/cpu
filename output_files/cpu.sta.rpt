@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for cpu
-Mon Jun 18 14:23:36 2018
+Tue Jun 19 10:44:05 2018
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -106,7 +106,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 418.94 MHz ; 418.94 MHz      ; clk        ;      ;
+; 318.17 MHz ; 318.17 MHz      ; clk        ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -116,7 +116,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+---------------+
 ; Clock ; Slack  ; End Point TNS ;
 +-------+--------+---------------+
-; clk   ; -1.387 ; -96.657       ;
+; clk   ; -2.143 ; -144.198      ;
 +-------+--------+---------------+
 
 
@@ -146,116 +146,116 @@ No paths to report.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; clk   ; -1.222 ; -113.222              ;
+; clk   ; -1.222 ; -110.222              ;
 +-------+--------+-----------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow Model Setup: 'clk'                                                                                                                     ;
-+--------+-----------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                   ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; -1.387 ; dp:datapath|entrada1_alu[1] ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; -0.004     ; 2.419      ;
-; -1.343 ; ctrl:controller|state.s7    ; ctrl:controller|enbcacc        ; clk          ; clk         ; 1.000        ; -0.017     ; 2.362      ;
-; -1.339 ; ctrl:controller|state.s6    ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 1.000        ; -0.014     ; 2.361      ;
-; -1.332 ; ctrl:controller|state.s7    ; ctrl:controller|imm[1]         ; clk          ; clk         ; 1.000        ; -0.009     ; 2.359      ;
-; -1.332 ; ctrl:controller|state.s7    ; ctrl:controller|imm[0]         ; clk          ; clk         ; 1.000        ; -0.009     ; 2.359      ;
-; -1.332 ; ctrl:controller|state.s7    ; ctrl:controller|imm[3]         ; clk          ; clk         ; 1.000        ; -0.009     ; 2.359      ;
-; -1.323 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_rf[0]      ; clk          ; clk         ; 1.000        ; -0.002     ; 2.357      ;
-; -1.323 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_rf[1]      ; clk          ; clk         ; 1.000        ; -0.002     ; 2.357      ;
-; -1.323 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_rf[2]      ; clk          ; clk         ; 1.000        ; -0.002     ; 2.357      ;
-; -1.323 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_rf[3]      ; clk          ; clk         ; 1.000        ; -0.002     ; 2.357      ;
-; -1.288 ; ctrl:controller|selc_dp[0]  ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.324      ;
-; -1.273 ; ctrl:controller|state.s8    ; ctrl:controller|selcrf[1]      ; clk          ; clk         ; 1.000        ; -0.006     ; 2.303      ;
-; -1.273 ; ctrl:controller|state.s8    ; ctrl:controller|selcrf[0]      ; clk          ; clk         ; 1.000        ; -0.006     ; 2.303      ;
-; -1.225 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada2_alu[0]    ; clk          ; clk         ; 1.000        ; 0.000      ; 2.261      ;
-; -1.224 ; ctrl:controller|state.s0    ; ctrl:controller|selc_dp[3]     ; clk          ; clk         ; 1.000        ; -0.014     ; 2.246      ;
-; -1.224 ; ctrl:controller|selc_dp[1]  ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.260      ;
-; -1.224 ; ctrl:controller|state.s0    ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 1.000        ; -0.014     ; 2.246      ;
-; -1.223 ; ctrl:controller|state.s0    ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.014     ; 2.245      ;
-; -1.222 ; ctrl:controller|state.s1    ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 1.000        ; -0.014     ; 2.244      ;
-; -1.212 ; dp:datapath|entrada2_alu[2] ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.248      ;
-; -1.209 ; ctrl:controller|state.s0    ; ctrl:controller|PC[1]          ; clk          ; clk         ; 1.000        ; -0.009     ; 2.236      ;
-; -1.209 ; ctrl:controller|state.s0    ; ctrl:controller|PC[2]          ; clk          ; clk         ; 1.000        ; -0.009     ; 2.236      ;
-; -1.192 ; ctrl:controller|selc_dp[1]  ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.228      ;
-; -1.191 ; dp:datapath|entrada1_alu[1] ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; -0.004     ; 2.223      ;
-; -1.189 ; ctrl:controller|selc_dp[1]  ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; 0.000      ; 2.225      ;
-; -1.186 ; ctrl:controller|state.s1    ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.014     ; 2.208      ;
-; -1.185 ; ctrl:controller|state.s8    ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.014     ; 2.207      ;
-; -1.184 ; ctrl:controller|selc_dp[0]  ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.220      ;
-; -1.182 ; ctrl:controller|state.s0    ; ctrl:controller|imm[1]         ; clk          ; clk         ; 1.000        ; -0.009     ; 2.209      ;
-; -1.182 ; ctrl:controller|state.s0    ; ctrl:controller|imm[0]         ; clk          ; clk         ; 1.000        ; -0.009     ; 2.209      ;
-; -1.182 ; ctrl:controller|state.s0    ; ctrl:controller|imm[3]         ; clk          ; clk         ; 1.000        ; -0.009     ; 2.209      ;
-; -1.180 ; ctrl:controller|selc_dp[0]  ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.216      ;
-; -1.170 ; ctrl:controller|state.s0    ; ctrl:controller|enbcacc        ; clk          ; clk         ; 1.000        ; -0.017     ; 2.189      ;
-; -1.165 ; ctrl:controller|PC[0]       ; ctrl:controller|PC[1]          ; clk          ; clk         ; 1.000        ; 0.001      ; 2.202      ;
-; -1.161 ; dp:datapath|entrada1_alu[2] ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; -0.004     ; 2.193      ;
-; -1.155 ; ctrl:controller|state.s8    ; ctrl:controller|enbcacc        ; clk          ; clk         ; 1.000        ; -0.017     ; 2.174      ;
-; -1.150 ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out2[0]     ; clk          ; clk         ; 1.000        ; -0.005     ; 2.181      ;
-; -1.150 ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out2[1]     ; clk          ; clk         ; 1.000        ; -0.005     ; 2.181      ;
-; -1.150 ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out2[2]     ; clk          ; clk         ; 1.000        ; -0.005     ; 2.181      ;
-; -1.150 ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out2[3]     ; clk          ; clk         ; 1.000        ; -0.005     ; 2.181      ;
-; -1.145 ; ctrl:controller|selc_dp[0]  ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 1.000        ; 0.000      ; 2.181      ;
-; -1.140 ; ctrl:controller|selc_dp[3]  ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.176      ;
-; -1.138 ; ctrl:controller|state.s2    ; ctrl:controller|selc_dp[3]     ; clk          ; clk         ; 1.000        ; -0.014     ; 2.160      ;
-; -1.138 ; ctrl:controller|state.s2    ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 1.000        ; -0.014     ; 2.160      ;
-; -1.137 ; ctrl:controller|state.s2    ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.014     ; 2.159      ;
-; -1.133 ; ctrl:controller|state.s5    ; ctrl:controller|selcrf[1]      ; clk          ; clk         ; 1.000        ; -0.006     ; 2.163      ;
-; -1.133 ; ctrl:controller|state.s5    ; ctrl:controller|selcrf[0]      ; clk          ; clk         ; 1.000        ; -0.006     ; 2.163      ;
-; -1.130 ; ctrl:controller|selc_dp[1]  ; dp:datapath|entrada_acc[0]     ; clk          ; clk         ; 1.000        ; -0.002     ; 2.164      ;
-; -1.130 ; ctrl:controller|selc_dp[1]  ; dp:datapath|entrada_acc[1]     ; clk          ; clk         ; 1.000        ; -0.002     ; 2.164      ;
-; -1.130 ; ctrl:controller|selc_dp[1]  ; dp:datapath|entrada_acc[2]     ; clk          ; clk         ; 1.000        ; -0.002     ; 2.164      ;
-; -1.130 ; ctrl:controller|selc_dp[1]  ; dp:datapath|entrada_acc[3]     ; clk          ; clk         ; 1.000        ; -0.002     ; 2.164      ;
-; -1.128 ; dp:datapath|entrada2_alu[0] ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.164      ;
-; -1.125 ; dp:datapath|entrada2_alu[2] ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.161      ;
-; -1.121 ; dp:datapath|entrada2_alu[1] ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.157      ;
-; -1.116 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out1[0]     ; clk          ; clk         ; 1.000        ; 0.001      ; 2.153      ;
-; -1.116 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out1[1]     ; clk          ; clk         ; 1.000        ; 0.001      ; 2.153      ;
-; -1.116 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out1[2]     ; clk          ; clk         ; 1.000        ; 0.001      ; 2.153      ;
-; -1.116 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out1[3]     ; clk          ; clk         ; 1.000        ; 0.001      ; 2.153      ;
-; -1.110 ; ctrl:controller|PC[0]       ; ctrl:controller|PC[2]          ; clk          ; clk         ; 1.000        ; 0.001      ; 2.147      ;
-; -1.104 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out0[0]     ; clk          ; clk         ; 1.000        ; 0.002      ; 2.142      ;
-; -1.104 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out0[1]     ; clk          ; clk         ; 1.000        ; 0.002      ; 2.142      ;
-; -1.104 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out0[2]     ; clk          ; clk         ; 1.000        ; 0.002      ; 2.142      ;
-; -1.104 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out0[3]     ; clk          ; clk         ; 1.000        ; 0.002      ; 2.142      ;
-; -1.103 ; ctrl:controller|selc_dp[3]  ; dp:datapath|alu:alu1|output[0] ; clk          ; clk         ; 1.000        ; 0.004      ; 2.143      ;
-; -1.103 ; ctrl:controller|selc_dp[3]  ; dp:datapath|entrada1_alu[1]    ; clk          ; clk         ; 1.000        ; 0.004      ; 2.143      ;
-; -1.103 ; ctrl:controller|selc_dp[3]  ; dp:datapath|entrada1_alu[2]    ; clk          ; clk         ; 1.000        ; 0.004      ; 2.143      ;
-; -1.103 ; ctrl:controller|selc_dp[3]  ; dp:datapath|entrada1_alu[3]    ; clk          ; clk         ; 1.000        ; 0.004      ; 2.143      ;
-; -1.101 ; ctrl:controller|state.s1    ; ctrl:controller|imm[3]         ; clk          ; clk         ; 1.000        ; -0.009     ; 2.128      ;
-; -1.093 ; dp:datapath|entrada1_alu[2] ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; -0.004     ; 2.125      ;
-; -1.092 ; dp:datapath|entrada2_alu[3] ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.128      ;
-; -1.091 ; dp:datapath|entrada1_alu[0] ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.127      ;
-; -1.090 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada2_alu[3]    ; clk          ; clk         ; 1.000        ; 0.000      ; 2.126      ;
-; -1.088 ; ctrl:controller|PC[0]       ; ctrl:controller|OPCODE[1]      ; clk          ; clk         ; 1.000        ; 0.012      ; 2.136      ;
-; -1.086 ; ctrl:controller|PC[2]       ; ctrl:controller|ADDRESS[1]     ; clk          ; clk         ; 1.000        ; 0.011      ; 2.133      ;
-; -1.086 ; ctrl:controller|state.s4    ; ctrl:controller|selc_dp[3]     ; clk          ; clk         ; 1.000        ; -0.014     ; 2.108      ;
-; -1.086 ; ctrl:controller|state.s4    ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 1.000        ; -0.014     ; 2.108      ;
-; -1.085 ; ctrl:controller|state.s4    ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.014     ; 2.107      ;
-; -1.084 ; ctrl:controller|state.s2    ; ctrl:controller|enbcacc        ; clk          ; clk         ; 1.000        ; -0.017     ; 2.103      ;
-; -1.081 ; ctrl:controller|selc_dp[3]  ; display4[0]~reg0               ; clk          ; clk         ; 1.000        ; 0.000      ; 2.117      ;
-; -1.081 ; ctrl:controller|selc_dp[3]  ; display4[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.000      ; 2.117      ;
-; -1.081 ; ctrl:controller|selc_dp[3]  ; display4[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.000      ; 2.117      ;
-; -1.078 ; ctrl:controller|selc_dp[3]  ; display4[5]~reg0               ; clk          ; clk         ; 1.000        ; 0.000      ; 2.114      ;
-; -1.070 ; ctrl:controller|selc_dp[0]  ; dp:datapath|alu:alu1|output[0] ; clk          ; clk         ; 1.000        ; 0.004      ; 2.110      ;
-; -1.070 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada1_alu[1]    ; clk          ; clk         ; 1.000        ; 0.004      ; 2.110      ;
-; -1.070 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada1_alu[2]    ; clk          ; clk         ; 1.000        ; 0.004      ; 2.110      ;
-; -1.070 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada1_alu[3]    ; clk          ; clk         ; 1.000        ; 0.004      ; 2.110      ;
-; -1.065 ; ctrl:controller|state.s1    ; ctrl:controller|imm[1]         ; clk          ; clk         ; 1.000        ; -0.009     ; 2.092      ;
-; -1.064 ; ctrl:controller|state.s13   ; ctrl:controller|enbcacc        ; clk          ; clk         ; 1.000        ; -0.017     ; 2.083      ;
-; -1.062 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_acc[0]     ; clk          ; clk         ; 1.000        ; -0.002     ; 2.096      ;
-; -1.062 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_acc[1]     ; clk          ; clk         ; 1.000        ; -0.002     ; 2.096      ;
-; -1.062 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_acc[2]     ; clk          ; clk         ; 1.000        ; -0.002     ; 2.096      ;
-; -1.062 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_acc[3]     ; clk          ; clk         ; 1.000        ; -0.002     ; 2.096      ;
-; -1.058 ; ctrl:controller|state.s2    ; ctrl:controller|PC[1]          ; clk          ; clk         ; 1.000        ; -0.009     ; 2.085      ;
-; -1.058 ; ctrl:controller|state.s2    ; ctrl:controller|PC[2]          ; clk          ; clk         ; 1.000        ; -0.009     ; 2.085      ;
-; -1.056 ; dp:datapath|entrada2_alu[1] ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.092      ;
-; -1.055 ; ctrl:controller|selc_dp[0]  ; display4[0]~reg0               ; clk          ; clk         ; 1.000        ; 0.000      ; 2.091      ;
-; -1.055 ; ctrl:controller|selc_dp[0]  ; display4[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.000      ; 2.091      ;
-; -1.055 ; ctrl:controller|selc_dp[0]  ; display4[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.000      ; 2.091      ;
-; -1.054 ; ctrl:controller|selc_dp[3]  ; display2[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.027      ; 2.117      ;
-; -1.053 ; ctrl:controller|selc_dp[3]  ; display1[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.027      ; 2.116      ;
-+--------+-----------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                        ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.143 ; dp:datapath|entrada1_alu[0]    ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.180      ;
+; -2.096 ; dp:datapath|entrada1_alu[1]    ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.133      ;
+; -2.087 ; ctrl:controller|selc_dp[2]     ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 3.121      ;
+; -2.076 ; dp:datapath|entrada2_alu[0]    ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.113      ;
+; -2.054 ; dp:datapath|entrada2_alu[0]    ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.091      ;
+; -1.997 ; ctrl:controller|selc_dp[0]     ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 3.031      ;
+; -1.995 ; dp:datapath|entrada2_alu[3]    ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 3.032      ;
+; -1.973 ; ctrl:controller|selc_dp[2]     ; display1[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.007      ; 3.016      ;
+; -1.967 ; ctrl:controller|selc_dp[0]     ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 3.001      ;
+; -1.922 ; ctrl:controller|selc_dp[3]     ; display1[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.002      ; 2.960      ;
+; -1.867 ; ctrl:controller|selc_dp[2]     ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.901      ;
+; -1.861 ; ctrl:controller|selc_dp[2]     ; display1[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.006      ; 2.903      ;
+; -1.861 ; ctrl:controller|selc_dp[2]     ; display4[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.006      ; 2.903      ;
+; -1.861 ; dp:datapath|entrada1_alu[1]    ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.898      ;
+; -1.859 ; ctrl:controller|selc_dp[2]     ; display3[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.006      ; 2.901      ;
+; -1.859 ; ctrl:controller|selc_dp[2]     ; display4[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.006      ; 2.901      ;
+; -1.852 ; ctrl:controller|state.s0       ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.004     ; 2.884      ;
+; -1.851 ; ctrl:controller|selc_dp[0]     ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.885      ;
+; -1.834 ; dp:datapath|entrada2_alu[1]    ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.871      ;
+; -1.834 ; ctrl:controller|selc_dp[1]     ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.870      ;
+; -1.828 ; ctrl:controller|selc_dp[2]     ; display3[5]~reg0               ; clk          ; clk         ; 1.000        ; 0.007      ; 2.871      ;
+; -1.827 ; ctrl:controller|selc_dp[2]     ; display3[0]~reg0               ; clk          ; clk         ; 1.000        ; 0.007      ; 2.870      ;
+; -1.826 ; ctrl:controller|selc_dp[2]     ; display3[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.007      ; 2.869      ;
+; -1.823 ; ctrl:controller|selc_dp[2]     ; display3[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.007      ; 2.866      ;
+; -1.810 ; ctrl:controller|selc_dp[3]     ; display1[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.001      ; 2.847      ;
+; -1.810 ; ctrl:controller|selc_dp[3]     ; display4[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.001      ; 2.847      ;
+; -1.808 ; ctrl:controller|selc_dp[3]     ; display3[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.001      ; 2.845      ;
+; -1.808 ; ctrl:controller|selc_dp[3]     ; display4[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.001      ; 2.845      ;
+; -1.803 ; dp:datapath|entrada1_alu[1]    ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.840      ;
+; -1.800 ; ctrl:controller|selc_dp[1]     ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.836      ;
+; -1.777 ; ctrl:controller|selc_dp[3]     ; display3[5]~reg0               ; clk          ; clk         ; 1.000        ; 0.002      ; 2.815      ;
+; -1.776 ; ctrl:controller|selc_dp[3]     ; display3[0]~reg0               ; clk          ; clk         ; 1.000        ; 0.002      ; 2.814      ;
+; -1.775 ; ctrl:controller|selc_dp[1]     ; display1[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 2.820      ;
+; -1.775 ; ctrl:controller|selc_dp[3]     ; display3[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.002      ; 2.813      ;
+; -1.772 ; ctrl:controller|selc_dp[3]     ; display3[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.002      ; 2.810      ;
+; -1.763 ; ctrl:controller|state.s2       ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.007     ; 2.792      ;
+; -1.721 ; dp:datapath|entrada1_alu[0]    ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.758      ;
+; -1.721 ; ctrl:controller|selc_dp[2]     ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 2.755      ;
+; -1.707 ; ctrl:controller|selc_dp[3]     ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; -0.007     ; 2.736      ;
+; -1.703 ; dp:datapath|entrada1_alu[3]    ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.740      ;
+; -1.699 ; dp:datapath|entrada1_alu[0]    ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.736      ;
+; -1.697 ; ctrl:controller|selc_dp[2]     ; display2[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.007      ; 2.740      ;
+; -1.697 ; ctrl:controller|selc_dp[2]     ; display3[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.007      ; 2.740      ;
+; -1.696 ; ctrl:controller|selc_dp[2]     ; display2[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.007      ; 2.739      ;
+; -1.692 ; ctrl:controller|selc_dp[1]     ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 2.728      ;
+; -1.680 ; dp:datapath|entrada2_alu[1]    ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.717      ;
+; -1.678 ; ctrl:controller|state.done     ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.004     ; 2.710      ;
+; -1.675 ; dp:datapath|entrada2_alu[0]    ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.712      ;
+; -1.669 ; ctrl:controller|selc_dp[2]     ; display4[0]~reg0               ; clk          ; clk         ; 1.000        ; 0.013      ; 2.718      ;
+; -1.668 ; dp:datapath|alu:alu1|output[3] ; conv1[5]~reg0                  ; clk          ; clk         ; 1.000        ; 0.013      ; 2.717      ;
+; -1.667 ; ctrl:controller|selc_dp[2]     ; display4[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.013      ; 2.716      ;
+; -1.666 ; ctrl:controller|selc_dp[2]     ; display4[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.013      ; 2.715      ;
+; -1.666 ; ctrl:controller|selc_dp[2]     ; display4[5]~reg0               ; clk          ; clk         ; 1.000        ; 0.013      ; 2.715      ;
+; -1.665 ; dp:datapath|alu:alu1|output[3] ; conv1[0]~reg0                  ; clk          ; clk         ; 1.000        ; 0.013      ; 2.714      ;
+; -1.665 ; dp:datapath|alu:alu1|output[3] ; conv1[4]~reg0                  ; clk          ; clk         ; 1.000        ; 0.013      ; 2.714      ;
+; -1.663 ; ctrl:controller|selc_dp[1]     ; display1[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.008      ; 2.707      ;
+; -1.663 ; ctrl:controller|selc_dp[1]     ; display4[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.008      ; 2.707      ;
+; -1.661 ; ctrl:controller|selc_dp[1]     ; display3[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.008      ; 2.705      ;
+; -1.661 ; ctrl:controller|selc_dp[1]     ; display4[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.008      ; 2.705      ;
+; -1.660 ; ctrl:controller|state.s10      ; ctrl:controller|selcrf[0]      ; clk          ; clk         ; 1.000        ; 0.011      ; 2.707      ;
+; -1.660 ; ctrl:controller|state.s10      ; ctrl:controller|selcrf[1]      ; clk          ; clk         ; 1.000        ; 0.011      ; 2.707      ;
+; -1.658 ; ctrl:controller|selc_dp[2]     ; display2[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.007      ; 2.701      ;
+; -1.658 ; ctrl:controller|selc_dp[3]     ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; -0.007     ; 2.687      ;
+; -1.656 ; ctrl:controller|selc_dp[2]     ; display2[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.007      ; 2.699      ;
+; -1.655 ; ctrl:controller|selc_dp[2]     ; display2[5]~reg0               ; clk          ; clk         ; 1.000        ; 0.007      ; 2.698      ;
+; -1.646 ; ctrl:controller|selc_dp[3]     ; display2[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.002      ; 2.684      ;
+; -1.646 ; ctrl:controller|selc_dp[3]     ; display3[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.002      ; 2.684      ;
+; -1.645 ; ctrl:controller|selc_dp[3]     ; display2[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.002      ; 2.683      ;
+; -1.639 ; ctrl:controller|selc_dp[2]     ; dp:datapath|alu:alu1|output[0] ; clk          ; clk         ; 1.000        ; 0.002      ; 2.677      ;
+; -1.635 ; ctrl:controller|selc_dp[3]     ; display2[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.002      ; 2.673      ;
+; -1.633 ; ctrl:controller|selc_dp[3]     ; display2[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.002      ; 2.671      ;
+; -1.632 ; ctrl:controller|selc_dp[3]     ; display2[5]~reg0               ; clk          ; clk         ; 1.000        ; 0.002      ; 2.670      ;
+; -1.627 ; ctrl:controller|selc_dp[1]     ; display3[5]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 2.672      ;
+; -1.626 ; ctrl:controller|selc_dp[1]     ; display3[0]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 2.671      ;
+; -1.625 ; ctrl:controller|selc_dp[1]     ; display3[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 2.670      ;
+; -1.622 ; ctrl:controller|selc_dp[1]     ; display3[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 2.667      ;
+; -1.615 ; ctrl:controller|state.s0       ; ctrl:controller|selc_dp[2]     ; clk          ; clk         ; 1.000        ; -0.002     ; 2.649      ;
+; -1.609 ; ctrl:controller|selc_dp[1]     ; display2[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 2.654      ;
+; -1.608 ; dp:datapath|entrada2_alu[2]    ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.645      ;
+; -1.607 ; ctrl:controller|selc_dp[1]     ; display2[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 2.652      ;
+; -1.606 ; ctrl:controller|selc_dp[1]     ; display2[5]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 2.651      ;
+; -1.604 ; ctrl:controller|state.s9       ; ctrl:controller|selcrf[0]      ; clk          ; clk         ; 1.000        ; 0.011      ; 2.651      ;
+; -1.604 ; ctrl:controller|state.s9       ; ctrl:controller|selcrf[1]      ; clk          ; clk         ; 1.000        ; 0.011      ; 2.651      ;
+; -1.579 ; dp:datapath|alu:alu1|output[0] ; conv2[1]~reg0                  ; clk          ; clk         ; 1.000        ; 0.009      ; 2.624      ;
+; -1.579 ; dp:datapath|alu:alu1|output[0] ; conv2[4]~reg0                  ; clk          ; clk         ; 1.000        ; 0.009      ; 2.624      ;
+; -1.577 ; dp:datapath|alu:alu1|output[0] ; conv2[0]~reg0                  ; clk          ; clk         ; 1.000        ; 0.009      ; 2.622      ;
+; -1.576 ; dp:datapath|alu:alu1|output[0] ; conv2[5]~reg0                  ; clk          ; clk         ; 1.000        ; 0.009      ; 2.621      ;
+; -1.575 ; dp:datapath|alu:alu1|output[0] ; conv2[6]~reg0                  ; clk          ; clk         ; 1.000        ; 0.009      ; 2.620      ;
+; -1.571 ; dp:datapath|alu:alu1|output[0] ; conv2[3]~reg0                  ; clk          ; clk         ; 1.000        ; 0.009      ; 2.616      ;
+; -1.570 ; dp:datapath|entrada1_alu[2]    ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.607      ;
+; -1.568 ; dp:datapath|entrada2_alu[1]    ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; 0.001      ; 2.605      ;
+; -1.528 ; dp:datapath|alu:alu1|output[0] ; conv2[2]~reg0                  ; clk          ; clk         ; 1.000        ; 0.009      ; 2.573      ;
+; -1.526 ; ctrl:controller|selc_dp[2]     ; dp:datapath|entrada2_alu[0]    ; clk          ; clk         ; 1.000        ; -0.003     ; 2.559      ;
+; -1.526 ; ctrl:controller|state.s2       ; ctrl:controller|selc_dp[2]     ; clk          ; clk         ; 1.000        ; -0.005     ; 2.557      ;
+; -1.525 ; ctrl:controller|state.s8       ; ctrl:controller|selcrf[0]      ; clk          ; clk         ; 1.000        ; 0.011      ; 2.572      ;
+; -1.525 ; ctrl:controller|state.s8       ; ctrl:controller|selcrf[1]      ; clk          ; clk         ; 1.000        ; 0.011      ; 2.572      ;
+; -1.524 ; ctrl:controller|state.s4       ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.007     ; 2.553      ;
+; -1.511 ; ctrl:controller|selc_dp[3]     ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; -0.007     ; 2.540      ;
+; -1.499 ; ctrl:controller|selc_dp[1]     ; display2[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 2.544      ;
+; -1.499 ; ctrl:controller|selc_dp[1]     ; display3[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 2.544      ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -263,106 +263,106 @@ No paths to report.
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.391 ; ctrl:controller|state.s0       ; ctrl:controller|state.s0       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
-; 0.391 ; ctrl:controller|PC[0]          ; ctrl:controller|PC[0]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
 ; 0.391 ; ctrl:controller|state.done     ; ctrl:controller|state.done     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
-; 0.391 ; ctrl:controller|selc_dp[1]     ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
-; 0.391 ; ctrl:controller|selc_dp[0]     ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
-; 0.391 ; ctrl:controller|selc_dp[3]     ; ctrl:controller|selc_dp[3]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
-; 0.391 ; ctrl:controller|enbcrf         ; ctrl:controller|enbcrf         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
-; 0.391 ; dp:datapath|acc:acc1|temp[0]   ; dp:datapath|acc:acc1|temp[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
-; 0.391 ; ctrl:controller|enbcacc        ; ctrl:controller|enbcacc        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ctrl:controller|state.s1       ; ctrl:controller|state.s1       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
 ; 0.391 ; dp:datapath|acc:acc1|temp[1]   ; dp:datapath|acc:acc1|temp[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; dp:datapath|acc:acc1|temp[0]   ; dp:datapath|acc:acc1|temp[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; ctrl:controller|enbcrf         ; ctrl:controller|enbcrf         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
 ; 0.391 ; dp:datapath|acc:acc1|temp[2]   ; dp:datapath|acc:acc1|temp[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
 ; 0.391 ; dp:datapath|acc:acc1|temp[3]   ; dp:datapath|acc:acc1|temp[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
-; 0.550 ; ctrl:controller|state.s6       ; ctrl:controller|enbcrf         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.816      ;
-; 0.553 ; ctrl:controller|state.s1       ; ctrl:controller|state.s2       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.819      ;
-; 0.696 ; dp:datapath|acc:acc1|output[0] ; conv2[4]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.962      ;
-; 0.698 ; dp:datapath|acc:acc1|output[0] ; conv2[2]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.964      ;
-; 0.698 ; dp:datapath|acc:acc1|output[0] ; conv2[5]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.964      ;
-; 0.699 ; ctrl:controller|imm[3]         ; dp:datapath|entrada1_alu[3]    ; clk          ; clk         ; 0.000        ; -0.001     ; 0.964      ;
-; 0.700 ; dp:datapath|acc:acc1|output[0] ; conv2[3]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.966      ;
-; 0.701 ; dp:datapath|acc:acc1|output[0] ; conv2[6]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.967      ;
-; 0.704 ; ctrl:controller|state.s4       ; ctrl:controller|state.s13      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.970      ;
-; 0.704 ; dp:datapath|acc:acc1|output[0] ; conv2[0]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.970      ;
-; 0.705 ; dp:datapath|acc:acc1|output[0] ; conv2[1]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.971      ;
-; 0.707 ; ctrl:controller|state.s4       ; ctrl:controller|state.s1       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.973      ;
-; 0.707 ; ctrl:controller|state.s4       ; ctrl:controller|state.s5       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.973      ;
-; 0.709 ; ctrl:controller|state.s4       ; ctrl:controller|state.s6       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.975      ;
-; 0.710 ; dp:datapath|entrada_acc[2]     ; dp:datapath|acc:acc1|temp[2]   ; clk          ; clk         ; 0.000        ; -0.001     ; 0.975      ;
-; 0.711 ; ctrl:controller|state.s4       ; ctrl:controller|state.s8       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.977      ;
-; 0.713 ; ctrl:controller|state.s4       ; ctrl:controller|state.s7       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.979      ;
-; 0.713 ; dp:datapath|entrada_acc[0]     ; dp:datapath|acc:acc1|temp[0]   ; clk          ; clk         ; 0.000        ; -0.001     ; 0.978      ;
-; 0.714 ; dp:datapath|alu:alu1|output[3] ; dp:datapath|entrada_acc[3]     ; clk          ; clk         ; 0.000        ; -0.002     ; 0.978      ;
-; 0.714 ; dp:datapath|entrada_acc[1]     ; dp:datapath|acc:acc1|temp[1]   ; clk          ; clk         ; 0.000        ; -0.001     ; 0.979      ;
-; 0.717 ; dp:datapath|alu:alu1|output[3] ; dp:datapath|entrada_rf[3]      ; clk          ; clk         ; 0.000        ; -0.002     ; 0.981      ;
-; 0.725 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s6       ; clk          ; clk         ; 0.000        ; -0.002     ; 0.989      ;
-; 0.726 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s5       ; clk          ; clk         ; 0.000        ; -0.002     ; 0.990      ;
-; 0.727 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s13      ; clk          ; clk         ; 0.000        ; -0.002     ; 0.991      ;
-; 0.727 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s8       ; clk          ; clk         ; 0.000        ; -0.002     ; 0.991      ;
-; 0.728 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s7       ; clk          ; clk         ; 0.000        ; -0.002     ; 0.992      ;
-; 0.783 ; dp:datapath|acc:acc1|temp[2]   ; dp:datapath|acc:acc1|output[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.049      ;
-; 0.795 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
-; 0.795 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
-; 0.795 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
-; 0.798 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.064      ;
-; 0.804 ; dp:datapath|acc:acc1|temp[3]   ; dp:datapath|acc:acc1|output[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.070      ;
-; 0.807 ; ctrl:controller|selc_dp[0]     ; dp:datapath|entrada2_alu[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.073      ;
-; 0.816 ; ctrl:controller|selc_dp[1]     ; dp:datapath|entrada1_alu[1]    ; clk          ; clk         ; 0.000        ; 0.004      ; 1.086      ;
-; 0.830 ; ctrl:controller|state.s8       ; ctrl:controller|enbcrf         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.096      ;
-; 0.832 ; ctrl:controller|selc_dp[1]     ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.098      ;
-; 0.836 ; ctrl:controller|selc_dp[3]     ; dp:datapath|entrada2_alu[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.102      ;
-; 0.843 ; ctrl:controller|ADDRESS[1]     ; ctrl:controller|imm[1]         ; clk          ; clk         ; 0.000        ; -0.011     ; 1.098      ;
-; 0.851 ; ctrl:controller|state.s2       ; ctrl:controller|state.s4       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.117      ;
-; 0.853 ; dp:datapath|alu:alu1|output[1] ; dp:datapath|entrada_acc[1]     ; clk          ; clk         ; 0.000        ; -0.002     ; 1.117      ;
-; 0.853 ; dp:datapath|alu:alu1|output[1] ; dp:datapath|entrada_rf[1]      ; clk          ; clk         ; 0.000        ; -0.002     ; 1.117      ;
-; 0.856 ; dp:datapath|alu:alu1|output[2] ; dp:datapath|entrada_rf[2]      ; clk          ; clk         ; 0.000        ; -0.002     ; 1.120      ;
-; 0.859 ; dp:datapath|alu:alu1|output[2] ; dp:datapath|entrada_acc[2]     ; clk          ; clk         ; 0.000        ; -0.002     ; 1.123      ;
-; 0.920 ; dp:datapath|acc:acc1|temp[1]   ; dp:datapath|acc:acc1|output[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.186      ;
-; 0.925 ; dp:datapath|acc:acc1|output[1] ; dp:datapath|entrada2_alu[1]    ; clk          ; clk         ; 0.000        ; 0.003      ; 1.194      ;
-; 0.935 ; dp:datapath|entrada_acc[3]     ; dp:datapath|acc:acc1|temp[3]   ; clk          ; clk         ; 0.000        ; -0.001     ; 1.200      ;
-; 0.939 ; dp:datapath|alu:alu1|output[0] ; dp:datapath|entrada_acc[0]     ; clk          ; clk         ; 0.000        ; -0.006     ; 1.199      ;
-; 0.941 ; dp:datapath|alu:alu1|output[0] ; dp:datapath|entrada_rf[0]      ; clk          ; clk         ; 0.000        ; -0.006     ; 1.201      ;
-; 0.944 ; ctrl:controller|state.s1       ; ctrl:controller|state.s1       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.210      ;
-; 0.954 ; ctrl:controller|PC[2]          ; ctrl:controller|imm[3]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.220      ;
-; 0.959 ; ctrl:controller|imm[1]         ; dp:datapath|entrada1_alu[1]    ; clk          ; clk         ; 0.000        ; -0.001     ; 1.224      ;
-; 0.963 ; ctrl:controller|PC[2]          ; ctrl:controller|PC[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.229      ;
-; 0.967 ; dp:datapath|rf:rf1|out2[1]     ; dp:datapath|rf:rf1|output[1]   ; clk          ; clk         ; 0.000        ; 0.001      ; 1.234      ;
-; 0.973 ; ctrl:controller|selc_dp[3]     ; display1[5]~reg0               ; clk          ; clk         ; 0.000        ; 0.009      ; 1.248      ;
-; 0.973 ; dp:datapath|acc:acc1|output[1] ; conv1[4]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.239      ;
-; 0.974 ; dp:datapath|rf:rf1|out1[2]     ; dp:datapath|rf:rf1|output[2]   ; clk          ; clk         ; 0.000        ; 0.001      ; 1.241      ;
-; 0.975 ; dp:datapath|rf:rf1|out1[3]     ; dp:datapath|rf:rf1|output[3]   ; clk          ; clk         ; 0.000        ; 0.001      ; 1.242      ;
-; 0.975 ; dp:datapath|rf:rf1|out1[1]     ; dp:datapath|rf:rf1|output[1]   ; clk          ; clk         ; 0.000        ; 0.001      ; 1.242      ;
-; 0.976 ; ctrl:controller|selc_dp[3]     ; display1[3]~reg0               ; clk          ; clk         ; 0.000        ; 0.009      ; 1.251      ;
-; 0.976 ; ctrl:controller|selc_dp[3]     ; display1[4]~reg0               ; clk          ; clk         ; 0.000        ; 0.009      ; 1.251      ;
-; 0.977 ; dp:datapath|rf:rf1|out2[0]     ; dp:datapath|rf:rf1|output[0]   ; clk          ; clk         ; 0.000        ; 0.001      ; 1.244      ;
-; 0.978 ; dp:datapath|entrada_rf[2]      ; dp:datapath|rf:rf1|out3[2]     ; clk          ; clk         ; 0.000        ; 0.010      ; 1.254      ;
-; 0.979 ; ctrl:controller|OPCODE[0]      ; ctrl:controller|state.s7       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.243      ;
-; 0.982 ; ctrl:controller|OPCODE[0]      ; ctrl:controller|state.s5       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.246      ;
-; 0.983 ; dp:datapath|rf:rf1|out1[0]     ; dp:datapath|rf:rf1|output[0]   ; clk          ; clk         ; 0.000        ; 0.001      ; 1.250      ;
-; 0.985 ; dp:datapath|entrada_rf[0]      ; dp:datapath|rf:rf1|out0[0]     ; clk          ; clk         ; 0.000        ; 0.012      ; 1.263      ;
-; 0.988 ; dp:datapath|entrada_rf[2]      ; dp:datapath|rf:rf1|out1[2]     ; clk          ; clk         ; 0.000        ; 0.011      ; 1.265      ;
-; 0.989 ; dp:datapath|entrada_rf[2]      ; dp:datapath|rf:rf1|out2[2]     ; clk          ; clk         ; 0.000        ; 0.011      ; 1.266      ;
-; 0.989 ; dp:datapath|entrada_rf[3]      ; dp:datapath|rf:rf1|out0[3]     ; clk          ; clk         ; 0.000        ; 0.012      ; 1.267      ;
-; 0.992 ; dp:datapath|acc:acc1|output[1] ; conv1[0]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.258      ;
-; 0.992 ; ctrl:controller|OPCODE[0]      ; ctrl:controller|state.s13      ; clk          ; clk         ; 0.000        ; -0.002     ; 1.256      ;
-; 0.993 ; dp:datapath|acc:acc1|output[1] ; conv1[5]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.259      ;
-; 0.994 ; dp:datapath|acc:acc1|output[1] ; conv1[3]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.260      ;
-; 0.996 ; dp:datapath|acc:acc1|output[1] ; conv2[4]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.262      ;
-; 0.997 ; dp:datapath|acc:acc1|output[1] ; conv2[2]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.997 ; dp:datapath|acc:acc1|output[1] ; conv2[3]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.997 ; dp:datapath|acc:acc1|output[1] ; conv2[6]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.263      ;
-; 0.998 ; dp:datapath|acc:acc1|output[1] ; conv2[5]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.264      ;
-; 0.998 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s1       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.262      ;
-; 1.000 ; ctrl:controller|OPCODE[0]      ; ctrl:controller|state.s8       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.264      ;
-; 1.002 ; dp:datapath|acc:acc1|output[1] ; conv2[0]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.268      ;
-; 1.002 ; dp:datapath|acc:acc1|output[1] ; conv2[1]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.268      ;
-; 1.012 ; dp:datapath|acc:acc1|temp[0]   ; dp:datapath|acc:acc1|output[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.278      ;
-; 1.016 ; dp:datapath|acc:acc1|output[2] ; conv2[0]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.282      ;
-; 1.016 ; dp:datapath|acc:acc1|output[2] ; conv2[1]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.282      ;
-; 1.018 ; dp:datapath|acc:acc1|output[2] ; conv2[3]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.284      ;
-; 1.019 ; dp:datapath|rf:rf1|out2[3]     ; dp:datapath|rf:rf1|output[3]   ; clk          ; clk         ; 0.000        ; 0.001      ; 1.286      ;
-; 1.020 ; dp:datapath|acc:acc1|output[2] ; conv2[6]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.286      ;
+; 0.542 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.808      ;
+; 0.695 ; ctrl:controller|ADDRESS[1]     ; ctrl:controller|imm[1]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.961      ;
+; 0.738 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s7       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.002      ;
+; 0.760 ; ctrl:controller|state.s1       ; ctrl:controller|imm[3]         ; clk          ; clk         ; 0.000        ; 0.002      ; 1.028      ;
+; 0.761 ; ctrl:controller|state.s1       ; ctrl:controller|imm[0]         ; clk          ; clk         ; 0.000        ; 0.002      ; 1.029      ;
+; 0.790 ; dp:datapath|rf:rf1|out3[0]     ; dp:datapath|rf:rf1|output[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.056      ;
+; 0.795 ; dp:datapath|rf:rf1|out3[3]     ; dp:datapath|rf:rf1|output[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.061      ;
+; 0.796 ; dp:datapath|rf:rf1|out3[1]     ; dp:datapath|rf:rf1|output[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.062      ;
+; 0.796 ; dp:datapath|acc:acc1|output[3] ; dp:datapath|entrada2_alu[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.062      ;
+; 0.802 ; ctrl:controller|state.s9       ; ctrl:controller|selc_dp[2]     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.068      ;
+; 0.803 ; dp:datapath|alu:alu1|output[0] ; dp:datapath|acc:acc1|temp[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.069      ;
+; 0.804 ; ctrl:controller|state.s13      ; ctrl:controller|enbcacc        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.070      ;
+; 0.808 ; ctrl:controller|state.s5       ; ctrl:controller|enbcrf         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.074      ;
+; 0.811 ; ctrl:controller|ADDRESS[3]     ; ctrl:controller|imm[3]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.077      ;
+; 0.816 ; ctrl:controller|state.s8       ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.082      ;
+; 0.824 ; dp:datapath|rf:rf1|out3[2]     ; dp:datapath|rf:rf1|output[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.090      ;
+; 0.828 ; ctrl:controller|state.s10      ; ctrl:controller|selc_dp[2]     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.094      ;
+; 0.828 ; ctrl:controller|state.s10      ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.094      ;
+; 0.850 ; ctrl:controller|state.s6       ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.116      ;
+; 0.851 ; ctrl:controller|state.s11      ; ctrl:controller|selc_dp[2]     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.117      ;
+; 0.858 ; ctrl:controller|ADDRESS[0]     ; ctrl:controller|PC[2]          ; clk          ; clk         ; 0.000        ; 0.001      ; 1.125      ;
+; 0.874 ; ctrl:controller|PC[0]          ; ctrl:controller|OPCODE[0]      ; clk          ; clk         ; 0.000        ; -0.001     ; 1.139      ;
+; 0.875 ; ctrl:controller|PC[0]          ; ctrl:controller|OPCODE[1]      ; clk          ; clk         ; 0.000        ; -0.001     ; 1.140      ;
+; 0.876 ; ctrl:controller|PC[0]          ; ctrl:controller|OPCODE[2]      ; clk          ; clk         ; 0.000        ; -0.001     ; 1.141      ;
+; 0.922 ; dp:datapath|rf:rf1|out0[0]     ; dp:datapath|rf:rf1|output[0]   ; clk          ; clk         ; 0.000        ; 0.001      ; 1.189      ;
+; 0.927 ; dp:datapath|acc:acc1|temp[0]   ; dp:datapath|acc:acc1|output[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.193      ;
+; 0.938 ; dp:datapath|alu:alu1|output[1] ; dp:datapath|acc:acc1|temp[1]   ; clk          ; clk         ; 0.000        ; 0.014      ; 1.218      ;
+; 0.939 ; dp:datapath|alu:alu1|output[1] ; dp:datapath|rf:rf1|out2[1]     ; clk          ; clk         ; 0.000        ; 0.014      ; 1.219      ;
+; 0.945 ; dp:datapath|alu:alu1|output[3] ; dp:datapath|rf:rf1|out2[3]     ; clk          ; clk         ; 0.000        ; 0.014      ; 1.225      ;
+; 0.946 ; dp:datapath|acc:acc1|output[2] ; dp:datapath|entrada2_alu[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.212      ;
+; 0.946 ; dp:datapath|alu:alu1|output[3] ; dp:datapath|acc:acc1|temp[3]   ; clk          ; clk         ; 0.000        ; 0.014      ; 1.226      ;
+; 0.964 ; dp:datapath|rf:rf1|out2[1]     ; dp:datapath|rf:rf1|output[1]   ; clk          ; clk         ; 0.000        ; -0.003     ; 1.227      ;
+; 0.964 ; dp:datapath|rf:rf1|out0[2]     ; dp:datapath|rf:rf1|output[2]   ; clk          ; clk         ; 0.000        ; 0.001      ; 1.231      ;
+; 0.966 ; ctrl:controller|OPCODE[0]      ; ctrl:controller|state.done     ; clk          ; clk         ; 0.000        ; -0.002     ; 1.230      ;
+; 0.985 ; dp:datapath|rf:rf1|out0[3]     ; dp:datapath|rf:rf1|output[3]   ; clk          ; clk         ; 0.000        ; 0.001      ; 1.252      ;
+; 0.985 ; dp:datapath|rf:rf1|out1[2]     ; dp:datapath|rf:rf1|output[2]   ; clk          ; clk         ; 0.000        ; 0.001      ; 1.252      ;
+; 0.992 ; dp:datapath|alu:alu1|output[2] ; dp:datapath|rf:rf1|out2[2]     ; clk          ; clk         ; 0.000        ; 0.014      ; 1.272      ;
+; 0.993 ; dp:datapath|alu:alu1|output[2] ; dp:datapath|acc:acc1|temp[2]   ; clk          ; clk         ; 0.000        ; 0.014      ; 1.273      ;
+; 1.001 ; ctrl:controller|state.s11      ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 0.000        ; -0.002     ; 1.265      ;
+; 1.012 ; dp:datapath|rf:rf1|out1[0]     ; dp:datapath|rf:rf1|output[0]   ; clk          ; clk         ; 0.000        ; 0.001      ; 1.279      ;
+; 1.020 ; ctrl:controller|OPCODE[2]      ; ctrl:controller|state.s11      ; clk          ; clk         ; 0.000        ; -0.004     ; 1.282      ;
+; 1.021 ; ctrl:controller|OPCODE[2]      ; ctrl:controller|state.s10      ; clk          ; clk         ; 0.000        ; -0.004     ; 1.283      ;
+; 1.021 ; ctrl:controller|OPCODE[2]      ; ctrl:controller|state.s5       ; clk          ; clk         ; 0.000        ; -0.004     ; 1.283      ;
+; 1.022 ; ctrl:controller|OPCODE[2]      ; ctrl:controller|state.s8       ; clk          ; clk         ; 0.000        ; -0.004     ; 1.284      ;
+; 1.023 ; ctrl:controller|OPCODE[2]      ; ctrl:controller|state.s9       ; clk          ; clk         ; 0.000        ; -0.004     ; 1.285      ;
+; 1.023 ; ctrl:controller|OPCODE[2]      ; ctrl:controller|state.s6       ; clk          ; clk         ; 0.000        ; -0.004     ; 1.285      ;
+; 1.034 ; ctrl:controller|state.s7       ; ctrl:controller|imm[1]         ; clk          ; clk         ; 0.000        ; 0.002      ; 1.302      ;
+; 1.034 ; ctrl:controller|selc_dp[0]     ; dp:datapath|entrada2_alu[3]    ; clk          ; clk         ; 0.000        ; -0.003     ; 1.297      ;
+; 1.043 ; dp:datapath|entrada2_alu[2]    ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 0.000        ; 0.001      ; 1.310      ;
+; 1.045 ; ctrl:controller|state.s13      ; ctrl:controller|selc_dp[3]     ; clk          ; clk         ; 0.000        ; 0.003      ; 1.314      ;
+; 1.051 ; ctrl:controller|state.s7       ; ctrl:controller|imm[3]         ; clk          ; clk         ; 0.000        ; 0.002      ; 1.319      ;
+; 1.058 ; ctrl:controller|state.s7       ; ctrl:controller|imm[0]         ; clk          ; clk         ; 0.000        ; 0.002      ; 1.326      ;
+; 1.062 ; ctrl:controller|selc_dp[3]     ; ctrl:controller|selc_dp[3]     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.328      ;
+; 1.073 ; dp:datapath|rf:rf1|out0[1]     ; dp:datapath|rf:rf1|output[1]   ; clk          ; clk         ; 0.000        ; 0.001      ; 1.340      ;
+; 1.078 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|output[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.344      ;
+; 1.090 ; ctrl:controller|state.s1       ; ctrl:controller|state.s2       ; clk          ; clk         ; 0.000        ; 0.003      ; 1.359      ;
+; 1.104 ; dp:datapath|rf:rf1|out2[3]     ; dp:datapath|rf:rf1|output[3]   ; clk          ; clk         ; 0.000        ; -0.003     ; 1.367      ;
+; 1.106 ; ctrl:controller|OPCODE[2]      ; ctrl:controller|state.s7       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.370      ;
+; 1.109 ; ctrl:controller|state.s2       ; ctrl:controller|state.s4       ; clk          ; clk         ; 0.000        ; 0.000      ; 1.375      ;
+; 1.109 ; dp:datapath|entrada1_alu[1]    ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 0.000        ; 0.001      ; 1.376      ;
+; 1.111 ; ctrl:controller|selcrf[0]      ; dp:datapath|rf:rf1|output[2]   ; clk          ; clk         ; 0.000        ; -0.002     ; 1.375      ;
+; 1.113 ; ctrl:controller|state.s12      ; ctrl:controller|PC[0]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.379      ;
+; 1.113 ; ctrl:controller|selcrf[0]      ; dp:datapath|rf:rf1|output[0]   ; clk          ; clk         ; 0.000        ; -0.002     ; 1.377      ;
+; 1.116 ; ctrl:controller|state.s12      ; ctrl:controller|PC[1]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.382      ;
+; 1.129 ; dp:datapath|acc:acc1|temp[2]   ; dp:datapath|acc:acc1|output[2] ; clk          ; clk         ; 0.000        ; -0.015     ; 1.380      ;
+; 1.130 ; dp:datapath|acc:acc1|temp[1]   ; dp:datapath|acc:acc1|output[1] ; clk          ; clk         ; 0.000        ; -0.015     ; 1.381      ;
+; 1.133 ; ctrl:controller|PC[2]          ; ctrl:controller|imm[3]         ; clk          ; clk         ; 0.000        ; -0.001     ; 1.398      ;
+; 1.140 ; ctrl:controller|PC[2]          ; ctrl:controller|ADDRESS[3]     ; clk          ; clk         ; 0.000        ; -0.001     ; 1.405      ;
+; 1.142 ; dp:datapath|acc:acc1|temp[3]   ; dp:datapath|acc:acc1|output[3] ; clk          ; clk         ; 0.000        ; -0.015     ; 1.393      ;
+; 1.159 ; ctrl:controller|selc_dp[2]     ; dp:datapath|entrada2_alu[1]    ; clk          ; clk         ; 0.000        ; -0.003     ; 1.422      ;
+; 1.159 ; ctrl:controller|selc_dp[2]     ; dp:datapath|entrada2_alu[3]    ; clk          ; clk         ; 0.000        ; -0.003     ; 1.422      ;
+; 1.170 ; ctrl:controller|ADDRESS[3]     ; ctrl:controller|selcrf[1]      ; clk          ; clk         ; 0.000        ; 0.007      ; 1.443      ;
+; 1.187 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[2]   ; clk          ; clk         ; 0.000        ; 0.010      ; 1.463      ;
+; 1.188 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[1]   ; clk          ; clk         ; 0.000        ; 0.010      ; 1.464      ;
+; 1.190 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[3]   ; clk          ; clk         ; 0.000        ; 0.010      ; 1.466      ;
+; 1.206 ; ctrl:controller|imm[3]         ; dp:datapath|entrada1_alu[3]    ; clk          ; clk         ; 0.000        ; -0.007     ; 1.465      ;
+; 1.208 ; ctrl:controller|PC[2]          ; ctrl:controller|PC[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 1.474      ;
+; 1.210 ; ctrl:controller|imm[1]         ; dp:datapath|entrada1_alu[1]    ; clk          ; clk         ; 0.000        ; -0.007     ; 1.469      ;
+; 1.211 ; ctrl:controller|state.s1       ; ctrl:controller|imm[1]         ; clk          ; clk         ; 0.000        ; 0.002      ; 1.479      ;
+; 1.213 ; ctrl:controller|ADDRESS[0]     ; ctrl:controller|selcrf[0]      ; clk          ; clk         ; 0.000        ; 0.007      ; 1.486      ;
+; 1.213 ; dp:datapath|acc:acc1|output[1] ; dp:datapath|entrada2_alu[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.479      ;
+; 1.219 ; dp:datapath|alu:alu1|output[3] ; dp:datapath|rf:rf1|out3[3]     ; clk          ; clk         ; 0.000        ; 0.011      ; 1.496      ;
+; 1.231 ; ctrl:controller|OPCODE[0]      ; ctrl:controller|state.s7       ; clk          ; clk         ; 0.000        ; -0.002     ; 1.495      ;
+; 1.233 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s10      ; clk          ; clk         ; 0.000        ; -0.004     ; 1.495      ;
+; 1.234 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s5       ; clk          ; clk         ; 0.000        ; -0.004     ; 1.496      ;
+; 1.235 ; ctrl:controller|OPCODE[0]      ; ctrl:controller|state.s13      ; clk          ; clk         ; 0.000        ; -0.002     ; 1.499      ;
+; 1.235 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s9       ; clk          ; clk         ; 0.000        ; -0.004     ; 1.497      ;
+; 1.236 ; ctrl:controller|ADDRESS[0]     ; ctrl:controller|imm[0]         ; clk          ; clk         ; 0.000        ; 0.000      ; 1.502      ;
+; 1.237 ; dp:datapath|alu:alu1|output[1] ; dp:datapath|rf:rf1|out3[1]     ; clk          ; clk         ; 0.000        ; 0.011      ; 1.514      ;
+; 1.241 ; ctrl:controller|PC[1]          ; ctrl:controller|OPCODE[0]      ; clk          ; clk         ; 0.000        ; -0.001     ; 1.506      ;
+; 1.244 ; ctrl:controller|state.s7       ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 0.000        ; -0.004     ; 1.506      ;
+; 1.245 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s6       ; clk          ; clk         ; 0.000        ; -0.004     ; 1.507      ;
+; 1.248 ; ctrl:controller|enbcacc        ; ctrl:controller|enbcacc        ; clk          ; clk         ; 0.000        ; 0.000      ; 1.514      ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -404,8 +404,8 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|OPCODE[0]  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|OPCODE[1]  ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|OPCODE[1]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|OPCODE[3]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|OPCODE[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|OPCODE[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|OPCODE[2]  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|PC[0]      ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|PC[0]      ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|PC[1]      ;
@@ -426,6 +426,8 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|selc_dp[0] ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|selc_dp[1] ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|selc_dp[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|selc_dp[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|selc_dp[2] ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|selc_dp[3] ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|selc_dp[3] ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|selcrf[0]  ;
@@ -438,6 +440,12 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s0   ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s1   ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s1   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s10  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s10  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s11  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s11  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s12  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s12  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s13  ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s13  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s2   ;
@@ -452,6 +460,8 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s7   ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s8   ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s8   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s9   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s9   ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display1[0]~reg0           ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; display1[0]~reg0           ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display1[1]~reg0           ;
@@ -461,16 +471,6 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display1[3]~reg0           ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; display1[3]~reg0           ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display1[4]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; display1[4]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display1[5]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; display1[5]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display2[0]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; display2[0]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display2[1]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; display2[1]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display2[2]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; display2[2]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display2[3]~reg0           ;
 +--------+--------------+----------------+------------------+-------+------------+----------------------------+
 
 
@@ -479,8 +479,8 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; rst       ; clk        ; 5.706 ; 5.706 ; Fall       ; clk             ;
-; start     ; clk        ; 4.718 ; 4.718 ; Fall       ; clk             ;
+; rst       ; clk        ; 5.118 ; 5.118 ; Fall       ; clk             ;
+; start     ; clk        ; 4.405 ; 4.405 ; Fall       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -489,8 +489,8 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; rst       ; clk        ; -3.916 ; -3.916 ; Fall       ; clk             ;
-; start     ; clk        ; -4.096 ; -4.096 ; Fall       ; clk             ;
+; rst       ; clk        ; -3.788 ; -3.788 ; Fall       ; clk             ;
+; start     ; clk        ; -4.030 ; -4.030 ; Fall       ; clk             ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -499,47 +499,47 @@ No paths to report.
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; conv1[*]     ; clk        ; 8.457 ; 8.457 ; Fall       ; clk             ;
-;  conv1[0]    ; clk        ; 7.839 ; 7.839 ; Fall       ; clk             ;
-;  conv1[3]    ; clk        ; 8.457 ; 8.457 ; Fall       ; clk             ;
-;  conv1[4]    ; clk        ; 8.196 ; 8.196 ; Fall       ; clk             ;
-;  conv1[5]    ; clk        ; 7.703 ; 7.703 ; Fall       ; clk             ;
-; conv2[*]     ; clk        ; 8.808 ; 8.808 ; Fall       ; clk             ;
-;  conv2[0]    ; clk        ; 7.531 ; 7.531 ; Fall       ; clk             ;
-;  conv2[1]    ; clk        ; 8.222 ; 8.222 ; Fall       ; clk             ;
-;  conv2[2]    ; clk        ; 7.943 ; 7.943 ; Fall       ; clk             ;
-;  conv2[3]    ; clk        ; 8.026 ; 8.026 ; Fall       ; clk             ;
-;  conv2[4]    ; clk        ; 7.812 ; 7.812 ; Fall       ; clk             ;
-;  conv2[5]    ; clk        ; 8.380 ; 8.380 ; Fall       ; clk             ;
-;  conv2[6]    ; clk        ; 8.808 ; 8.808 ; Fall       ; clk             ;
-; display1[*]  ; clk        ; 7.843 ; 7.843 ; Fall       ; clk             ;
-;  display1[0] ; clk        ; 6.720 ; 6.720 ; Fall       ; clk             ;
-;  display1[1] ; clk        ; 7.843 ; 7.843 ; Fall       ; clk             ;
-;  display1[2] ; clk        ; 7.204 ; 7.204 ; Fall       ; clk             ;
-;  display1[3] ; clk        ; 7.395 ; 7.395 ; Fall       ; clk             ;
-;  display1[4] ; clk        ; 7.590 ; 7.590 ; Fall       ; clk             ;
-;  display1[5] ; clk        ; 6.686 ; 6.686 ; Fall       ; clk             ;
-; display2[*]  ; clk        ; 7.855 ; 7.855 ; Fall       ; clk             ;
-;  display2[0] ; clk        ; 7.855 ; 7.855 ; Fall       ; clk             ;
-;  display2[1] ; clk        ; 7.250 ; 7.250 ; Fall       ; clk             ;
-;  display2[2] ; clk        ; 7.454 ; 7.454 ; Fall       ; clk             ;
-;  display2[3] ; clk        ; 7.611 ; 7.611 ; Fall       ; clk             ;
-;  display2[4] ; clk        ; 7.571 ; 7.571 ; Fall       ; clk             ;
-;  display2[5] ; clk        ; 7.605 ; 7.605 ; Fall       ; clk             ;
-; display3[*]  ; clk        ; 8.057 ; 8.057 ; Fall       ; clk             ;
-;  display3[0] ; clk        ; 8.011 ; 8.011 ; Fall       ; clk             ;
-;  display3[1] ; clk        ; 8.057 ; 8.057 ; Fall       ; clk             ;
-;  display3[2] ; clk        ; 7.192 ; 7.192 ; Fall       ; clk             ;
-;  display3[3] ; clk        ; 7.469 ; 7.469 ; Fall       ; clk             ;
-;  display3[4] ; clk        ; 7.081 ; 7.081 ; Fall       ; clk             ;
-;  display3[5] ; clk        ; 7.020 ; 7.020 ; Fall       ; clk             ;
-; display4[*]  ; clk        ; 7.746 ; 7.746 ; Fall       ; clk             ;
-;  display4[0] ; clk        ; 7.746 ; 7.746 ; Fall       ; clk             ;
-;  display4[1] ; clk        ; 7.622 ; 7.622 ; Fall       ; clk             ;
-;  display4[2] ; clk        ; 7.620 ; 7.620 ; Fall       ; clk             ;
-;  display4[3] ; clk        ; 7.406 ; 7.406 ; Fall       ; clk             ;
-;  display4[4] ; clk        ; 7.439 ; 7.439 ; Fall       ; clk             ;
-;  display4[5] ; clk        ; 7.485 ; 7.485 ; Fall       ; clk             ;
+; conv1[*]     ; clk        ; 6.372 ; 6.372 ; Fall       ; clk             ;
+;  conv1[0]    ; clk        ; 6.372 ; 6.372 ; Fall       ; clk             ;
+;  conv1[3]    ; clk        ; 6.369 ; 6.369 ; Fall       ; clk             ;
+;  conv1[4]    ; clk        ; 6.354 ; 6.354 ; Fall       ; clk             ;
+;  conv1[5]    ; clk        ; 6.367 ; 6.367 ; Fall       ; clk             ;
+; conv2[*]     ; clk        ; 6.378 ; 6.378 ; Fall       ; clk             ;
+;  conv2[0]    ; clk        ; 6.328 ; 6.328 ; Fall       ; clk             ;
+;  conv2[1]    ; clk        ; 6.342 ; 6.342 ; Fall       ; clk             ;
+;  conv2[2]    ; clk        ; 6.340 ; 6.340 ; Fall       ; clk             ;
+;  conv2[3]    ; clk        ; 6.339 ; 6.339 ; Fall       ; clk             ;
+;  conv2[4]    ; clk        ; 6.355 ; 6.355 ; Fall       ; clk             ;
+;  conv2[5]    ; clk        ; 6.353 ; 6.353 ; Fall       ; clk             ;
+;  conv2[6]    ; clk        ; 6.378 ; 6.378 ; Fall       ; clk             ;
+; display1[*]  ; clk        ; 7.722 ; 7.722 ; Fall       ; clk             ;
+;  display1[0] ; clk        ; 7.141 ; 7.141 ; Fall       ; clk             ;
+;  display1[1] ; clk        ; 7.722 ; 7.722 ; Fall       ; clk             ;
+;  display1[2] ; clk        ; 7.131 ; 7.131 ; Fall       ; clk             ;
+;  display1[3] ; clk        ; 7.382 ; 7.382 ; Fall       ; clk             ;
+;  display1[4] ; clk        ; 7.649 ; 7.649 ; Fall       ; clk             ;
+;  display1[5] ; clk        ; 7.585 ; 7.585 ; Fall       ; clk             ;
+; display2[*]  ; clk        ; 7.414 ; 7.414 ; Fall       ; clk             ;
+;  display2[0] ; clk        ; 7.045 ; 7.045 ; Fall       ; clk             ;
+;  display2[1] ; clk        ; 6.983 ; 6.983 ; Fall       ; clk             ;
+;  display2[2] ; clk        ; 7.189 ; 7.189 ; Fall       ; clk             ;
+;  display2[3] ; clk        ; 7.414 ; 7.414 ; Fall       ; clk             ;
+;  display2[4] ; clk        ; 7.379 ; 7.379 ; Fall       ; clk             ;
+;  display2[5] ; clk        ; 6.771 ; 6.771 ; Fall       ; clk             ;
+; display3[*]  ; clk        ; 7.867 ; 7.867 ; Fall       ; clk             ;
+;  display3[0] ; clk        ; 7.845 ; 7.845 ; Fall       ; clk             ;
+;  display3[1] ; clk        ; 7.867 ; 7.867 ; Fall       ; clk             ;
+;  display3[2] ; clk        ; 7.209 ; 7.209 ; Fall       ; clk             ;
+;  display3[3] ; clk        ; 7.470 ; 7.470 ; Fall       ; clk             ;
+;  display3[4] ; clk        ; 7.710 ; 7.710 ; Fall       ; clk             ;
+;  display3[5] ; clk        ; 7.435 ; 7.435 ; Fall       ; clk             ;
+; display4[*]  ; clk        ; 7.628 ; 7.628 ; Fall       ; clk             ;
+;  display4[0] ; clk        ; 6.987 ; 6.987 ; Fall       ; clk             ;
+;  display4[1] ; clk        ; 7.363 ; 7.363 ; Fall       ; clk             ;
+;  display4[2] ; clk        ; 7.628 ; 7.628 ; Fall       ; clk             ;
+;  display4[3] ; clk        ; 6.719 ; 6.719 ; Fall       ; clk             ;
+;  display4[4] ; clk        ; 6.719 ; 6.719 ; Fall       ; clk             ;
+;  display4[5] ; clk        ; 6.709 ; 6.709 ; Fall       ; clk             ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
@@ -548,47 +548,47 @@ No paths to report.
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; conv1[*]     ; clk        ; 7.703 ; 7.703 ; Fall       ; clk             ;
-;  conv1[0]    ; clk        ; 7.839 ; 7.839 ; Fall       ; clk             ;
-;  conv1[3]    ; clk        ; 8.457 ; 8.457 ; Fall       ; clk             ;
-;  conv1[4]    ; clk        ; 8.196 ; 8.196 ; Fall       ; clk             ;
-;  conv1[5]    ; clk        ; 7.703 ; 7.703 ; Fall       ; clk             ;
-; conv2[*]     ; clk        ; 7.531 ; 7.531 ; Fall       ; clk             ;
-;  conv2[0]    ; clk        ; 7.531 ; 7.531 ; Fall       ; clk             ;
-;  conv2[1]    ; clk        ; 8.222 ; 8.222 ; Fall       ; clk             ;
-;  conv2[2]    ; clk        ; 7.943 ; 7.943 ; Fall       ; clk             ;
-;  conv2[3]    ; clk        ; 8.026 ; 8.026 ; Fall       ; clk             ;
-;  conv2[4]    ; clk        ; 7.812 ; 7.812 ; Fall       ; clk             ;
-;  conv2[5]    ; clk        ; 8.380 ; 8.380 ; Fall       ; clk             ;
-;  conv2[6]    ; clk        ; 8.808 ; 8.808 ; Fall       ; clk             ;
-; display1[*]  ; clk        ; 6.686 ; 6.686 ; Fall       ; clk             ;
-;  display1[0] ; clk        ; 6.720 ; 6.720 ; Fall       ; clk             ;
-;  display1[1] ; clk        ; 7.843 ; 7.843 ; Fall       ; clk             ;
-;  display1[2] ; clk        ; 7.204 ; 7.204 ; Fall       ; clk             ;
-;  display1[3] ; clk        ; 7.395 ; 7.395 ; Fall       ; clk             ;
-;  display1[4] ; clk        ; 7.590 ; 7.590 ; Fall       ; clk             ;
-;  display1[5] ; clk        ; 6.686 ; 6.686 ; Fall       ; clk             ;
-; display2[*]  ; clk        ; 7.250 ; 7.250 ; Fall       ; clk             ;
-;  display2[0] ; clk        ; 7.855 ; 7.855 ; Fall       ; clk             ;
-;  display2[1] ; clk        ; 7.250 ; 7.250 ; Fall       ; clk             ;
-;  display2[2] ; clk        ; 7.454 ; 7.454 ; Fall       ; clk             ;
-;  display2[3] ; clk        ; 7.611 ; 7.611 ; Fall       ; clk             ;
-;  display2[4] ; clk        ; 7.571 ; 7.571 ; Fall       ; clk             ;
-;  display2[5] ; clk        ; 7.605 ; 7.605 ; Fall       ; clk             ;
-; display3[*]  ; clk        ; 7.020 ; 7.020 ; Fall       ; clk             ;
-;  display3[0] ; clk        ; 8.011 ; 8.011 ; Fall       ; clk             ;
-;  display3[1] ; clk        ; 8.057 ; 8.057 ; Fall       ; clk             ;
-;  display3[2] ; clk        ; 7.192 ; 7.192 ; Fall       ; clk             ;
-;  display3[3] ; clk        ; 7.469 ; 7.469 ; Fall       ; clk             ;
-;  display3[4] ; clk        ; 7.081 ; 7.081 ; Fall       ; clk             ;
-;  display3[5] ; clk        ; 7.020 ; 7.020 ; Fall       ; clk             ;
-; display4[*]  ; clk        ; 7.406 ; 7.406 ; Fall       ; clk             ;
-;  display4[0] ; clk        ; 7.746 ; 7.746 ; Fall       ; clk             ;
-;  display4[1] ; clk        ; 7.622 ; 7.622 ; Fall       ; clk             ;
-;  display4[2] ; clk        ; 7.620 ; 7.620 ; Fall       ; clk             ;
-;  display4[3] ; clk        ; 7.406 ; 7.406 ; Fall       ; clk             ;
-;  display4[4] ; clk        ; 7.439 ; 7.439 ; Fall       ; clk             ;
-;  display4[5] ; clk        ; 7.485 ; 7.485 ; Fall       ; clk             ;
+; conv1[*]     ; clk        ; 6.354 ; 6.354 ; Fall       ; clk             ;
+;  conv1[0]    ; clk        ; 6.372 ; 6.372 ; Fall       ; clk             ;
+;  conv1[3]    ; clk        ; 6.369 ; 6.369 ; Fall       ; clk             ;
+;  conv1[4]    ; clk        ; 6.354 ; 6.354 ; Fall       ; clk             ;
+;  conv1[5]    ; clk        ; 6.367 ; 6.367 ; Fall       ; clk             ;
+; conv2[*]     ; clk        ; 6.328 ; 6.328 ; Fall       ; clk             ;
+;  conv2[0]    ; clk        ; 6.328 ; 6.328 ; Fall       ; clk             ;
+;  conv2[1]    ; clk        ; 6.342 ; 6.342 ; Fall       ; clk             ;
+;  conv2[2]    ; clk        ; 6.340 ; 6.340 ; Fall       ; clk             ;
+;  conv2[3]    ; clk        ; 6.339 ; 6.339 ; Fall       ; clk             ;
+;  conv2[4]    ; clk        ; 6.355 ; 6.355 ; Fall       ; clk             ;
+;  conv2[5]    ; clk        ; 6.353 ; 6.353 ; Fall       ; clk             ;
+;  conv2[6]    ; clk        ; 6.378 ; 6.378 ; Fall       ; clk             ;
+; display1[*]  ; clk        ; 7.131 ; 7.131 ; Fall       ; clk             ;
+;  display1[0] ; clk        ; 7.141 ; 7.141 ; Fall       ; clk             ;
+;  display1[1] ; clk        ; 7.722 ; 7.722 ; Fall       ; clk             ;
+;  display1[2] ; clk        ; 7.131 ; 7.131 ; Fall       ; clk             ;
+;  display1[3] ; clk        ; 7.382 ; 7.382 ; Fall       ; clk             ;
+;  display1[4] ; clk        ; 7.649 ; 7.649 ; Fall       ; clk             ;
+;  display1[5] ; clk        ; 7.585 ; 7.585 ; Fall       ; clk             ;
+; display2[*]  ; clk        ; 6.771 ; 6.771 ; Fall       ; clk             ;
+;  display2[0] ; clk        ; 7.045 ; 7.045 ; Fall       ; clk             ;
+;  display2[1] ; clk        ; 6.983 ; 6.983 ; Fall       ; clk             ;
+;  display2[2] ; clk        ; 7.189 ; 7.189 ; Fall       ; clk             ;
+;  display2[3] ; clk        ; 7.414 ; 7.414 ; Fall       ; clk             ;
+;  display2[4] ; clk        ; 7.379 ; 7.379 ; Fall       ; clk             ;
+;  display2[5] ; clk        ; 6.771 ; 6.771 ; Fall       ; clk             ;
+; display3[*]  ; clk        ; 7.209 ; 7.209 ; Fall       ; clk             ;
+;  display3[0] ; clk        ; 7.845 ; 7.845 ; Fall       ; clk             ;
+;  display3[1] ; clk        ; 7.867 ; 7.867 ; Fall       ; clk             ;
+;  display3[2] ; clk        ; 7.209 ; 7.209 ; Fall       ; clk             ;
+;  display3[3] ; clk        ; 7.470 ; 7.470 ; Fall       ; clk             ;
+;  display3[4] ; clk        ; 7.710 ; 7.710 ; Fall       ; clk             ;
+;  display3[5] ; clk        ; 7.435 ; 7.435 ; Fall       ; clk             ;
+; display4[*]  ; clk        ; 6.709 ; 6.709 ; Fall       ; clk             ;
+;  display4[0] ; clk        ; 6.987 ; 6.987 ; Fall       ; clk             ;
+;  display4[1] ; clk        ; 7.363 ; 7.363 ; Fall       ; clk             ;
+;  display4[2] ; clk        ; 7.628 ; 7.628 ; Fall       ; clk             ;
+;  display4[3] ; clk        ; 6.719 ; 6.719 ; Fall       ; clk             ;
+;  display4[4] ; clk        ; 6.719 ; 6.719 ; Fall       ; clk             ;
+;  display4[5] ; clk        ; 6.709 ; 6.709 ; Fall       ; clk             ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
@@ -597,7 +597,7 @@ No paths to report.
 +-------+--------+---------------+
 ; Clock ; Slack  ; End Point TNS ;
 +-------+--------+---------------+
-; clk   ; -0.146 ; -2.445        ;
+; clk   ; -0.404 ; -14.576       ;
 +-------+--------+---------------+
 
 
@@ -627,116 +627,116 @@ No paths to report.
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; clk   ; -1.222 ; -113.222              ;
+; clk   ; -1.222 ; -110.222              ;
 +-------+--------+-----------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Setup: 'clk'                                                                                                                     ;
-+--------+-----------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                   ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-----------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.146 ; ctrl:controller|state.s7    ; ctrl:controller|imm[1]         ; clk          ; clk         ; 1.000        ; -0.009     ; 1.169      ;
-; -0.146 ; ctrl:controller|state.s7    ; ctrl:controller|imm[0]         ; clk          ; clk         ; 1.000        ; -0.009     ; 1.169      ;
-; -0.146 ; ctrl:controller|state.s7    ; ctrl:controller|imm[3]         ; clk          ; clk         ; 1.000        ; -0.009     ; 1.169      ;
-; -0.133 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_rf[0]      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.164      ;
-; -0.133 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_rf[1]      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.164      ;
-; -0.133 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_rf[2]      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.164      ;
-; -0.133 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_rf[3]      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.164      ;
-; -0.111 ; ctrl:controller|state.s8    ; ctrl:controller|selcrf[1]      ; clk          ; clk         ; 1.000        ; -0.005     ; 1.138      ;
-; -0.111 ; ctrl:controller|state.s8    ; ctrl:controller|selcrf[0]      ; clk          ; clk         ; 1.000        ; -0.005     ; 1.138      ;
-; -0.082 ; ctrl:controller|state.s0    ; ctrl:controller|PC[1]          ; clk          ; clk         ; 1.000        ; -0.009     ; 1.105      ;
-; -0.082 ; ctrl:controller|state.s0    ; ctrl:controller|PC[2]          ; clk          ; clk         ; 1.000        ; -0.009     ; 1.105      ;
-; -0.078 ; dp:datapath|entrada1_alu[1] ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.108      ;
-; -0.072 ; ctrl:controller|state.s0    ; ctrl:controller|imm[1]         ; clk          ; clk         ; 1.000        ; -0.009     ; 1.095      ;
-; -0.072 ; ctrl:controller|state.s0    ; ctrl:controller|imm[0]         ; clk          ; clk         ; 1.000        ; -0.009     ; 1.095      ;
-; -0.072 ; ctrl:controller|state.s0    ; ctrl:controller|imm[3]         ; clk          ; clk         ; 1.000        ; -0.009     ; 1.095      ;
-; -0.061 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out1[0]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.095      ;
-; -0.061 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out1[1]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.095      ;
-; -0.061 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out1[2]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.095      ;
-; -0.061 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out1[3]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.095      ;
-; -0.058 ; ctrl:controller|state.s6    ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 1.000        ; -0.012     ; 1.078      ;
-; -0.054 ; ctrl:controller|state.s7    ; ctrl:controller|enbcacc        ; clk          ; clk         ; 1.000        ; -0.015     ; 1.071      ;
-; -0.053 ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out2[0]     ; clk          ; clk         ; 1.000        ; -0.003     ; 1.082      ;
-; -0.053 ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out2[1]     ; clk          ; clk         ; 1.000        ; -0.003     ; 1.082      ;
-; -0.053 ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out2[2]     ; clk          ; clk         ; 1.000        ; -0.003     ; 1.082      ;
-; -0.053 ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out2[3]     ; clk          ; clk         ; 1.000        ; -0.003     ; 1.082      ;
-; -0.048 ; ctrl:controller|state.s5    ; ctrl:controller|selcrf[1]      ; clk          ; clk         ; 1.000        ; -0.005     ; 1.075      ;
-; -0.048 ; ctrl:controller|state.s5    ; ctrl:controller|selcrf[0]      ; clk          ; clk         ; 1.000        ; -0.005     ; 1.075      ;
-; -0.041 ; ctrl:controller|selc_dp[1]  ; dp:datapath|entrada_acc[0]     ; clk          ; clk         ; 1.000        ; -0.001     ; 1.072      ;
-; -0.041 ; ctrl:controller|selc_dp[1]  ; dp:datapath|entrada_acc[1]     ; clk          ; clk         ; 1.000        ; -0.001     ; 1.072      ;
-; -0.041 ; ctrl:controller|selc_dp[1]  ; dp:datapath|entrada_acc[2]     ; clk          ; clk         ; 1.000        ; -0.001     ; 1.072      ;
-; -0.041 ; ctrl:controller|selc_dp[1]  ; dp:datapath|entrada_acc[3]     ; clk          ; clk         ; 1.000        ; -0.001     ; 1.072      ;
-; -0.037 ; ctrl:controller|selc_dp[0]  ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.069      ;
-; -0.032 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada2_alu[0]    ; clk          ; clk         ; 1.000        ; 0.000      ; 1.064      ;
-; -0.029 ; ctrl:controller|selc_dp[3]  ; dp:datapath|alu:alu1|output[0] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.063      ;
-; -0.029 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out0[0]     ; clk          ; clk         ; 1.000        ; 0.003      ; 1.064      ;
-; -0.029 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out0[1]     ; clk          ; clk         ; 1.000        ; 0.003      ; 1.064      ;
-; -0.029 ; ctrl:controller|selc_dp[3]  ; dp:datapath|entrada1_alu[1]    ; clk          ; clk         ; 1.000        ; 0.002      ; 1.063      ;
-; -0.029 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out0[2]     ; clk          ; clk         ; 1.000        ; 0.003      ; 1.064      ;
-; -0.029 ; ctrl:controller|selc_dp[3]  ; dp:datapath|entrada1_alu[2]    ; clk          ; clk         ; 1.000        ; 0.002      ; 1.063      ;
-; -0.029 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out0[3]     ; clk          ; clk         ; 1.000        ; 0.003      ; 1.064      ;
-; -0.029 ; ctrl:controller|selc_dp[3]  ; dp:datapath|entrada1_alu[3]    ; clk          ; clk         ; 1.000        ; 0.002      ; 1.063      ;
-; -0.026 ; ctrl:controller|selc_dp[1]  ; dp:datapath|entrada_rf[0]      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.057      ;
-; -0.026 ; ctrl:controller|selc_dp[1]  ; dp:datapath|entrada_rf[1]      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.057      ;
-; -0.026 ; ctrl:controller|selc_dp[1]  ; dp:datapath|entrada_rf[2]      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.057      ;
-; -0.026 ; ctrl:controller|selc_dp[1]  ; dp:datapath|entrada_rf[3]      ; clk          ; clk         ; 1.000        ; -0.001     ; 1.057      ;
-; -0.022 ; ctrl:controller|state.s1    ; ctrl:controller|imm[1]         ; clk          ; clk         ; 1.000        ; -0.009     ; 1.045      ;
-; -0.022 ; ctrl:controller|state.s1    ; ctrl:controller|imm[0]         ; clk          ; clk         ; 1.000        ; -0.009     ; 1.045      ;
-; -0.022 ; ctrl:controller|state.s1    ; ctrl:controller|imm[3]         ; clk          ; clk         ; 1.000        ; -0.009     ; 1.045      ;
-; -0.020 ; ctrl:controller|state.s2    ; ctrl:controller|PC[1]          ; clk          ; clk         ; 1.000        ; -0.009     ; 1.043      ;
-; -0.020 ; ctrl:controller|state.s2    ; ctrl:controller|PC[2]          ; clk          ; clk         ; 1.000        ; -0.009     ; 1.043      ;
-; -0.019 ; ctrl:controller|selc_dp[0]  ; dp:datapath|alu:alu1|output[0] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.053      ;
-; -0.019 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada1_alu[1]    ; clk          ; clk         ; 1.000        ; 0.002      ; 1.053      ;
-; -0.019 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada1_alu[2]    ; clk          ; clk         ; 1.000        ; 0.002      ; 1.053      ;
-; -0.019 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada1_alu[3]    ; clk          ; clk         ; 1.000        ; 0.002      ; 1.053      ;
-; -0.017 ; ctrl:controller|selc_dp[1]  ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.049      ;
-; -0.017 ; ctrl:controller|selcrf[1]   ; dp:datapath|rf:rf1|out1[0]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.051      ;
-; -0.017 ; ctrl:controller|selcrf[1]   ; dp:datapath|rf:rf1|out1[1]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.051      ;
-; -0.017 ; ctrl:controller|selcrf[1]   ; dp:datapath|rf:rf1|out1[2]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.051      ;
-; -0.017 ; ctrl:controller|selcrf[1]   ; dp:datapath|rf:rf1|out1[3]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.051      ;
-; -0.016 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_acc[0]     ; clk          ; clk         ; 1.000        ; -0.001     ; 1.047      ;
-; -0.016 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_acc[1]     ; clk          ; clk         ; 1.000        ; -0.001     ; 1.047      ;
-; -0.016 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_acc[2]     ; clk          ; clk         ; 1.000        ; -0.001     ; 1.047      ;
-; -0.016 ; ctrl:controller|selc_dp[0]  ; dp:datapath|entrada_acc[3]     ; clk          ; clk         ; 1.000        ; -0.001     ; 1.047      ;
-; -0.009 ; ctrl:controller|state.s0    ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 1.000        ; -0.012     ; 1.029      ;
-; -0.009 ; ctrl:controller|state.s1    ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 1.000        ; -0.012     ; 1.029      ;
-; -0.008 ; ctrl:controller|state.s0    ; ctrl:controller|selc_dp[3]     ; clk          ; clk         ; 1.000        ; -0.012     ; 1.028      ;
-; -0.008 ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out0[0]     ; clk          ; clk         ; 1.000        ; -0.002     ; 1.038      ;
-; -0.008 ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out0[1]     ; clk          ; clk         ; 1.000        ; -0.002     ; 1.038      ;
-; -0.008 ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out0[2]     ; clk          ; clk         ; 1.000        ; -0.002     ; 1.038      ;
-; -0.008 ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out0[3]     ; clk          ; clk         ; 1.000        ; -0.002     ; 1.038      ;
-; -0.007 ; ctrl:controller|state.s0    ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.012     ; 1.027      ;
-; -0.007 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out2[0]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.041      ;
-; -0.007 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out2[1]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.041      ;
-; -0.007 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out2[2]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.041      ;
-; -0.007 ; ctrl:controller|selcrf[0]   ; dp:datapath|rf:rf1|out2[3]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.041      ;
-; -0.002 ; ctrl:controller|state.s8    ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.012     ; 1.022      ;
-; 0.002  ; ctrl:controller|selcrf[1]   ; dp:datapath|rf:rf1|out2[0]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.032      ;
-; 0.002  ; ctrl:controller|selcrf[1]   ; dp:datapath|rf:rf1|out2[1]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.032      ;
-; 0.002  ; ctrl:controller|selcrf[1]   ; dp:datapath|rf:rf1|out2[2]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.032      ;
-; 0.002  ; ctrl:controller|selcrf[1]   ; dp:datapath|rf:rf1|out2[3]     ; clk          ; clk         ; 1.000        ; 0.002      ; 1.032      ;
-; 0.004  ; ctrl:controller|state.s1    ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.012     ; 1.016      ;
-; 0.007  ; ctrl:controller|state.s6    ; ctrl:controller|selcrf[1]      ; clk          ; clk         ; 1.000        ; -0.005     ; 1.020      ;
-; 0.007  ; ctrl:controller|state.s6    ; ctrl:controller|selcrf[0]      ; clk          ; clk         ; 1.000        ; -0.005     ; 1.020      ;
-; 0.007  ; ctrl:controller|state.s0    ; ctrl:controller|enbcacc        ; clk          ; clk         ; 1.000        ; -0.015     ; 1.010      ;
-; 0.007  ; ctrl:controller|state.s2    ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 1.000        ; -0.012     ; 1.013      ;
-; 0.008  ; ctrl:controller|state.s2    ; ctrl:controller|selc_dp[3]     ; clk          ; clk         ; 1.000        ; -0.012     ; 1.012      ;
-; 0.009  ; ctrl:controller|state.s2    ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.012     ; 1.011      ;
-; 0.013  ; ctrl:controller|selcrf[1]   ; dp:datapath|rf:rf1|out0[0]     ; clk          ; clk         ; 1.000        ; 0.003      ; 1.022      ;
-; 0.013  ; ctrl:controller|selcrf[1]   ; dp:datapath|rf:rf1|out0[1]     ; clk          ; clk         ; 1.000        ; 0.003      ; 1.022      ;
-; 0.013  ; ctrl:controller|selcrf[1]   ; dp:datapath|rf:rf1|out0[2]     ; clk          ; clk         ; 1.000        ; 0.003      ; 1.022      ;
-; 0.013  ; ctrl:controller|selcrf[1]   ; dp:datapath|rf:rf1|out0[3]     ; clk          ; clk         ; 1.000        ; 0.003      ; 1.022      ;
-; 0.014  ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out1[0]     ; clk          ; clk         ; 1.000        ; -0.003     ; 1.015      ;
-; 0.014  ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out1[1]     ; clk          ; clk         ; 1.000        ; -0.003     ; 1.015      ;
-; 0.014  ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out1[2]     ; clk          ; clk         ; 1.000        ; -0.003     ; 1.015      ;
-; 0.014  ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out1[3]     ; clk          ; clk         ; 1.000        ; -0.003     ; 1.015      ;
-; 0.016  ; dp:datapath|entrada2_alu[2] ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.016      ;
-; 0.018  ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out3[0]     ; clk          ; clk         ; 1.000        ; -0.005     ; 1.009      ;
-; 0.018  ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out3[1]     ; clk          ; clk         ; 1.000        ; -0.005     ; 1.009      ;
-; 0.018  ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out3[2]     ; clk          ; clk         ; 1.000        ; -0.005     ; 1.009      ;
-; 0.018  ; ctrl:controller|enbcrf      ; dp:datapath|rf:rf1|out3[3]     ; clk          ; clk         ; 1.000        ; -0.005     ; 1.009      ;
-+--------+-----------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                        ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.404 ; ctrl:controller|selc_dp[2]     ; display1[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 1.445      ;
+; -0.391 ; ctrl:controller|selc_dp[3]     ; display1[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.005      ; 1.428      ;
+; -0.378 ; dp:datapath|entrada1_alu[0]    ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.412      ;
+; -0.365 ; dp:datapath|entrada2_alu[0]    ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.399      ;
+; -0.363 ; dp:datapath|entrada2_alu[0]    ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.397      ;
+; -0.360 ; ctrl:controller|selc_dp[2]     ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.390      ;
+; -0.359 ; dp:datapath|entrada1_alu[1]    ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.393      ;
+; -0.348 ; ctrl:controller|selc_dp[1]     ; display1[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.011      ; 1.391      ;
+; -0.337 ; ctrl:controller|selc_dp[2]     ; display1[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.008      ; 1.377      ;
+; -0.337 ; ctrl:controller|selc_dp[2]     ; display4[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.008      ; 1.377      ;
+; -0.335 ; ctrl:controller|selc_dp[2]     ; display3[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.008      ; 1.375      ;
+; -0.334 ; ctrl:controller|selc_dp[2]     ; display3[5]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 1.375      ;
+; -0.334 ; ctrl:controller|selc_dp[2]     ; display4[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.008      ; 1.374      ;
+; -0.333 ; ctrl:controller|selc_dp[2]     ; display3[0]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 1.374      ;
+; -0.331 ; ctrl:controller|selc_dp[2]     ; display3[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 1.372      ;
+; -0.324 ; ctrl:controller|selc_dp[3]     ; display1[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.004      ; 1.360      ;
+; -0.324 ; ctrl:controller|selc_dp[3]     ; display4[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.004      ; 1.360      ;
+; -0.323 ; ctrl:controller|selc_dp[0]     ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.353      ;
+; -0.322 ; ctrl:controller|selc_dp[3]     ; display3[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.004      ; 1.358      ;
+; -0.321 ; ctrl:controller|selc_dp[0]     ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.351      ;
+; -0.321 ; ctrl:controller|selc_dp[3]     ; display4[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.004      ; 1.357      ;
+; -0.317 ; ctrl:controller|selc_dp[3]     ; display3[5]~reg0               ; clk          ; clk         ; 1.000        ; 0.005      ; 1.354      ;
+; -0.316 ; ctrl:controller|selc_dp[3]     ; display3[0]~reg0               ; clk          ; clk         ; 1.000        ; 0.005      ; 1.353      ;
+; -0.314 ; ctrl:controller|selc_dp[3]     ; display3[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.005      ; 1.351      ;
+; -0.311 ; ctrl:controller|selc_dp[2]     ; display3[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 1.352      ;
+; -0.307 ; dp:datapath|entrada2_alu[3]    ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.341      ;
+; -0.294 ; ctrl:controller|selc_dp[3]     ; display3[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.005      ; 1.331      ;
+; -0.285 ; ctrl:controller|state.s10      ; ctrl:controller|selcrf[0]      ; clk          ; clk         ; 1.000        ; 0.012      ; 1.329      ;
+; -0.285 ; ctrl:controller|state.s10      ; ctrl:controller|selcrf[1]      ; clk          ; clk         ; 1.000        ; 0.012      ; 1.329      ;
+; -0.284 ; ctrl:controller|state.s0       ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.004     ; 1.312      ;
+; -0.281 ; ctrl:controller|selc_dp[1]     ; display1[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.010      ; 1.323      ;
+; -0.281 ; ctrl:controller|selc_dp[1]     ; display4[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.010      ; 1.323      ;
+; -0.279 ; ctrl:controller|selc_dp[1]     ; display3[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.010      ; 1.321      ;
+; -0.279 ; ctrl:controller|selc_dp[1]     ; display3[5]~reg0               ; clk          ; clk         ; 1.000        ; 0.011      ; 1.322      ;
+; -0.278 ; ctrl:controller|selc_dp[1]     ; display4[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.010      ; 1.320      ;
+; -0.278 ; ctrl:controller|selc_dp[1]     ; display3[0]~reg0               ; clk          ; clk         ; 1.000        ; 0.011      ; 1.321      ;
+; -0.276 ; ctrl:controller|selc_dp[1]     ; display3[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.011      ; 1.319      ;
+; -0.272 ; ctrl:controller|selc_dp[2]     ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.302      ;
+; -0.268 ; ctrl:controller|selc_dp[0]     ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.298      ;
+; -0.268 ; dp:datapath|entrada1_alu[1]    ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.302      ;
+; -0.265 ; ctrl:controller|state.s9       ; ctrl:controller|selcrf[0]      ; clk          ; clk         ; 1.000        ; 0.012      ; 1.309      ;
+; -0.265 ; ctrl:controller|state.s9       ; ctrl:controller|selcrf[1]      ; clk          ; clk         ; 1.000        ; 0.012      ; 1.309      ;
+; -0.256 ; ctrl:controller|selc_dp[2]     ; display2[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 1.297      ;
+; -0.256 ; ctrl:controller|selc_dp[1]     ; display3[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.011      ; 1.299      ;
+; -0.255 ; ctrl:controller|selc_dp[2]     ; display2[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 1.296      ;
+; -0.255 ; ctrl:controller|selc_dp[2]     ; display3[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 1.296      ;
+; -0.254 ; ctrl:controller|selc_dp[2]     ; display2[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 1.295      ;
+; -0.254 ; ctrl:controller|selc_dp[2]     ; display2[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 1.295      ;
+; -0.254 ; ctrl:controller|selc_dp[1]     ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.286      ;
+; -0.253 ; ctrl:controller|selc_dp[2]     ; display2[5]~reg0               ; clk          ; clk         ; 1.000        ; 0.009      ; 1.294      ;
+; -0.253 ; dp:datapath|entrada1_alu[1]    ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.287      ;
+; -0.252 ; dp:datapath|alu:alu1|output[3] ; conv1[5]~reg0                  ; clk          ; clk         ; 1.000        ; 0.014      ; 1.298      ;
+; -0.252 ; ctrl:controller|state.s2       ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.006     ; 1.278      ;
+; -0.250 ; dp:datapath|alu:alu1|output[3] ; conv1[0]~reg0                  ; clk          ; clk         ; 1.000        ; 0.014      ; 1.296      ;
+; -0.249 ; dp:datapath|alu:alu1|output[3] ; conv1[4]~reg0                  ; clk          ; clk         ; 1.000        ; 0.014      ; 1.295      ;
+; -0.246 ; ctrl:controller|selc_dp[1]     ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.278      ;
+; -0.244 ; dp:datapath|entrada2_alu[1]    ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.278      ;
+; -0.243 ; ctrl:controller|selc_dp[1]     ; display2[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.011      ; 1.286      ;
+; -0.242 ; ctrl:controller|selc_dp[3]     ; display2[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.005      ; 1.279      ;
+; -0.242 ; ctrl:controller|selc_dp[3]     ; display3[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.005      ; 1.279      ;
+; -0.241 ; ctrl:controller|selc_dp[3]     ; display2[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.005      ; 1.278      ;
+; -0.241 ; ctrl:controller|selc_dp[1]     ; display2[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.011      ; 1.284      ;
+; -0.240 ; ctrl:controller|selc_dp[3]     ; display2[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.005      ; 1.277      ;
+; -0.240 ; ctrl:controller|selc_dp[1]     ; display2[5]~reg0               ; clk          ; clk         ; 1.000        ; 0.011      ; 1.283      ;
+; -0.238 ; ctrl:controller|selc_dp[3]     ; display2[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.005      ; 1.275      ;
+; -0.237 ; ctrl:controller|selc_dp[3]     ; display2[5]~reg0               ; clk          ; clk         ; 1.000        ; 0.005      ; 1.274      ;
+; -0.219 ; dp:datapath|alu:alu1|output[0] ; conv2[0]~reg0                  ; clk          ; clk         ; 1.000        ; 0.010      ; 1.261      ;
+; -0.219 ; dp:datapath|alu:alu1|output[0] ; conv2[1]~reg0                  ; clk          ; clk         ; 1.000        ; 0.010      ; 1.261      ;
+; -0.219 ; dp:datapath|alu:alu1|output[0] ; conv2[4]~reg0                  ; clk          ; clk         ; 1.000        ; 0.010      ; 1.261      ;
+; -0.218 ; dp:datapath|alu:alu1|output[0] ; conv2[5]~reg0                  ; clk          ; clk         ; 1.000        ; 0.010      ; 1.260      ;
+; -0.217 ; dp:datapath|alu:alu1|output[0] ; conv2[6]~reg0                  ; clk          ; clk         ; 1.000        ; 0.010      ; 1.259      ;
+; -0.217 ; ctrl:controller|selc_dp[2]     ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; -0.002     ; 1.247      ;
+; -0.215 ; ctrl:controller|selc_dp[3]     ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; -0.006     ; 1.241      ;
+; -0.212 ; dp:datapath|alu:alu1|output[0] ; conv2[3]~reg0                  ; clk          ; clk         ; 1.000        ; 0.010      ; 1.254      ;
+; -0.210 ; ctrl:controller|selc_dp[2]     ; display4[0]~reg0               ; clk          ; clk         ; 1.000        ; 0.013      ; 1.255      ;
+; -0.209 ; dp:datapath|alu:alu1|output[0] ; conv2[2]~reg0                  ; clk          ; clk         ; 1.000        ; 0.010      ; 1.251      ;
+; -0.208 ; ctrl:controller|selc_dp[2]     ; display4[4]~reg0               ; clk          ; clk         ; 1.000        ; 0.013      ; 1.253      ;
+; -0.207 ; ctrl:controller|selc_dp[2]     ; display4[3]~reg0               ; clk          ; clk         ; 1.000        ; 0.013      ; 1.252      ;
+; -0.206 ; ctrl:controller|selc_dp[2]     ; display4[5]~reg0               ; clk          ; clk         ; 1.000        ; 0.013      ; 1.251      ;
+; -0.206 ; dp:datapath|entrada2_alu[0]    ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.240      ;
+; -0.201 ; ctrl:controller|state.s8       ; ctrl:controller|selcrf[0]      ; clk          ; clk         ; 1.000        ; 0.012      ; 1.245      ;
+; -0.201 ; ctrl:controller|state.s8       ; ctrl:controller|selcrf[1]      ; clk          ; clk         ; 1.000        ; 0.012      ; 1.245      ;
+; -0.199 ; ctrl:controller|selc_dp[1]     ; display2[2]~reg0               ; clk          ; clk         ; 1.000        ; 0.011      ; 1.242      ;
+; -0.199 ; ctrl:controller|selc_dp[1]     ; display3[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.011      ; 1.242      ;
+; -0.198 ; ctrl:controller|selc_dp[1]     ; display2[1]~reg0               ; clk          ; clk         ; 1.000        ; 0.011      ; 1.241      ;
+; -0.196 ; ctrl:controller|selc_dp[1]     ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.228      ;
+; -0.191 ; dp:datapath|entrada1_alu[0]    ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.225      ;
+; -0.189 ; dp:datapath|entrada1_alu[0]    ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.223      ;
+; -0.189 ; ctrl:controller|state.done     ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 1.000        ; -0.004     ; 1.217      ;
+; -0.186 ; dp:datapath|entrada2_alu[1]    ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.220      ;
+; -0.179 ; ctrl:controller|state.s0       ; ctrl:controller|selc_dp[2]     ; clk          ; clk         ; 1.000        ; -0.002     ; 1.209      ;
+; -0.178 ; ctrl:controller|selc_dp[3]     ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 1.000        ; -0.006     ; 1.204      ;
+; -0.178 ; dp:datapath|entrada1_alu[3]    ; dp:datapath|alu:alu1|output[3] ; clk          ; clk         ; 1.000        ; 0.002      ; 1.212      ;
+; -0.168 ; ctrl:controller|selc_dp[0]     ; dp:datapath|entrada2_alu[1]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.196      ;
+; -0.168 ; ctrl:controller|selc_dp[0]     ; dp:datapath|entrada1_alu[0]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.196      ;
+; -0.168 ; ctrl:controller|selc_dp[0]     ; dp:datapath|entrada2_alu[0]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.196      ;
+; -0.168 ; ctrl:controller|selc_dp[0]     ; dp:datapath|entrada1_alu[1]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.196      ;
+; -0.168 ; ctrl:controller|selc_dp[0]     ; dp:datapath|entrada2_alu[2]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.196      ;
+; -0.168 ; ctrl:controller|selc_dp[0]     ; dp:datapath|entrada1_alu[2]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.196      ;
+; -0.168 ; ctrl:controller|selc_dp[0]     ; dp:datapath|entrada1_alu[3]    ; clk          ; clk         ; 1.000        ; -0.004     ; 1.196      ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -744,106 +744,106 @@ No paths to report.
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.215 ; ctrl:controller|state.s0       ; ctrl:controller|state.s0       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; ctrl:controller|PC[0]          ; ctrl:controller|PC[0]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; ctrl:controller|state.done     ; ctrl:controller|state.done     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; ctrl:controller|selc_dp[1]     ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; ctrl:controller|selc_dp[0]     ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; ctrl:controller|selc_dp[3]     ; ctrl:controller|selc_dp[3]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; ctrl:controller|enbcrf         ; ctrl:controller|enbcrf         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; dp:datapath|acc:acc1|temp[0]   ; dp:datapath|acc:acc1|temp[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.215 ; ctrl:controller|enbcacc        ; ctrl:controller|enbcacc        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ctrl:controller|state.s1       ; ctrl:controller|state.s1       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; dp:datapath|acc:acc1|temp[1]   ; dp:datapath|acc:acc1|temp[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; dp:datapath|acc:acc1|temp[0]   ; dp:datapath|acc:acc1|temp[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; ctrl:controller|enbcrf         ; ctrl:controller|enbcrf         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; dp:datapath|acc:acc1|temp[2]   ; dp:datapath|acc:acc1|temp[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; dp:datapath|acc:acc1|temp[3]   ; dp:datapath|acc:acc1|temp[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
-; 0.255 ; ctrl:controller|state.s6       ; ctrl:controller|enbcrf         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.407      ;
-; 0.259 ; ctrl:controller|state.s1       ; ctrl:controller|state.s2       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.411      ;
-; 0.315 ; dp:datapath|acc:acc1|output[0] ; conv2[2]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.467      ;
-; 0.315 ; dp:datapath|acc:acc1|output[0] ; conv2[5]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.467      ;
-; 0.317 ; dp:datapath|acc:acc1|output[0] ; conv2[3]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.469      ;
-; 0.317 ; dp:datapath|acc:acc1|output[0] ; conv2[4]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.469      ;
-; 0.319 ; dp:datapath|acc:acc1|output[0] ; conv2[6]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.471      ;
-; 0.320 ; ctrl:controller|imm[3]         ; dp:datapath|entrada1_alu[3]    ; clk          ; clk         ; 0.000        ; -0.001     ; 0.471      ;
-; 0.322 ; dp:datapath|acc:acc1|output[0] ; conv2[0]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.474      ;
-; 0.323 ; dp:datapath|acc:acc1|output[0] ; conv2[1]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.475      ;
-; 0.326 ; dp:datapath|alu:alu1|output[3] ; dp:datapath|entrada_acc[3]     ; clk          ; clk         ; 0.000        ; -0.001     ; 0.477      ;
-; 0.327 ; ctrl:controller|state.s4       ; ctrl:controller|state.s1       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.479      ;
-; 0.327 ; dp:datapath|entrada_acc[2]     ; dp:datapath|acc:acc1|temp[2]   ; clk          ; clk         ; 0.000        ; -0.002     ; 0.477      ;
-; 0.328 ; dp:datapath|entrada_acc[1]     ; dp:datapath|acc:acc1|temp[1]   ; clk          ; clk         ; 0.000        ; -0.002     ; 0.478      ;
-; 0.329 ; dp:datapath|entrada_acc[0]     ; dp:datapath|acc:acc1|temp[0]   ; clk          ; clk         ; 0.000        ; -0.002     ; 0.479      ;
-; 0.330 ; dp:datapath|alu:alu1|output[3] ; dp:datapath|entrada_rf[3]      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.481      ;
-; 0.346 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s6       ; clk          ; clk         ; 0.000        ; -0.001     ; 0.497      ;
-; 0.347 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s8       ; clk          ; clk         ; 0.000        ; -0.001     ; 0.498      ;
-; 0.347 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s13      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.498      ;
-; 0.347 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s5       ; clk          ; clk         ; 0.000        ; -0.001     ; 0.498      ;
-; 0.348 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s7       ; clk          ; clk         ; 0.000        ; -0.001     ; 0.499      ;
-; 0.348 ; ctrl:controller|state.s4       ; ctrl:controller|state.s13      ; clk          ; clk         ; 0.000        ; 0.000      ; 0.500      ;
-; 0.350 ; ctrl:controller|state.s4       ; ctrl:controller|state.s5       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.502      ;
-; 0.353 ; ctrl:controller|state.s4       ; ctrl:controller|state.s6       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.505      ;
-; 0.353 ; ctrl:controller|state.s4       ; ctrl:controller|state.s8       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.505      ;
-; 0.355 ; ctrl:controller|state.s4       ; ctrl:controller|state.s7       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.507      ;
-; 0.371 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
-; 0.371 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.523      ;
-; 0.372 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.524      ;
-; 0.375 ; ctrl:controller|state.s8       ; ctrl:controller|enbcrf         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.527      ;
-; 0.375 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.527      ;
-; 0.378 ; ctrl:controller|selc_dp[0]     ; dp:datapath|entrada2_alu[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.530      ;
-; 0.378 ; dp:datapath|acc:acc1|temp[2]   ; dp:datapath|acc:acc1|output[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.530      ;
-; 0.379 ; ctrl:controller|ADDRESS[1]     ; ctrl:controller|imm[1]         ; clk          ; clk         ; 0.000        ; -0.010     ; 0.521      ;
-; 0.380 ; ctrl:controller|selc_dp[1]     ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.532      ;
-; 0.383 ; ctrl:controller|selc_dp[3]     ; dp:datapath|entrada2_alu[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.535      ;
-; 0.384 ; ctrl:controller|selc_dp[1]     ; dp:datapath|entrada1_alu[1]    ; clk          ; clk         ; 0.000        ; 0.002      ; 0.538      ;
-; 0.392 ; dp:datapath|acc:acc1|temp[3]   ; dp:datapath|acc:acc1|output[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.544      ;
-; 0.409 ; ctrl:controller|state.s2       ; ctrl:controller|state.s4       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.561      ;
-; 0.413 ; dp:datapath|alu:alu1|output[1] ; dp:datapath|entrada_acc[1]     ; clk          ; clk         ; 0.000        ; -0.001     ; 0.564      ;
-; 0.413 ; dp:datapath|alu:alu1|output[2] ; dp:datapath|entrada_rf[2]      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.564      ;
-; 0.415 ; dp:datapath|alu:alu1|output[1] ; dp:datapath|entrada_rf[1]      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.566      ;
-; 0.416 ; dp:datapath|acc:acc1|output[1] ; dp:datapath|entrada2_alu[1]    ; clk          ; clk         ; 0.000        ; 0.003      ; 0.571      ;
-; 0.418 ; dp:datapath|alu:alu1|output[2] ; dp:datapath|entrada_acc[2]     ; clk          ; clk         ; 0.000        ; -0.001     ; 0.569      ;
-; 0.421 ; ctrl:controller|state.s1       ; ctrl:controller|state.s1       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.573      ;
-; 0.423 ; dp:datapath|entrada_acc[3]     ; dp:datapath|acc:acc1|temp[3]   ; clk          ; clk         ; 0.000        ; -0.002     ; 0.573      ;
-; 0.424 ; ctrl:controller|PC[2]          ; ctrl:controller|imm[3]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.576      ;
-; 0.425 ; dp:datapath|alu:alu1|output[0] ; dp:datapath|entrada_acc[0]     ; clk          ; clk         ; 0.000        ; -0.003     ; 0.574      ;
-; 0.427 ; dp:datapath|alu:alu1|output[0] ; dp:datapath|entrada_rf[0]      ; clk          ; clk         ; 0.000        ; -0.003     ; 0.576      ;
-; 0.430 ; ctrl:controller|PC[2]          ; ctrl:controller|PC[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.582      ;
-; 0.434 ; dp:datapath|rf:rf1|out1[2]     ; dp:datapath|rf:rf1|output[2]   ; clk          ; clk         ; 0.000        ; 0.001      ; 0.587      ;
-; 0.438 ; dp:datapath|rf:rf1|out2[1]     ; dp:datapath|rf:rf1|output[1]   ; clk          ; clk         ; 0.000        ; 0.001      ; 0.591      ;
-; 0.440 ; dp:datapath|entrada_rf[2]      ; dp:datapath|rf:rf1|out3[2]     ; clk          ; clk         ; 0.000        ; 0.008      ; 0.600      ;
-; 0.442 ; dp:datapath|rf:rf1|out1[0]     ; dp:datapath|rf:rf1|output[0]   ; clk          ; clk         ; 0.000        ; 0.001      ; 0.595      ;
-; 0.442 ; dp:datapath|entrada_rf[3]      ; dp:datapath|rf:rf1|out0[3]     ; clk          ; clk         ; 0.000        ; 0.011      ; 0.605      ;
-; 0.442 ; ctrl:controller|selc_dp[3]     ; display1[5]~reg0               ; clk          ; clk         ; 0.000        ; 0.007      ; 0.601      ;
-; 0.443 ; ctrl:controller|imm[1]         ; dp:datapath|entrada1_alu[1]    ; clk          ; clk         ; 0.000        ; -0.001     ; 0.594      ;
-; 0.444 ; dp:datapath|entrada_rf[0]      ; dp:datapath|rf:rf1|out0[0]     ; clk          ; clk         ; 0.000        ; 0.011      ; 0.607      ;
-; 0.444 ; dp:datapath|entrada_rf[2]      ; dp:datapath|rf:rf1|out1[2]     ; clk          ; clk         ; 0.000        ; 0.010      ; 0.606      ;
-; 0.445 ; ctrl:controller|selc_dp[3]     ; display1[3]~reg0               ; clk          ; clk         ; 0.000        ; 0.007      ; 0.604      ;
-; 0.445 ; ctrl:controller|selc_dp[3]     ; display1[4]~reg0               ; clk          ; clk         ; 0.000        ; 0.007      ; 0.604      ;
-; 0.446 ; dp:datapath|entrada_rf[2]      ; dp:datapath|rf:rf1|out2[2]     ; clk          ; clk         ; 0.000        ; 0.010      ; 0.608      ;
-; 0.453 ; dp:datapath|rf:rf1|out2[3]     ; dp:datapath|rf:rf1|output[3]   ; clk          ; clk         ; 0.000        ; 0.001      ; 0.606      ;
-; 0.460 ; dp:datapath|acc:acc1|output[1] ; conv2[2]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.612      ;
-; 0.460 ; dp:datapath|acc:acc1|output[1] ; conv2[5]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.612      ;
-; 0.460 ; dp:datapath|acc:acc1|output[1] ; conv2[4]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.612      ;
-; 0.461 ; dp:datapath|acc:acc1|output[1] ; conv2[3]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.613      ;
-; 0.461 ; dp:datapath|rf:rf1|out3[1]     ; dp:datapath|rf:rf1|output[1]   ; clk          ; clk         ; 0.000        ; 0.003      ; 0.616      ;
-; 0.462 ; dp:datapath|acc:acc1|temp[1]   ; dp:datapath|acc:acc1|output[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.614      ;
-; 0.462 ; dp:datapath|acc:acc1|output[1] ; conv1[4]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.614      ;
-; 0.462 ; dp:datapath|acc:acc1|output[1] ; conv2[6]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.614      ;
-; 0.463 ; dp:datapath|rf:rf1|out1[1]     ; dp:datapath|rf:rf1|output[1]   ; clk          ; clk         ; 0.000        ; 0.001      ; 0.616      ;
-; 0.463 ; dp:datapath|rf:rf1|out3[0]     ; dp:datapath|rf:rf1|output[0]   ; clk          ; clk         ; 0.000        ; 0.003      ; 0.618      ;
-; 0.463 ; dp:datapath|rf:rf1|out1[3]     ; dp:datapath|rf:rf1|output[3]   ; clk          ; clk         ; 0.000        ; 0.001      ; 0.616      ;
-; 0.464 ; dp:datapath|acc:acc1|output[1] ; conv2[0]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.616      ;
-; 0.465 ; dp:datapath|acc:acc1|output[1] ; conv2[1]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.617      ;
-; 0.465 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s1       ; clk          ; clk         ; 0.000        ; -0.001     ; 0.616      ;
-; 0.465 ; ctrl:controller|OPCODE[0]      ; ctrl:controller|state.s7       ; clk          ; clk         ; 0.000        ; -0.001     ; 0.616      ;
-; 0.465 ; dp:datapath|rf:rf1|out3[2]     ; dp:datapath|rf:rf1|output[2]   ; clk          ; clk         ; 0.000        ; 0.003      ; 0.620      ;
-; 0.465 ; dp:datapath|rf:rf1|out2[0]     ; dp:datapath|rf:rf1|output[0]   ; clk          ; clk         ; 0.000        ; 0.001      ; 0.618      ;
-; 0.466 ; dp:datapath|rf:rf1|out3[3]     ; dp:datapath|rf:rf1|output[3]   ; clk          ; clk         ; 0.000        ; 0.003      ; 0.621      ;
-; 0.470 ; ctrl:controller|PC[1]          ; ctrl:controller|imm[1]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.622      ;
-; 0.471 ; ctrl:controller|OPCODE[0]      ; ctrl:controller|state.done     ; clk          ; clk         ; 0.000        ; -0.001     ; 0.622      ;
-; 0.471 ; dp:datapath|acc:acc1|output[2] ; conv2[6]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.623      ;
-; 0.472 ; dp:datapath|acc:acc1|output[2] ; conv2[2]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.624      ;
-; 0.472 ; dp:datapath|acc:acc1|output[2] ; conv2[4]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.624      ;
-; 0.473 ; dp:datapath|acc:acc1|output[2] ; conv2[5]~reg0                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.625      ;
-; 0.473 ; ctrl:controller|OPCODE[0]      ; ctrl:controller|state.s6       ; clk          ; clk         ; 0.000        ; -0.001     ; 0.624      ;
+; 0.251 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.403      ;
+; 0.329 ; ctrl:controller|ADDRESS[1]     ; ctrl:controller|imm[1]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.481      ;
+; 0.337 ; ctrl:controller|OPCODE[1]      ; ctrl:controller|state.s7       ; clk          ; clk         ; 0.000        ; -0.001     ; 0.488      ;
+; 0.350 ; ctrl:controller|state.s1       ; ctrl:controller|imm[3]         ; clk          ; clk         ; 0.000        ; 0.001      ; 0.503      ;
+; 0.352 ; ctrl:controller|state.s1       ; ctrl:controller|imm[0]         ; clk          ; clk         ; 0.000        ; 0.001      ; 0.505      ;
+; 0.355 ; dp:datapath|rf:rf1|out3[0]     ; dp:datapath|rf:rf1|output[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.507      ;
+; 0.357 ; dp:datapath|rf:rf1|out3[3]     ; dp:datapath|rf:rf1|output[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358 ; dp:datapath|rf:rf1|out3[1]     ; dp:datapath|rf:rf1|output[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.510      ;
+; 0.360 ; ctrl:controller|state.s13      ; ctrl:controller|enbcacc        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.512      ;
+; 0.362 ; dp:datapath|acc:acc1|output[3] ; dp:datapath|entrada2_alu[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363 ; ctrl:controller|state.s9       ; ctrl:controller|selc_dp[2]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.515      ;
+; 0.365 ; dp:datapath|alu:alu1|output[0] ; dp:datapath|acc:acc1|temp[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; ctrl:controller|ADDRESS[3]     ; ctrl:controller|imm[3]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.517      ;
+; 0.366 ; dp:datapath|rf:rf1|out3[2]     ; dp:datapath|rf:rf1|output[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.518      ;
+; 0.366 ; ctrl:controller|state.s5       ; ctrl:controller|enbcrf         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.518      ;
+; 0.369 ; ctrl:controller|state.s8       ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.521      ;
+; 0.379 ; ctrl:controller|state.s6       ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.531      ;
+; 0.380 ; ctrl:controller|state.s11      ; ctrl:controller|selc_dp[2]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.532      ;
+; 0.382 ; ctrl:controller|ADDRESS[0]     ; ctrl:controller|PC[2]          ; clk          ; clk         ; 0.000        ; 0.001      ; 0.535      ;
+; 0.387 ; ctrl:controller|state.s10      ; ctrl:controller|selc_dp[2]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.539      ;
+; 0.387 ; ctrl:controller|state.s10      ; ctrl:controller|selc_dp[0]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.539      ;
+; 0.393 ; ctrl:controller|PC[0]          ; ctrl:controller|OPCODE[0]      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.544      ;
+; 0.395 ; ctrl:controller|PC[0]          ; ctrl:controller|OPCODE[1]      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.546      ;
+; 0.396 ; ctrl:controller|PC[0]          ; ctrl:controller|OPCODE[2]      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.547      ;
+; 0.426 ; dp:datapath|alu:alu1|output[3] ; dp:datapath|acc:acc1|temp[3]   ; clk          ; clk         ; 0.000        ; 0.014      ; 0.592      ;
+; 0.427 ; dp:datapath|alu:alu1|output[3] ; dp:datapath|rf:rf1|out2[3]     ; clk          ; clk         ; 0.000        ; 0.014      ; 0.593      ;
+; 0.432 ; dp:datapath|alu:alu1|output[1] ; dp:datapath|acc:acc1|temp[1]   ; clk          ; clk         ; 0.000        ; 0.014      ; 0.598      ;
+; 0.433 ; dp:datapath|alu:alu1|output[1] ; dp:datapath|rf:rf1|out2[1]     ; clk          ; clk         ; 0.000        ; 0.014      ; 0.599      ;
+; 0.437 ; ctrl:controller|OPCODE[0]      ; ctrl:controller|state.done     ; clk          ; clk         ; 0.000        ; -0.001     ; 0.588      ;
+; 0.443 ; dp:datapath|rf:rf1|out1[2]     ; dp:datapath|rf:rf1|output[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.595      ;
+; 0.445 ; dp:datapath|rf:rf1|out2[1]     ; dp:datapath|rf:rf1|output[1]   ; clk          ; clk         ; 0.000        ; -0.003     ; 0.594      ;
+; 0.446 ; dp:datapath|rf:rf1|out0[0]     ; dp:datapath|rf:rf1|output[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.598      ;
+; 0.450 ; dp:datapath|rf:rf1|out1[0]     ; dp:datapath|rf:rf1|output[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.602      ;
+; 0.452 ; ctrl:controller|state.s11      ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 0.000        ; -0.002     ; 0.602      ;
+; 0.456 ; dp:datapath|alu:alu1|output[2] ; dp:datapath|acc:acc1|temp[2]   ; clk          ; clk         ; 0.000        ; 0.014      ; 0.622      ;
+; 0.457 ; dp:datapath|alu:alu1|output[2] ; dp:datapath|rf:rf1|out2[2]     ; clk          ; clk         ; 0.000        ; 0.014      ; 0.623      ;
+; 0.457 ; dp:datapath|rf:rf1|out0[2]     ; dp:datapath|rf:rf1|output[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.609      ;
+; 0.463 ; dp:datapath|entrada2_alu[2]    ; dp:datapath|alu:alu1|output[2] ; clk          ; clk         ; 0.000        ; 0.002      ; 0.617      ;
+; 0.465 ; dp:datapath|acc:acc1|temp[0]   ; dp:datapath|acc:acc1|output[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.617      ;
+; 0.469 ; dp:datapath|rf:rf1|out0[3]     ; dp:datapath|rf:rf1|output[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.621      ;
+; 0.470 ; ctrl:controller|state.s7       ; ctrl:controller|imm[3]         ; clk          ; clk         ; 0.000        ; 0.001      ; 0.623      ;
+; 0.475 ; ctrl:controller|state.s7       ; ctrl:controller|imm[0]         ; clk          ; clk         ; 0.000        ; 0.001      ; 0.628      ;
+; 0.476 ; ctrl:controller|OPCODE[2]      ; ctrl:controller|state.s11      ; clk          ; clk         ; 0.000        ; -0.003     ; 0.625      ;
+; 0.476 ; ctrl:controller|OPCODE[2]      ; ctrl:controller|state.s10      ; clk          ; clk         ; 0.000        ; -0.003     ; 0.625      ;
+; 0.476 ; ctrl:controller|OPCODE[2]      ; ctrl:controller|state.s5       ; clk          ; clk         ; 0.000        ; -0.003     ; 0.625      ;
+; 0.476 ; ctrl:controller|state.s7       ; ctrl:controller|imm[1]         ; clk          ; clk         ; 0.000        ; 0.001      ; 0.629      ;
+; 0.477 ; ctrl:controller|OPCODE[2]      ; ctrl:controller|state.s8       ; clk          ; clk         ; 0.000        ; -0.003     ; 0.626      ;
+; 0.477 ; ctrl:controller|OPCODE[2]      ; ctrl:controller|state.s9       ; clk          ; clk         ; 0.000        ; -0.003     ; 0.626      ;
+; 0.477 ; ctrl:controller|OPCODE[2]      ; ctrl:controller|state.s6       ; clk          ; clk         ; 0.000        ; -0.003     ; 0.626      ;
+; 0.479 ; dp:datapath|acc:acc1|output[2] ; dp:datapath|entrada2_alu[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.631      ;
+; 0.481 ; ctrl:controller|selc_dp[0]     ; dp:datapath|entrada2_alu[3]    ; clk          ; clk         ; 0.000        ; -0.004     ; 0.629      ;
+; 0.484 ; ctrl:controller|selc_dp[3]     ; ctrl:controller|selc_dp[3]     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.636      ;
+; 0.493 ; ctrl:controller|state.s13      ; ctrl:controller|selc_dp[3]     ; clk          ; clk         ; 0.000        ; 0.002      ; 0.647      ;
+; 0.495 ; dp:datapath|entrada1_alu[1]    ; dp:datapath|alu:alu1|output[1] ; clk          ; clk         ; 0.000        ; 0.002      ; 0.649      ;
+; 0.496 ; ctrl:controller|OPCODE[2]      ; ctrl:controller|state.s7       ; clk          ; clk         ; 0.000        ; -0.001     ; 0.647      ;
+; 0.498 ; dp:datapath|rf:rf1|out2[3]     ; dp:datapath|rf:rf1|output[3]   ; clk          ; clk         ; 0.000        ; -0.003     ; 0.647      ;
+; 0.500 ; ctrl:controller|state.s12      ; ctrl:controller|PC[0]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.652      ;
+; 0.501 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|output[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.653      ;
+; 0.503 ; ctrl:controller|selcrf[0]      ; dp:datapath|rf:rf1|output[2]   ; clk          ; clk         ; 0.000        ; -0.003     ; 0.652      ;
+; 0.504 ; ctrl:controller|state.s12      ; ctrl:controller|PC[1]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.656      ;
+; 0.505 ; ctrl:controller|selcrf[0]      ; dp:datapath|rf:rf1|output[0]   ; clk          ; clk         ; 0.000        ; -0.003     ; 0.654      ;
+; 0.507 ; dp:datapath|rf:rf1|out0[1]     ; dp:datapath|rf:rf1|output[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.659      ;
+; 0.514 ; ctrl:controller|state.s1       ; ctrl:controller|state.s2       ; clk          ; clk         ; 0.000        ; 0.002      ; 0.668      ;
+; 0.522 ; ctrl:controller|ADDRESS[3]     ; ctrl:controller|selcrf[1]      ; clk          ; clk         ; 0.000        ; 0.009      ; 0.683      ;
+; 0.524 ; ctrl:controller|PC[2]          ; ctrl:controller|imm[3]         ; clk          ; clk         ; 0.000        ; -0.001     ; 0.675      ;
+; 0.529 ; ctrl:controller|selc_dp[2]     ; dp:datapath|entrada2_alu[3]    ; clk          ; clk         ; 0.000        ; -0.004     ; 0.677      ;
+; 0.530 ; ctrl:controller|selc_dp[2]     ; dp:datapath|entrada2_alu[1]    ; clk          ; clk         ; 0.000        ; -0.004     ; 0.678      ;
+; 0.532 ; ctrl:controller|state.s2       ; ctrl:controller|state.s4       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.684      ;
+; 0.532 ; ctrl:controller|PC[2]          ; ctrl:controller|PC[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.684      ;
+; 0.539 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[2]   ; clk          ; clk         ; 0.000        ; 0.010      ; 0.701      ;
+; 0.540 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[1]   ; clk          ; clk         ; 0.000        ; 0.010      ; 0.702      ;
+; 0.541 ; ctrl:controller|enbcacc        ; dp:datapath|acc:acc1|temp[3]   ; clk          ; clk         ; 0.000        ; 0.010      ; 0.703      ;
+; 0.545 ; ctrl:controller|state.s1       ; ctrl:controller|imm[1]         ; clk          ; clk         ; 0.000        ; 0.001      ; 0.698      ;
+; 0.547 ; ctrl:controller|imm[3]         ; dp:datapath|entrada1_alu[3]    ; clk          ; clk         ; 0.000        ; -0.007     ; 0.692      ;
+; 0.548 ; ctrl:controller|imm[1]         ; dp:datapath|entrada1_alu[1]    ; clk          ; clk         ; 0.000        ; -0.007     ; 0.693      ;
+; 0.548 ; dp:datapath|acc:acc1|output[1] ; dp:datapath|entrada2_alu[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.700      ;
+; 0.549 ; ctrl:controller|enbcacc        ; ctrl:controller|enbcacc        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.701      ;
+; 0.552 ; ctrl:controller|ADDRESS[0]     ; ctrl:controller|selcrf[0]      ; clk          ; clk         ; 0.000        ; 0.009      ; 0.713      ;
+; 0.553 ; ctrl:controller|state.s7       ; ctrl:controller|selc_dp[1]     ; clk          ; clk         ; 0.000        ; -0.004     ; 0.701      ;
+; 0.554 ; ctrl:controller|state.s11      ; ctrl:controller|enbcrf         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.706      ;
+; 0.555 ; ctrl:controller|ADDRESS[0]     ; ctrl:controller|imm[0]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.707      ;
+; 0.556 ; ctrl:controller|PC[1]          ; ctrl:controller|imm[1]         ; clk          ; clk         ; 0.000        ; -0.001     ; 0.707      ;
+; 0.557 ; dp:datapath|alu:alu1|output[3] ; dp:datapath|rf:rf1|out3[3]     ; clk          ; clk         ; 0.000        ; 0.011      ; 0.720      ;
+; 0.560 ; ctrl:controller|PC[2]          ; ctrl:controller|ADDRESS[3]     ; clk          ; clk         ; 0.000        ; -0.001     ; 0.711      ;
+; 0.565 ; dp:datapath|acc:acc1|temp[1]   ; dp:datapath|acc:acc1|output[1] ; clk          ; clk         ; 0.000        ; -0.016     ; 0.701      ;
+; 0.565 ; dp:datapath|acc:acc1|temp[2]   ; dp:datapath|acc:acc1|output[2] ; clk          ; clk         ; 0.000        ; -0.016     ; 0.701      ;
+; 0.565 ; ctrl:controller|OPCODE[0]      ; ctrl:controller|state.s7       ; clk          ; clk         ; 0.000        ; -0.001     ; 0.716      ;
+; 0.569 ; ctrl:controller|OPCODE[0]      ; ctrl:controller|state.s13      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.720      ;
+; 0.569 ; dp:datapath|alu:alu1|output[1] ; dp:datapath|rf:rf1|out3[1]     ; clk          ; clk         ; 0.000        ; 0.011      ; 0.732      ;
+; 0.569 ; ctrl:controller|ADDRESS[1]     ; ctrl:controller|PC[1]          ; clk          ; clk         ; 0.000        ; 0.001      ; 0.722      ;
+; 0.572 ; dp:datapath|acc:acc1|temp[3]   ; dp:datapath|acc:acc1|output[3] ; clk          ; clk         ; 0.000        ; -0.016     ; 0.708      ;
+; 0.574 ; ctrl:controller|state.s12      ; ctrl:controller|PC[2]          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.726      ;
+; 0.575 ; ctrl:controller|PC[1]          ; ctrl:controller|OPCODE[1]      ; clk          ; clk         ; 0.000        ; -0.001     ; 0.726      ;
 +-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -885,8 +885,8 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|OPCODE[0]  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|OPCODE[1]  ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|OPCODE[1]  ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|OPCODE[3]  ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|OPCODE[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|OPCODE[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|OPCODE[2]  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|PC[0]      ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|PC[0]      ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|PC[1]      ;
@@ -907,6 +907,8 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|selc_dp[0] ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|selc_dp[1] ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|selc_dp[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|selc_dp[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|selc_dp[2] ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|selc_dp[3] ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|selc_dp[3] ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|selcrf[0]  ;
@@ -919,6 +921,12 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s0   ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s1   ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s1   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s10  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s10  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s11  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s11  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s12  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s12  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s13  ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s13  ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s2   ;
@@ -933,6 +941,8 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s7   ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s8   ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s8   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; ctrl:controller|state.s9   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; ctrl:controller|state.s9   ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display1[0]~reg0           ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; display1[0]~reg0           ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display1[1]~reg0           ;
@@ -942,16 +952,6 @@ No paths to report.
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display1[3]~reg0           ;
 ; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; display1[3]~reg0           ;
 ; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display1[4]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; display1[4]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display1[5]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; display1[5]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display2[0]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; display2[0]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display2[1]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; display2[1]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display2[2]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Fall       ; display2[2]~reg0           ;
-; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Fall       ; display2[3]~reg0           ;
 +--------+--------------+----------------+------------------+-------+------------+----------------------------+
 
 
@@ -960,8 +960,8 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; rst       ; clk        ; 3.089 ; 3.089 ; Fall       ; clk             ;
-; start     ; clk        ; 2.533 ; 2.533 ; Fall       ; clk             ;
+; rst       ; clk        ; 2.787 ; 2.787 ; Fall       ; clk             ;
+; start     ; clk        ; 2.401 ; 2.401 ; Fall       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -970,8 +970,8 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; rst       ; clk        ; -2.188 ; -2.188 ; Fall       ; clk             ;
-; start     ; clk        ; -2.242 ; -2.242 ; Fall       ; clk             ;
+; rst       ; clk        ; -2.092 ; -2.092 ; Fall       ; clk             ;
+; start     ; clk        ; -2.191 ; -2.191 ; Fall       ; clk             ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -980,47 +980,47 @@ No paths to report.
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; conv1[*]     ; clk        ; 4.593 ; 4.593 ; Fall       ; clk             ;
-;  conv1[0]    ; clk        ; 4.294 ; 4.294 ; Fall       ; clk             ;
-;  conv1[3]    ; clk        ; 4.593 ; 4.593 ; Fall       ; clk             ;
-;  conv1[4]    ; clk        ; 4.426 ; 4.426 ; Fall       ; clk             ;
-;  conv1[5]    ; clk        ; 4.232 ; 4.232 ; Fall       ; clk             ;
-; conv2[*]     ; clk        ; 4.825 ; 4.825 ; Fall       ; clk             ;
-;  conv2[0]    ; clk        ; 4.142 ; 4.142 ; Fall       ; clk             ;
-;  conv2[1]    ; clk        ; 4.418 ; 4.418 ; Fall       ; clk             ;
-;  conv2[2]    ; clk        ; 4.312 ; 4.312 ; Fall       ; clk             ;
-;  conv2[3]    ; clk        ; 4.354 ; 4.354 ; Fall       ; clk             ;
-;  conv2[4]    ; clk        ; 4.271 ; 4.271 ; Fall       ; clk             ;
-;  conv2[5]    ; clk        ; 4.549 ; 4.549 ; Fall       ; clk             ;
-;  conv2[6]    ; clk        ; 4.825 ; 4.825 ; Fall       ; clk             ;
-; display1[*]  ; clk        ; 4.229 ; 4.229 ; Fall       ; clk             ;
-;  display1[0] ; clk        ; 3.765 ; 3.765 ; Fall       ; clk             ;
-;  display1[1] ; clk        ; 4.229 ; 4.229 ; Fall       ; clk             ;
-;  display1[2] ; clk        ; 3.983 ; 3.983 ; Fall       ; clk             ;
-;  display1[3] ; clk        ; 4.059 ; 4.059 ; Fall       ; clk             ;
-;  display1[4] ; clk        ; 4.136 ; 4.136 ; Fall       ; clk             ;
-;  display1[5] ; clk        ; 3.734 ; 3.734 ; Fall       ; clk             ;
-; display2[*]  ; clk        ; 4.241 ; 4.241 ; Fall       ; clk             ;
-;  display2[0] ; clk        ; 4.241 ; 4.241 ; Fall       ; clk             ;
-;  display2[1] ; clk        ; 4.001 ; 4.001 ; Fall       ; clk             ;
-;  display2[2] ; clk        ; 4.097 ; 4.097 ; Fall       ; clk             ;
-;  display2[3] ; clk        ; 4.143 ; 4.143 ; Fall       ; clk             ;
-;  display2[4] ; clk        ; 4.108 ; 4.108 ; Fall       ; clk             ;
-;  display2[5] ; clk        ; 4.131 ; 4.131 ; Fall       ; clk             ;
-; display3[*]  ; clk        ; 4.382 ; 4.382 ; Fall       ; clk             ;
-;  display3[0] ; clk        ; 4.354 ; 4.354 ; Fall       ; clk             ;
-;  display3[1] ; clk        ; 4.382 ; 4.382 ; Fall       ; clk             ;
-;  display3[2] ; clk        ; 3.968 ; 3.968 ; Fall       ; clk             ;
-;  display3[3] ; clk        ; 4.103 ; 4.103 ; Fall       ; clk             ;
-;  display3[4] ; clk        ; 3.925 ; 3.925 ; Fall       ; clk             ;
-;  display3[5] ; clk        ; 3.905 ; 3.905 ; Fall       ; clk             ;
-; display4[*]  ; clk        ; 4.278 ; 4.278 ; Fall       ; clk             ;
-;  display4[0] ; clk        ; 4.278 ; 4.278 ; Fall       ; clk             ;
-;  display4[1] ; clk        ; 4.194 ; 4.194 ; Fall       ; clk             ;
-;  display4[2] ; clk        ; 4.232 ; 4.232 ; Fall       ; clk             ;
-;  display4[3] ; clk        ; 4.100 ; 4.100 ; Fall       ; clk             ;
-;  display4[4] ; clk        ; 4.133 ; 4.133 ; Fall       ; clk             ;
-;  display4[5] ; clk        ; 4.138 ; 4.138 ; Fall       ; clk             ;
+; conv1[*]     ; clk        ; 3.581 ; 3.581 ; Fall       ; clk             ;
+;  conv1[0]    ; clk        ; 3.581 ; 3.581 ; Fall       ; clk             ;
+;  conv1[3]    ; clk        ; 3.581 ; 3.581 ; Fall       ; clk             ;
+;  conv1[4]    ; clk        ; 3.564 ; 3.564 ; Fall       ; clk             ;
+;  conv1[5]    ; clk        ; 3.569 ; 3.569 ; Fall       ; clk             ;
+; conv2[*]     ; clk        ; 3.583 ; 3.583 ; Fall       ; clk             ;
+;  conv2[0]    ; clk        ; 3.547 ; 3.547 ; Fall       ; clk             ;
+;  conv2[1]    ; clk        ; 3.558 ; 3.558 ; Fall       ; clk             ;
+;  conv2[2]    ; clk        ; 3.558 ; 3.558 ; Fall       ; clk             ;
+;  conv2[3]    ; clk        ; 3.551 ; 3.551 ; Fall       ; clk             ;
+;  conv2[4]    ; clk        ; 3.569 ; 3.569 ; Fall       ; clk             ;
+;  conv2[5]    ; clk        ; 3.568 ; 3.568 ; Fall       ; clk             ;
+;  conv2[6]    ; clk        ; 3.583 ; 3.583 ; Fall       ; clk             ;
+; display1[*]  ; clk        ; 4.189 ; 4.189 ; Fall       ; clk             ;
+;  display1[0] ; clk        ; 3.940 ; 3.940 ; Fall       ; clk             ;
+;  display1[1] ; clk        ; 4.189 ; 4.189 ; Fall       ; clk             ;
+;  display1[2] ; clk        ; 3.949 ; 3.949 ; Fall       ; clk             ;
+;  display1[3] ; clk        ; 4.031 ; 4.031 ; Fall       ; clk             ;
+;  display1[4] ; clk        ; 4.147 ; 4.147 ; Fall       ; clk             ;
+;  display1[5] ; clk        ; 4.127 ; 4.127 ; Fall       ; clk             ;
+; display2[*]  ; clk        ; 4.060 ; 4.060 ; Fall       ; clk             ;
+;  display2[0] ; clk        ; 3.930 ; 3.930 ; Fall       ; clk             ;
+;  display2[1] ; clk        ; 3.875 ; 3.875 ; Fall       ; clk             ;
+;  display2[2] ; clk        ; 3.975 ; 3.975 ; Fall       ; clk             ;
+;  display2[3] ; clk        ; 4.060 ; 4.060 ; Fall       ; clk             ;
+;  display2[4] ; clk        ; 4.029 ; 4.029 ; Fall       ; clk             ;
+;  display2[5] ; clk        ; 3.804 ; 3.804 ; Fall       ; clk             ;
+; display3[*]  ; clk        ; 4.304 ; 4.304 ; Fall       ; clk             ;
+;  display3[0] ; clk        ; 4.286 ; 4.286 ; Fall       ; clk             ;
+;  display3[1] ; clk        ; 4.304 ; 4.304 ; Fall       ; clk             ;
+;  display3[2] ; clk        ; 3.981 ; 3.981 ; Fall       ; clk             ;
+;  display3[3] ; clk        ; 4.104 ; 4.104 ; Fall       ; clk             ;
+;  display3[4] ; clk        ; 4.188 ; 4.188 ; Fall       ; clk             ;
+;  display3[5] ; clk        ; 4.075 ; 4.075 ; Fall       ; clk             ;
+; display4[*]  ; clk        ; 4.202 ; 4.202 ; Fall       ; clk             ;
+;  display4[0] ; clk        ; 3.933 ; 3.933 ; Fall       ; clk             ;
+;  display4[1] ; clk        ; 4.109 ; 4.109 ; Fall       ; clk             ;
+;  display4[2] ; clk        ; 4.202 ; 4.202 ; Fall       ; clk             ;
+;  display4[3] ; clk        ; 3.801 ; 3.801 ; Fall       ; clk             ;
+;  display4[4] ; clk        ; 3.799 ; 3.799 ; Fall       ; clk             ;
+;  display4[5] ; clk        ; 3.791 ; 3.791 ; Fall       ; clk             ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1029,60 +1029,60 @@ No paths to report.
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; conv1[*]     ; clk        ; 4.232 ; 4.232 ; Fall       ; clk             ;
-;  conv1[0]    ; clk        ; 4.294 ; 4.294 ; Fall       ; clk             ;
-;  conv1[3]    ; clk        ; 4.593 ; 4.593 ; Fall       ; clk             ;
-;  conv1[4]    ; clk        ; 4.426 ; 4.426 ; Fall       ; clk             ;
-;  conv1[5]    ; clk        ; 4.232 ; 4.232 ; Fall       ; clk             ;
-; conv2[*]     ; clk        ; 4.142 ; 4.142 ; Fall       ; clk             ;
-;  conv2[0]    ; clk        ; 4.142 ; 4.142 ; Fall       ; clk             ;
-;  conv2[1]    ; clk        ; 4.418 ; 4.418 ; Fall       ; clk             ;
-;  conv2[2]    ; clk        ; 4.312 ; 4.312 ; Fall       ; clk             ;
-;  conv2[3]    ; clk        ; 4.354 ; 4.354 ; Fall       ; clk             ;
-;  conv2[4]    ; clk        ; 4.271 ; 4.271 ; Fall       ; clk             ;
-;  conv2[5]    ; clk        ; 4.549 ; 4.549 ; Fall       ; clk             ;
-;  conv2[6]    ; clk        ; 4.825 ; 4.825 ; Fall       ; clk             ;
-; display1[*]  ; clk        ; 3.734 ; 3.734 ; Fall       ; clk             ;
-;  display1[0] ; clk        ; 3.765 ; 3.765 ; Fall       ; clk             ;
-;  display1[1] ; clk        ; 4.229 ; 4.229 ; Fall       ; clk             ;
-;  display1[2] ; clk        ; 3.983 ; 3.983 ; Fall       ; clk             ;
-;  display1[3] ; clk        ; 4.059 ; 4.059 ; Fall       ; clk             ;
-;  display1[4] ; clk        ; 4.136 ; 4.136 ; Fall       ; clk             ;
-;  display1[5] ; clk        ; 3.734 ; 3.734 ; Fall       ; clk             ;
-; display2[*]  ; clk        ; 4.001 ; 4.001 ; Fall       ; clk             ;
-;  display2[0] ; clk        ; 4.241 ; 4.241 ; Fall       ; clk             ;
-;  display2[1] ; clk        ; 4.001 ; 4.001 ; Fall       ; clk             ;
-;  display2[2] ; clk        ; 4.097 ; 4.097 ; Fall       ; clk             ;
-;  display2[3] ; clk        ; 4.143 ; 4.143 ; Fall       ; clk             ;
-;  display2[4] ; clk        ; 4.108 ; 4.108 ; Fall       ; clk             ;
-;  display2[5] ; clk        ; 4.131 ; 4.131 ; Fall       ; clk             ;
-; display3[*]  ; clk        ; 3.905 ; 3.905 ; Fall       ; clk             ;
-;  display3[0] ; clk        ; 4.354 ; 4.354 ; Fall       ; clk             ;
-;  display3[1] ; clk        ; 4.382 ; 4.382 ; Fall       ; clk             ;
-;  display3[2] ; clk        ; 3.968 ; 3.968 ; Fall       ; clk             ;
-;  display3[3] ; clk        ; 4.103 ; 4.103 ; Fall       ; clk             ;
-;  display3[4] ; clk        ; 3.925 ; 3.925 ; Fall       ; clk             ;
-;  display3[5] ; clk        ; 3.905 ; 3.905 ; Fall       ; clk             ;
-; display4[*]  ; clk        ; 4.100 ; 4.100 ; Fall       ; clk             ;
-;  display4[0] ; clk        ; 4.278 ; 4.278 ; Fall       ; clk             ;
-;  display4[1] ; clk        ; 4.194 ; 4.194 ; Fall       ; clk             ;
-;  display4[2] ; clk        ; 4.232 ; 4.232 ; Fall       ; clk             ;
-;  display4[3] ; clk        ; 4.100 ; 4.100 ; Fall       ; clk             ;
-;  display4[4] ; clk        ; 4.133 ; 4.133 ; Fall       ; clk             ;
-;  display4[5] ; clk        ; 4.138 ; 4.138 ; Fall       ; clk             ;
+; conv1[*]     ; clk        ; 3.564 ; 3.564 ; Fall       ; clk             ;
+;  conv1[0]    ; clk        ; 3.581 ; 3.581 ; Fall       ; clk             ;
+;  conv1[3]    ; clk        ; 3.581 ; 3.581 ; Fall       ; clk             ;
+;  conv1[4]    ; clk        ; 3.564 ; 3.564 ; Fall       ; clk             ;
+;  conv1[5]    ; clk        ; 3.569 ; 3.569 ; Fall       ; clk             ;
+; conv2[*]     ; clk        ; 3.547 ; 3.547 ; Fall       ; clk             ;
+;  conv2[0]    ; clk        ; 3.547 ; 3.547 ; Fall       ; clk             ;
+;  conv2[1]    ; clk        ; 3.558 ; 3.558 ; Fall       ; clk             ;
+;  conv2[2]    ; clk        ; 3.558 ; 3.558 ; Fall       ; clk             ;
+;  conv2[3]    ; clk        ; 3.551 ; 3.551 ; Fall       ; clk             ;
+;  conv2[4]    ; clk        ; 3.569 ; 3.569 ; Fall       ; clk             ;
+;  conv2[5]    ; clk        ; 3.568 ; 3.568 ; Fall       ; clk             ;
+;  conv2[6]    ; clk        ; 3.583 ; 3.583 ; Fall       ; clk             ;
+; display1[*]  ; clk        ; 3.940 ; 3.940 ; Fall       ; clk             ;
+;  display1[0] ; clk        ; 3.940 ; 3.940 ; Fall       ; clk             ;
+;  display1[1] ; clk        ; 4.189 ; 4.189 ; Fall       ; clk             ;
+;  display1[2] ; clk        ; 3.949 ; 3.949 ; Fall       ; clk             ;
+;  display1[3] ; clk        ; 4.031 ; 4.031 ; Fall       ; clk             ;
+;  display1[4] ; clk        ; 4.147 ; 4.147 ; Fall       ; clk             ;
+;  display1[5] ; clk        ; 4.127 ; 4.127 ; Fall       ; clk             ;
+; display2[*]  ; clk        ; 3.804 ; 3.804 ; Fall       ; clk             ;
+;  display2[0] ; clk        ; 3.930 ; 3.930 ; Fall       ; clk             ;
+;  display2[1] ; clk        ; 3.875 ; 3.875 ; Fall       ; clk             ;
+;  display2[2] ; clk        ; 3.975 ; 3.975 ; Fall       ; clk             ;
+;  display2[3] ; clk        ; 4.060 ; 4.060 ; Fall       ; clk             ;
+;  display2[4] ; clk        ; 4.029 ; 4.029 ; Fall       ; clk             ;
+;  display2[5] ; clk        ; 3.804 ; 3.804 ; Fall       ; clk             ;
+; display3[*]  ; clk        ; 3.981 ; 3.981 ; Fall       ; clk             ;
+;  display3[0] ; clk        ; 4.286 ; 4.286 ; Fall       ; clk             ;
+;  display3[1] ; clk        ; 4.304 ; 4.304 ; Fall       ; clk             ;
+;  display3[2] ; clk        ; 3.981 ; 3.981 ; Fall       ; clk             ;
+;  display3[3] ; clk        ; 4.104 ; 4.104 ; Fall       ; clk             ;
+;  display3[4] ; clk        ; 4.188 ; 4.188 ; Fall       ; clk             ;
+;  display3[5] ; clk        ; 4.075 ; 4.075 ; Fall       ; clk             ;
+; display4[*]  ; clk        ; 3.791 ; 3.791 ; Fall       ; clk             ;
+;  display4[0] ; clk        ; 3.933 ; 3.933 ; Fall       ; clk             ;
+;  display4[1] ; clk        ; 4.109 ; 4.109 ; Fall       ; clk             ;
+;  display4[2] ; clk        ; 4.202 ; 4.202 ; Fall       ; clk             ;
+;  display4[3] ; clk        ; 3.801 ; 3.801 ; Fall       ; clk             ;
+;  display4[4] ; clk        ; 3.799 ; 3.799 ; Fall       ; clk             ;
+;  display4[5] ; clk        ; 3.791 ; 3.791 ; Fall       ; clk             ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
-+-------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                           ;
-+------------------+---------+-------+----------+---------+---------------------+
-; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -1.387  ; 0.215 ; N/A      ; N/A     ; -1.222              ;
-;  clk             ; -1.387  ; 0.215 ; N/A      ; N/A     ; -1.222              ;
-; Design-wide TNS  ; -96.657 ; 0.0   ; 0.0      ; 0.0     ; -113.222            ;
-;  clk             ; -96.657 ; 0.000 ; N/A      ; N/A     ; -113.222            ;
-+------------------+---------+-------+----------+---------+---------------------+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+----------+-------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.143   ; 0.215 ; N/A      ; N/A     ; -1.222              ;
+;  clk             ; -2.143   ; 0.215 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -144.198 ; 0.0   ; 0.0      ; 0.0     ; -110.222            ;
+;  clk             ; -144.198 ; 0.000 ; N/A      ; N/A     ; -110.222            ;
++------------------+----------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------+
@@ -1090,8 +1090,8 @@ No paths to report.
 +-----------+------------+-------+-------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-----------+------------+-------+-------+------------+-----------------+
-; rst       ; clk        ; 5.706 ; 5.706 ; Fall       ; clk             ;
-; start     ; clk        ; 4.718 ; 4.718 ; Fall       ; clk             ;
+; rst       ; clk        ; 5.118 ; 5.118 ; Fall       ; clk             ;
+; start     ; clk        ; 4.405 ; 4.405 ; Fall       ; clk             ;
 +-----------+------------+-------+-------+------------+-----------------+
 
 
@@ -1100,8 +1100,8 @@ No paths to report.
 +-----------+------------+--------+--------+------------+-----------------+
 ; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-----------+------------+--------+--------+------------+-----------------+
-; rst       ; clk        ; -2.188 ; -2.188 ; Fall       ; clk             ;
-; start     ; clk        ; -2.242 ; -2.242 ; Fall       ; clk             ;
+; rst       ; clk        ; -2.092 ; -2.092 ; Fall       ; clk             ;
+; start     ; clk        ; -2.191 ; -2.191 ; Fall       ; clk             ;
 +-----------+------------+--------+--------+------------+-----------------+
 
 
@@ -1110,47 +1110,47 @@ No paths to report.
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; conv1[*]     ; clk        ; 8.457 ; 8.457 ; Fall       ; clk             ;
-;  conv1[0]    ; clk        ; 7.839 ; 7.839 ; Fall       ; clk             ;
-;  conv1[3]    ; clk        ; 8.457 ; 8.457 ; Fall       ; clk             ;
-;  conv1[4]    ; clk        ; 8.196 ; 8.196 ; Fall       ; clk             ;
-;  conv1[5]    ; clk        ; 7.703 ; 7.703 ; Fall       ; clk             ;
-; conv2[*]     ; clk        ; 8.808 ; 8.808 ; Fall       ; clk             ;
-;  conv2[0]    ; clk        ; 7.531 ; 7.531 ; Fall       ; clk             ;
-;  conv2[1]    ; clk        ; 8.222 ; 8.222 ; Fall       ; clk             ;
-;  conv2[2]    ; clk        ; 7.943 ; 7.943 ; Fall       ; clk             ;
-;  conv2[3]    ; clk        ; 8.026 ; 8.026 ; Fall       ; clk             ;
-;  conv2[4]    ; clk        ; 7.812 ; 7.812 ; Fall       ; clk             ;
-;  conv2[5]    ; clk        ; 8.380 ; 8.380 ; Fall       ; clk             ;
-;  conv2[6]    ; clk        ; 8.808 ; 8.808 ; Fall       ; clk             ;
-; display1[*]  ; clk        ; 7.843 ; 7.843 ; Fall       ; clk             ;
-;  display1[0] ; clk        ; 6.720 ; 6.720 ; Fall       ; clk             ;
-;  display1[1] ; clk        ; 7.843 ; 7.843 ; Fall       ; clk             ;
-;  display1[2] ; clk        ; 7.204 ; 7.204 ; Fall       ; clk             ;
-;  display1[3] ; clk        ; 7.395 ; 7.395 ; Fall       ; clk             ;
-;  display1[4] ; clk        ; 7.590 ; 7.590 ; Fall       ; clk             ;
-;  display1[5] ; clk        ; 6.686 ; 6.686 ; Fall       ; clk             ;
-; display2[*]  ; clk        ; 7.855 ; 7.855 ; Fall       ; clk             ;
-;  display2[0] ; clk        ; 7.855 ; 7.855 ; Fall       ; clk             ;
-;  display2[1] ; clk        ; 7.250 ; 7.250 ; Fall       ; clk             ;
-;  display2[2] ; clk        ; 7.454 ; 7.454 ; Fall       ; clk             ;
-;  display2[3] ; clk        ; 7.611 ; 7.611 ; Fall       ; clk             ;
-;  display2[4] ; clk        ; 7.571 ; 7.571 ; Fall       ; clk             ;
-;  display2[5] ; clk        ; 7.605 ; 7.605 ; Fall       ; clk             ;
-; display3[*]  ; clk        ; 8.057 ; 8.057 ; Fall       ; clk             ;
-;  display3[0] ; clk        ; 8.011 ; 8.011 ; Fall       ; clk             ;
-;  display3[1] ; clk        ; 8.057 ; 8.057 ; Fall       ; clk             ;
-;  display3[2] ; clk        ; 7.192 ; 7.192 ; Fall       ; clk             ;
-;  display3[3] ; clk        ; 7.469 ; 7.469 ; Fall       ; clk             ;
-;  display3[4] ; clk        ; 7.081 ; 7.081 ; Fall       ; clk             ;
-;  display3[5] ; clk        ; 7.020 ; 7.020 ; Fall       ; clk             ;
-; display4[*]  ; clk        ; 7.746 ; 7.746 ; Fall       ; clk             ;
-;  display4[0] ; clk        ; 7.746 ; 7.746 ; Fall       ; clk             ;
-;  display4[1] ; clk        ; 7.622 ; 7.622 ; Fall       ; clk             ;
-;  display4[2] ; clk        ; 7.620 ; 7.620 ; Fall       ; clk             ;
-;  display4[3] ; clk        ; 7.406 ; 7.406 ; Fall       ; clk             ;
-;  display4[4] ; clk        ; 7.439 ; 7.439 ; Fall       ; clk             ;
-;  display4[5] ; clk        ; 7.485 ; 7.485 ; Fall       ; clk             ;
+; conv1[*]     ; clk        ; 6.372 ; 6.372 ; Fall       ; clk             ;
+;  conv1[0]    ; clk        ; 6.372 ; 6.372 ; Fall       ; clk             ;
+;  conv1[3]    ; clk        ; 6.369 ; 6.369 ; Fall       ; clk             ;
+;  conv1[4]    ; clk        ; 6.354 ; 6.354 ; Fall       ; clk             ;
+;  conv1[5]    ; clk        ; 6.367 ; 6.367 ; Fall       ; clk             ;
+; conv2[*]     ; clk        ; 6.378 ; 6.378 ; Fall       ; clk             ;
+;  conv2[0]    ; clk        ; 6.328 ; 6.328 ; Fall       ; clk             ;
+;  conv2[1]    ; clk        ; 6.342 ; 6.342 ; Fall       ; clk             ;
+;  conv2[2]    ; clk        ; 6.340 ; 6.340 ; Fall       ; clk             ;
+;  conv2[3]    ; clk        ; 6.339 ; 6.339 ; Fall       ; clk             ;
+;  conv2[4]    ; clk        ; 6.355 ; 6.355 ; Fall       ; clk             ;
+;  conv2[5]    ; clk        ; 6.353 ; 6.353 ; Fall       ; clk             ;
+;  conv2[6]    ; clk        ; 6.378 ; 6.378 ; Fall       ; clk             ;
+; display1[*]  ; clk        ; 7.722 ; 7.722 ; Fall       ; clk             ;
+;  display1[0] ; clk        ; 7.141 ; 7.141 ; Fall       ; clk             ;
+;  display1[1] ; clk        ; 7.722 ; 7.722 ; Fall       ; clk             ;
+;  display1[2] ; clk        ; 7.131 ; 7.131 ; Fall       ; clk             ;
+;  display1[3] ; clk        ; 7.382 ; 7.382 ; Fall       ; clk             ;
+;  display1[4] ; clk        ; 7.649 ; 7.649 ; Fall       ; clk             ;
+;  display1[5] ; clk        ; 7.585 ; 7.585 ; Fall       ; clk             ;
+; display2[*]  ; clk        ; 7.414 ; 7.414 ; Fall       ; clk             ;
+;  display2[0] ; clk        ; 7.045 ; 7.045 ; Fall       ; clk             ;
+;  display2[1] ; clk        ; 6.983 ; 6.983 ; Fall       ; clk             ;
+;  display2[2] ; clk        ; 7.189 ; 7.189 ; Fall       ; clk             ;
+;  display2[3] ; clk        ; 7.414 ; 7.414 ; Fall       ; clk             ;
+;  display2[4] ; clk        ; 7.379 ; 7.379 ; Fall       ; clk             ;
+;  display2[5] ; clk        ; 6.771 ; 6.771 ; Fall       ; clk             ;
+; display3[*]  ; clk        ; 7.867 ; 7.867 ; Fall       ; clk             ;
+;  display3[0] ; clk        ; 7.845 ; 7.845 ; Fall       ; clk             ;
+;  display3[1] ; clk        ; 7.867 ; 7.867 ; Fall       ; clk             ;
+;  display3[2] ; clk        ; 7.209 ; 7.209 ; Fall       ; clk             ;
+;  display3[3] ; clk        ; 7.470 ; 7.470 ; Fall       ; clk             ;
+;  display3[4] ; clk        ; 7.710 ; 7.710 ; Fall       ; clk             ;
+;  display3[5] ; clk        ; 7.435 ; 7.435 ; Fall       ; clk             ;
+; display4[*]  ; clk        ; 7.628 ; 7.628 ; Fall       ; clk             ;
+;  display4[0] ; clk        ; 6.987 ; 6.987 ; Fall       ; clk             ;
+;  display4[1] ; clk        ; 7.363 ; 7.363 ; Fall       ; clk             ;
+;  display4[2] ; clk        ; 7.628 ; 7.628 ; Fall       ; clk             ;
+;  display4[3] ; clk        ; 6.719 ; 6.719 ; Fall       ; clk             ;
+;  display4[4] ; clk        ; 6.719 ; 6.719 ; Fall       ; clk             ;
+;  display4[5] ; clk        ; 6.709 ; 6.709 ; Fall       ; clk             ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1159,47 +1159,47 @@ No paths to report.
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; conv1[*]     ; clk        ; 4.232 ; 4.232 ; Fall       ; clk             ;
-;  conv1[0]    ; clk        ; 4.294 ; 4.294 ; Fall       ; clk             ;
-;  conv1[3]    ; clk        ; 4.593 ; 4.593 ; Fall       ; clk             ;
-;  conv1[4]    ; clk        ; 4.426 ; 4.426 ; Fall       ; clk             ;
-;  conv1[5]    ; clk        ; 4.232 ; 4.232 ; Fall       ; clk             ;
-; conv2[*]     ; clk        ; 4.142 ; 4.142 ; Fall       ; clk             ;
-;  conv2[0]    ; clk        ; 4.142 ; 4.142 ; Fall       ; clk             ;
-;  conv2[1]    ; clk        ; 4.418 ; 4.418 ; Fall       ; clk             ;
-;  conv2[2]    ; clk        ; 4.312 ; 4.312 ; Fall       ; clk             ;
-;  conv2[3]    ; clk        ; 4.354 ; 4.354 ; Fall       ; clk             ;
-;  conv2[4]    ; clk        ; 4.271 ; 4.271 ; Fall       ; clk             ;
-;  conv2[5]    ; clk        ; 4.549 ; 4.549 ; Fall       ; clk             ;
-;  conv2[6]    ; clk        ; 4.825 ; 4.825 ; Fall       ; clk             ;
-; display1[*]  ; clk        ; 3.734 ; 3.734 ; Fall       ; clk             ;
-;  display1[0] ; clk        ; 3.765 ; 3.765 ; Fall       ; clk             ;
-;  display1[1] ; clk        ; 4.229 ; 4.229 ; Fall       ; clk             ;
-;  display1[2] ; clk        ; 3.983 ; 3.983 ; Fall       ; clk             ;
-;  display1[3] ; clk        ; 4.059 ; 4.059 ; Fall       ; clk             ;
-;  display1[4] ; clk        ; 4.136 ; 4.136 ; Fall       ; clk             ;
-;  display1[5] ; clk        ; 3.734 ; 3.734 ; Fall       ; clk             ;
-; display2[*]  ; clk        ; 4.001 ; 4.001 ; Fall       ; clk             ;
-;  display2[0] ; clk        ; 4.241 ; 4.241 ; Fall       ; clk             ;
-;  display2[1] ; clk        ; 4.001 ; 4.001 ; Fall       ; clk             ;
-;  display2[2] ; clk        ; 4.097 ; 4.097 ; Fall       ; clk             ;
-;  display2[3] ; clk        ; 4.143 ; 4.143 ; Fall       ; clk             ;
-;  display2[4] ; clk        ; 4.108 ; 4.108 ; Fall       ; clk             ;
-;  display2[5] ; clk        ; 4.131 ; 4.131 ; Fall       ; clk             ;
-; display3[*]  ; clk        ; 3.905 ; 3.905 ; Fall       ; clk             ;
-;  display3[0] ; clk        ; 4.354 ; 4.354 ; Fall       ; clk             ;
-;  display3[1] ; clk        ; 4.382 ; 4.382 ; Fall       ; clk             ;
-;  display3[2] ; clk        ; 3.968 ; 3.968 ; Fall       ; clk             ;
-;  display3[3] ; clk        ; 4.103 ; 4.103 ; Fall       ; clk             ;
-;  display3[4] ; clk        ; 3.925 ; 3.925 ; Fall       ; clk             ;
-;  display3[5] ; clk        ; 3.905 ; 3.905 ; Fall       ; clk             ;
-; display4[*]  ; clk        ; 4.100 ; 4.100 ; Fall       ; clk             ;
-;  display4[0] ; clk        ; 4.278 ; 4.278 ; Fall       ; clk             ;
-;  display4[1] ; clk        ; 4.194 ; 4.194 ; Fall       ; clk             ;
-;  display4[2] ; clk        ; 4.232 ; 4.232 ; Fall       ; clk             ;
-;  display4[3] ; clk        ; 4.100 ; 4.100 ; Fall       ; clk             ;
-;  display4[4] ; clk        ; 4.133 ; 4.133 ; Fall       ; clk             ;
-;  display4[5] ; clk        ; 4.138 ; 4.138 ; Fall       ; clk             ;
+; conv1[*]     ; clk        ; 3.564 ; 3.564 ; Fall       ; clk             ;
+;  conv1[0]    ; clk        ; 3.581 ; 3.581 ; Fall       ; clk             ;
+;  conv1[3]    ; clk        ; 3.581 ; 3.581 ; Fall       ; clk             ;
+;  conv1[4]    ; clk        ; 3.564 ; 3.564 ; Fall       ; clk             ;
+;  conv1[5]    ; clk        ; 3.569 ; 3.569 ; Fall       ; clk             ;
+; conv2[*]     ; clk        ; 3.547 ; 3.547 ; Fall       ; clk             ;
+;  conv2[0]    ; clk        ; 3.547 ; 3.547 ; Fall       ; clk             ;
+;  conv2[1]    ; clk        ; 3.558 ; 3.558 ; Fall       ; clk             ;
+;  conv2[2]    ; clk        ; 3.558 ; 3.558 ; Fall       ; clk             ;
+;  conv2[3]    ; clk        ; 3.551 ; 3.551 ; Fall       ; clk             ;
+;  conv2[4]    ; clk        ; 3.569 ; 3.569 ; Fall       ; clk             ;
+;  conv2[5]    ; clk        ; 3.568 ; 3.568 ; Fall       ; clk             ;
+;  conv2[6]    ; clk        ; 3.583 ; 3.583 ; Fall       ; clk             ;
+; display1[*]  ; clk        ; 3.940 ; 3.940 ; Fall       ; clk             ;
+;  display1[0] ; clk        ; 3.940 ; 3.940 ; Fall       ; clk             ;
+;  display1[1] ; clk        ; 4.189 ; 4.189 ; Fall       ; clk             ;
+;  display1[2] ; clk        ; 3.949 ; 3.949 ; Fall       ; clk             ;
+;  display1[3] ; clk        ; 4.031 ; 4.031 ; Fall       ; clk             ;
+;  display1[4] ; clk        ; 4.147 ; 4.147 ; Fall       ; clk             ;
+;  display1[5] ; clk        ; 4.127 ; 4.127 ; Fall       ; clk             ;
+; display2[*]  ; clk        ; 3.804 ; 3.804 ; Fall       ; clk             ;
+;  display2[0] ; clk        ; 3.930 ; 3.930 ; Fall       ; clk             ;
+;  display2[1] ; clk        ; 3.875 ; 3.875 ; Fall       ; clk             ;
+;  display2[2] ; clk        ; 3.975 ; 3.975 ; Fall       ; clk             ;
+;  display2[3] ; clk        ; 4.060 ; 4.060 ; Fall       ; clk             ;
+;  display2[4] ; clk        ; 4.029 ; 4.029 ; Fall       ; clk             ;
+;  display2[5] ; clk        ; 3.804 ; 3.804 ; Fall       ; clk             ;
+; display3[*]  ; clk        ; 3.981 ; 3.981 ; Fall       ; clk             ;
+;  display3[0] ; clk        ; 4.286 ; 4.286 ; Fall       ; clk             ;
+;  display3[1] ; clk        ; 4.304 ; 4.304 ; Fall       ; clk             ;
+;  display3[2] ; clk        ; 3.981 ; 3.981 ; Fall       ; clk             ;
+;  display3[3] ; clk        ; 4.104 ; 4.104 ; Fall       ; clk             ;
+;  display3[4] ; clk        ; 4.188 ; 4.188 ; Fall       ; clk             ;
+;  display3[5] ; clk        ; 4.075 ; 4.075 ; Fall       ; clk             ;
+; display4[*]  ; clk        ; 3.791 ; 3.791 ; Fall       ; clk             ;
+;  display4[0] ; clk        ; 3.933 ; 3.933 ; Fall       ; clk             ;
+;  display4[1] ; clk        ; 4.109 ; 4.109 ; Fall       ; clk             ;
+;  display4[2] ; clk        ; 4.202 ; 4.202 ; Fall       ; clk             ;
+;  display4[3] ; clk        ; 3.801 ; 3.801 ; Fall       ; clk             ;
+;  display4[4] ; clk        ; 3.799 ; 3.799 ; Fall       ; clk             ;
+;  display4[5] ; clk        ; 3.791 ; 3.791 ; Fall       ; clk             ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1208,7 +1208,7 @@ No paths to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 0        ; 0        ; 0        ; 510      ;
+; clk        ; clk      ; 0        ; 0        ; 0        ; 663      ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1218,7 +1218,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; clk        ; clk      ; 0        ; 0        ; 0        ; 510      ;
+; clk        ; clk      ; 0        ; 0        ; 0        ; 663      ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1243,7 +1243,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 2     ; 2    ;
-; Unconstrained Input Port Paths  ; 98    ; 98   ;
+; Unconstrained Input Port Paths  ; 103   ; 103  ;
 ; Unconstrained Output Ports      ; 35    ; 35   ;
 ; Unconstrained Output Port Paths ; 35    ; 35   ;
 +---------------------------------+-------+------+
@@ -1255,7 +1255,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Mon Jun 18 14:23:35 2018
+    Info: Processing started: Tue Jun 19 10:44:04 2018
 Info: Command: quartus_sta cpu -c cpu
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1268,10 +1268,10 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.387
+Info (332146): Worst-case setup slack is -2.143
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.387       -96.657 clk 
+    Info (332119):    -2.143      -144.198 clk 
 Info (332146): Worst-case hold slack is 0.391
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -1281,14 +1281,14 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.222
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.222      -113.222 clk 
+    Info (332119):    -1.222      -110.222 clk 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.146
+Info (332146): Worst-case setup slack is -0.404
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -0.146        -2.445 clk 
+    Info (332119):    -0.404       -14.576 clk 
 Info (332146): Worst-case hold slack is 0.215
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -1298,13 +1298,13 @@ Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.222
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.222      -113.222 clk 
+    Info (332119):    -1.222      -110.222 clk 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 501 megabytes
-    Info: Processing ended: Mon Jun 18 14:23:36 2018
+    Info: Peak virtual memory: 505 megabytes
+    Info: Processing ended: Tue Jun 19 10:44:05 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

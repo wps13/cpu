@@ -38,18 +38,22 @@ architecture fsm of ctrl is
 
 	-- as you add more code for your algorithms make sure to increase the
 	-- array size. ie. 2 lines of code here, means array size of 0 to 1.
-	type PM_BLOCK is array (0 to 5) of std_logic_vector(7 downto 0);
+	type PM_BLOCK is array (0 to 4) of std_logic_vector(7 downto 0);
 	constant PM : PM_BLOCK := (	
 
 	
     "00100101",   -- load 5
-	 "00010000", --move acc para rf
+	-- "10000001", --inv PEGANDO ADRESS E USANDO PARA CONVERTER
+	  "00010000", --move acc para rf
+	-- "00100101",   -- load 5
+	 
 	 "00100010", --load 2
-	 "00110000", --soma acc + rf[0]
-	 "10000000", --inv
+	  "01100000", -- acc and rf[0]
+	-- "00110000", --soma acc + rf[0]
+	-- "10000000", --inv OK
 	-- "01000100", --sub acc e rf[0]
 	-- "01010000", -- acc and rf[0]
-	-- "01110000", --jmp to 0000
+	--"01110000", --jmp to 0000
 	
 	 "10011111"		-- halt
     );
@@ -136,21 +140,21 @@ begin
 			--deve mover o registrador para o acumulador
 			selc_dp <= "0000"; -- seleciona a operaçao
 			selcrf <= ADDRESS(3 downto 2); -- indica o registrador
-			enbcacc <= '1'; 
-			enbcrf <= '0';
+			enbcacc <= '0'; 
+			enbcrf <= '1';
 			state <= s1;
 			
 		when s6 =>
 			--move acumulador para registrador
 			selc_dp <= "0001";
 			selcrf <= ADDRESS(3 downto 2); -- indica o registrador
-			enbcacc <= '0'; 
-			enbcrf <= '1';
+			enbcacc <= '1'; 
+			enbcrf <= '0';
 			state <= s1;
 			 
         when s7 =>  
 			selc_dp <= "0010";							-- load
-			enbcacc <= '1'; 
+			enbcacc <= '0'; 
 			enbcrf <= '0';
           imm <= ADDRESS;                       -- set the immediate port
 																-- to the lower_ir

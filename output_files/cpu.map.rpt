@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cpu
-Mon Jun 18 14:23:21 2018
+Tue Jun 19 10:43:50 2018
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -19,8 +19,10 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
  11. General Register Statistics
  12. Inverted Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 14. Port Connectivity Checks: "dp:datapath|alu:alu1|somador_4bits:sub"
+ 15. Port Connectivity Checks: "dp:datapath|alu:alu1|somador_4bits:soma"
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -46,15 +48,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jun 18 14:23:21 2018      ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 19 10:43:50 2018      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; cpu                                        ;
 ; Top-level Entity Name              ; cpu                                        ;
 ; Family                             ; Cyclone II                                 ;
-; Total logic elements               ; 150                                        ;
-;     Total combinational functions  ; 92                                         ;
-;     Dedicated logic registers      ; 112                                        ;
-; Total registers                    ; 112                                        ;
+; Total logic elements               ; 167                                        ;
+;     Total combinational functions  ; 119                                        ;
+;     Dedicated logic registers      ; 109                                        ;
+; Total registers                    ; 109                                        ;
 ; Total pins                         ; 45                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -159,15 +161,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                     ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path              ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------+---------+
-; cpu.vhd                          ; yes             ; User VHDL File  ; /home/luiza/Documents/cpu-master/cpu.vhd  ;         ;
-; dp.vhd                           ; yes             ; User VHDL File  ; /home/luiza/Documents/cpu-master/dp.vhd   ;         ;
-; ctrl.vhd                         ; yes             ; User VHDL File  ; /home/luiza/Documents/cpu-master/ctrl.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                          ;
++----------------------------------+-----------------+-----------------+--------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path   ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------+---------+
+; cpu.vhd                          ; yes             ; User VHDL File  ; /home/willane/cpuv0.2/cpu.vhd  ;         ;
+; dp.vhd                           ; yes             ; User VHDL File  ; /home/willane/cpuv0.2/dp.vhd   ;         ;
+; ctrl.vhd                         ; yes             ; User VHDL File  ; /home/willane/cpuv0.2/ctrl.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -175,45 +177,52 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 150   ;
+; Estimated Total logic elements              ; 167   ;
 ;                                             ;       ;
-; Total combinational functions               ; 92    ;
+; Total combinational functions               ; 119   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 52    ;
-;     -- 3 input functions                    ; 27    ;
-;     -- <=2 input functions                  ; 13    ;
+;     -- 4 input functions                    ; 88    ;
+;     -- 3 input functions                    ; 17    ;
+;     -- <=2 input functions                  ; 14    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 86    ;
-;     -- arithmetic mode                      ; 6     ;
+;     -- normal mode                          ; 117   ;
+;     -- arithmetic mode                      ; 2     ;
 ;                                             ;       ;
-; Total registers                             ; 112   ;
-;     -- Dedicated logic registers            ; 112   ;
+; Total registers                             ; 109   ;
+;     -- Dedicated logic registers            ; 109   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 45    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 112   ;
-; Total fan-out                               ; 695   ;
-; Average fan-out                             ; 2.79  ;
+; Maximum fan-out                             ; 109   ;
+; Total fan-out                               ; 800   ;
+; Average fan-out                             ; 2.93  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                               ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
-; |cpu                       ; 92 (0)            ; 112 (35)     ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |cpu                      ;              ;
-;    |conversor:c1|          ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|conversor:c1         ;              ;
-;    |ctrl:controller|       ; 37 (37)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|ctrl:controller      ;              ;
-;    |display:d1|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|display:d1           ;              ;
-;    |dp:datapath|           ; 45 (13)           ; 48 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|dp:datapath          ;              ;
-;       |acc:acc1|           ; 4 (4)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|dp:datapath|acc:acc1 ;              ;
-;       |alu:alu1|           ; 16 (16)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|dp:datapath|alu:alu1 ;              ;
-;       |rf:rf1|             ; 12 (12)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|dp:datapath|rf:rf1   ;              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
++-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+--------------+
+; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Library Name ;
++-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+--------------+
+; |cpu                          ; 119 (0)           ; 109 (35)     ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |cpu                                                 ;              ;
+;    |conversor:c1|             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|conversor:c1                                    ;              ;
+;    |ctrl:controller|          ; 48 (48)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|ctrl:controller                                 ;              ;
+;    |display:d1|               ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|display:d1                                      ;              ;
+;    |dp:datapath|              ; 59 (11)           ; 40 (8)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|dp:datapath                                     ;              ;
+;       |acc:acc1|              ; 4 (4)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|dp:datapath|acc:acc1                            ;              ;
+;       |alu:alu1|              ; 32 (25)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|dp:datapath|alu:alu1                            ;              ;
+;          |somador_4bits:soma| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|dp:datapath|alu:alu1|somador_4bits:soma         ;              ;
+;             |FA:FA_1|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|dp:datapath|alu:alu1|somador_4bits:soma|FA:FA_1 ;              ;
+;             |FA:FA_2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|dp:datapath|alu:alu1|somador_4bits:soma|FA:FA_2 ;              ;
+;             |FA:FA_3|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|dp:datapath|alu:alu1|somador_4bits:soma|FA:FA_3 ;              ;
+;          |somador_4bits:sub|  ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|dp:datapath|alu:alu1|somador_4bits:sub          ;              ;
+;             |FA:FA_1|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|dp:datapath|alu:alu1|somador_4bits:sub|FA:FA_1  ;              ;
+;             |FA:FA_3|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|dp:datapath|alu:alu1|somador_4bits:sub|FA:FA_3  ;              ;
+;       |rf:rf1|                ; 12 (12)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|dp:datapath|rf:rf1                              ;              ;
++-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -253,38 +262,31 @@ Encoding Type:  One-Hot
 ; display2[6]~reg0                       ; Stuck at VCC due to stuck port data_in ;
 ; display3[6]~reg0                       ; Stuck at VCC due to stuck port data_in ;
 ; display4[6]~reg0                       ; Stuck at VCC due to stuck port data_in ;
-; ctrl:controller|OPCODE[2]              ; Stuck at GND due to stuck port data_in ;
-; ctrl:controller|ADDRESS[2]             ; Merged with ctrl:controller|ADDRESS[0] ;
+; ctrl:controller|OPCODE[3]              ; Merged with ctrl:controller|ADDRESS[3] ;
 ; ctrl:controller|imm[2]                 ; Merged with ctrl:controller|imm[0]     ;
-; ctrl:controller|state.s11              ; Merged with ctrl:controller|state.s10  ;
-; ctrl:controller|state.s12              ; Merged with ctrl:controller|state.s10  ;
-; ctrl:controller|state.s9               ; Merged with ctrl:controller|state.s10  ;
+; ctrl:controller|ADDRESS[2]             ; Merged with ctrl:controller|ADDRESS[0] ;
 ; ctrl:controller|state.s3               ; Stuck at GND due to stuck port data_in ;
-; ctrl:controller|state.s10              ; Stuck at GND due to stuck port data_in ;
-; ctrl:controller|selc_dp[2]             ; Stuck at GND due to stuck port data_in ;
 ; ctrl:controller|PC[3..31]              ; Lost fanout                            ;
-; Total Number of Removed Registers = 45 ;                                        ;
+; Total Number of Removed Registers = 40 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                     ;
-+---------------------------+---------------------------+-------------------------------------------------------------------------+
-; Register name             ; Reason for Removal        ; Registers Removed due to This Register                                  ;
-+---------------------------+---------------------------+-------------------------------------------------------------------------+
-; ctrl:controller|PC[31]    ; Lost Fanouts              ; ctrl:controller|PC[30], ctrl:controller|PC[29], ctrl:controller|PC[28], ;
-;                           ;                           ; ctrl:controller|PC[27], ctrl:controller|PC[26], ctrl:controller|PC[25], ;
-;                           ;                           ; ctrl:controller|PC[24], ctrl:controller|PC[23], ctrl:controller|PC[22], ;
-;                           ;                           ; ctrl:controller|PC[21], ctrl:controller|PC[20], ctrl:controller|PC[19], ;
-;                           ;                           ; ctrl:controller|PC[18], ctrl:controller|PC[17], ctrl:controller|PC[16], ;
-;                           ;                           ; ctrl:controller|PC[15], ctrl:controller|PC[14], ctrl:controller|PC[13], ;
-;                           ;                           ; ctrl:controller|PC[12], ctrl:controller|PC[11], ctrl:controller|PC[10], ;
-;                           ;                           ; ctrl:controller|PC[9], ctrl:controller|PC[8], ctrl:controller|PC[7],    ;
-;                           ;                           ; ctrl:controller|PC[6], ctrl:controller|PC[5], ctrl:controller|PC[4],    ;
-;                           ;                           ; ctrl:controller|PC[3]                                                   ;
-; ctrl:controller|OPCODE[2] ; Stuck at GND              ; ctrl:controller|selc_dp[2]                                              ;
-;                           ; due to stuck port data_in ;                                                                         ;
-+---------------------------+---------------------------+-------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                           ;
++------------------------+--------------------+-------------------------------------------------------------------------+
+; Register name          ; Reason for Removal ; Registers Removed due to This Register                                  ;
++------------------------+--------------------+-------------------------------------------------------------------------+
+; ctrl:controller|PC[31] ; Lost Fanouts       ; ctrl:controller|PC[30], ctrl:controller|PC[29], ctrl:controller|PC[28], ;
+;                        ;                    ; ctrl:controller|PC[27], ctrl:controller|PC[26], ctrl:controller|PC[25], ;
+;                        ;                    ; ctrl:controller|PC[24], ctrl:controller|PC[23], ctrl:controller|PC[22], ;
+;                        ;                    ; ctrl:controller|PC[21], ctrl:controller|PC[20], ctrl:controller|PC[19], ;
+;                        ;                    ; ctrl:controller|PC[18], ctrl:controller|PC[17], ctrl:controller|PC[16], ;
+;                        ;                    ; ctrl:controller|PC[15], ctrl:controller|PC[14], ctrl:controller|PC[13], ;
+;                        ;                    ; ctrl:controller|PC[12], ctrl:controller|PC[11], ctrl:controller|PC[10], ;
+;                        ;                    ; ctrl:controller|PC[9], ctrl:controller|PC[8], ctrl:controller|PC[7],    ;
+;                        ;                    ; ctrl:controller|PC[6], ctrl:controller|PC[5], ctrl:controller|PC[4],    ;
+;                        ;                    ; ctrl:controller|PC[3]                                                   ;
++------------------------+--------------------+-------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -292,12 +294,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 112   ;
-; Number of registers using Synchronous Clear  ; 2     ;
+; Total registers                              ; 109   ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 26    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 95    ;
+; Number of registers using Clock Enable       ; 91    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -318,18 +320,33 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |cpu|dp:datapath|rf:rf1|output[0]   ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |cpu|ctrl:controller|imm[0]         ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |cpu|ctrl:controller|PC[3]          ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |cpu|dp:datapath|entrada2_alu[0]    ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |cpu|dp:datapath|entrada_acc[3]     ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 2 LEs                ; 10 LEs                 ; Yes        ; |cpu|dp:datapath|entrada2_alu[3]    ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; Yes        ; |cpu|dp:datapath|entrada1_alu[3]    ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |cpu|dp:datapath|entrada_acc[2]     ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |cpu|dp:datapath|entrada1_alu[2]    ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |cpu|dp:datapath|alu:alu1|output[2] ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |cpu|dp:datapath|alu:alu1|output[3] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |cpu|dp:datapath|rf:rf1|output[3]   ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |cpu|ctrl:controller|imm[1]         ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |cpu|ctrl:controller|PC[2]          ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |cpu|dp:datapath|entrada2_alu[0]    ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |cpu|dp:datapath|entrada1_alu[3]    ;
+; 12:1               ; 3 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |cpu|dp:datapath|alu:alu1|output[3] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dp:datapath|alu:alu1|somador_4bits:sub"                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cin  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dp:datapath|alu:alu1|somador_4bits:soma"                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -347,7 +364,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Mon Jun 18 14:23:19 2018
+    Info: Processing started: Tue Jun 19 10:43:48 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu -c cpu
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 6 design units, including 3 entities, in source file cpu.vhd
@@ -357,21 +374,28 @@ Info (12021): Found 6 design units, including 3 entities, in source file cpu.vhd
     Info (12023): Found entity 1: display
     Info (12023): Found entity 2: conversor
     Info (12023): Found entity 3: cpu
-Info (12021): Found 8 design units, including 4 entities, in source file dp.vhd
-    Info (12022): Found design unit 1: alu-bhv
-    Info (12022): Found design unit 2: acc-bhv
-    Info (12022): Found design unit 3: rf-bhv
-    Info (12022): Found design unit 4: dp-rtl2
-    Info (12023): Found entity 1: alu
-    Info (12023): Found entity 2: acc
-    Info (12023): Found entity 3: rf
-    Info (12023): Found entity 4: dp
+Info (12021): Found 12 design units, including 6 entities, in source file dp.vhd
+    Info (12022): Found design unit 1: FA-hardware
+    Info (12022): Found design unit 2: somador_4bits-hardware
+    Info (12022): Found design unit 3: alu-bhv
+    Info (12022): Found design unit 4: acc-bhv
+    Info (12022): Found design unit 5: rf-bhv
+    Info (12022): Found design unit 6: dp-rtl2
+    Info (12023): Found entity 1: FA
+    Info (12023): Found entity 2: somador_4bits
+    Info (12023): Found entity 3: alu
+    Info (12023): Found entity 4: acc
+    Info (12023): Found entity 5: rf
+    Info (12023): Found entity 6: dp
 Info (12021): Found 2 design units, including 1 entities, in source file ctrl.vhd
     Info (12022): Found design unit 1: ctrl-fsm
     Info (12023): Found entity 1: ctrl
 Info (12127): Elaborating entity "cpu" for the top level hierarchy
 Info (12128): Elaborating entity "dp" for hierarchy "dp:datapath"
 Info (12128): Elaborating entity "alu" for hierarchy "dp:datapath|alu:alu1"
+Warning (10036): Verilog HDL or VHDL warning at dp.vhd(98): object "cout" assigned a value but never read
+Info (12128): Elaborating entity "somador_4bits" for hierarchy "dp:datapath|alu:alu1|somador_4bits:soma"
+Info (12128): Elaborating entity "FA" for hierarchy "dp:datapath|alu:alu1|somador_4bits:soma|FA:FA_0"
 Info (12128): Elaborating entity "rf" for hierarchy "dp:datapath|rf:rf1"
 Info (12128): Elaborating entity "acc" for hierarchy "dp:datapath|acc:acc1"
 Info (12128): Elaborating entity "ctrl" for hierarchy "ctrl:controller"
@@ -390,13 +414,13 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (17049): 29 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 205 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 223 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 160 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 630 megabytes
-    Info: Processing ended: Mon Jun 18 14:23:21 2018
+    Info (21061): Implemented 178 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 618 megabytes
+    Info: Processing ended: Tue Jun 19 10:43:50 2018
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

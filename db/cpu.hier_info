@@ -139,14 +139,6 @@ rst => acc:acc1.rst
 clk => alu:alu1.clk
 clk => rf:rf1.clk
 clk => acc:acc1.clk
-clk => entrada_rf[0].CLK
-clk => entrada_rf[1].CLK
-clk => entrada_rf[2].CLK
-clk => entrada_rf[3].CLK
-clk => entrada_acc[0].CLK
-clk => entrada_acc[1].CLK
-clk => entrada_acc[2].CLK
-clk => entrada_acc[3].CLK
 clk => entrada2_alu[0].CLK
 clk => entrada2_alu[1].CLK
 clk => entrada2_alu[2].CLK
@@ -167,14 +159,6 @@ sel_dp[0] => Mux4.IN5
 sel_dp[0] => Mux5.IN5
 sel_dp[0] => Mux6.IN5
 sel_dp[0] => Mux7.IN5
-sel_dp[0] => Mux8.IN3
-sel_dp[0] => Mux9.IN3
-sel_dp[0] => Mux10.IN3
-sel_dp[0] => Mux11.IN3
-sel_dp[0] => Mux12.IN3
-sel_dp[0] => Mux13.IN3
-sel_dp[0] => Mux14.IN3
-sel_dp[0] => Mux15.IN3
 sel_dp[0] => alu:alu1.sel[0]
 sel_dp[1] => Mux0.IN5
 sel_dp[1] => Mux1.IN5
@@ -184,14 +168,6 @@ sel_dp[1] => Mux4.IN4
 sel_dp[1] => Mux5.IN4
 sel_dp[1] => Mux6.IN4
 sel_dp[1] => Mux7.IN4
-sel_dp[1] => Mux8.IN2
-sel_dp[1] => Mux9.IN2
-sel_dp[1] => Mux10.IN2
-sel_dp[1] => Mux11.IN2
-sel_dp[1] => Mux12.IN2
-sel_dp[1] => Mux13.IN2
-sel_dp[1] => Mux14.IN2
-sel_dp[1] => Mux15.IN2
 sel_dp[1] => alu:alu1.sel[1]
 sel_dp[2] => Mux0.IN4
 sel_dp[2] => Mux1.IN4
@@ -201,14 +177,6 @@ sel_dp[2] => Mux4.IN3
 sel_dp[2] => Mux5.IN3
 sel_dp[2] => Mux6.IN3
 sel_dp[2] => Mux7.IN3
-sel_dp[2] => Mux8.IN1
-sel_dp[2] => Mux9.IN1
-sel_dp[2] => Mux10.IN1
-sel_dp[2] => Mux11.IN1
-sel_dp[2] => Mux12.IN1
-sel_dp[2] => Mux13.IN1
-sel_dp[2] => Mux14.IN1
-sel_dp[2] => Mux15.IN1
 sel_dp[2] => alu:alu1.sel[2]
 sel_dp[3] => Mux0.IN3
 sel_dp[3] => Mux1.IN3
@@ -218,23 +186,15 @@ sel_dp[3] => Mux4.IN2
 sel_dp[3] => Mux5.IN2
 sel_dp[3] => Mux6.IN2
 sel_dp[3] => Mux7.IN2
-sel_dp[3] => Mux8.IN0
-sel_dp[3] => Mux9.IN0
-sel_dp[3] => Mux10.IN0
-sel_dp[3] => Mux11.IN0
-sel_dp[3] => Mux12.IN0
-sel_dp[3] => Mux13.IN0
-sel_dp[3] => Mux14.IN0
-sel_dp[3] => Mux15.IN0
 sel_dp[3] => alu:alu1.sel[3]
 selrf[0] => rf:rf1.sel[0]
 selrf[1] => rf:rf1.sel[1]
 enbrf => rf:rf1.enb
 enbacc => acc:acc1.enb
-output_4[0] <= acc:acc1.output[0]
-output_4[1] <= acc:acc1.output[1]
-output_4[2] <= acc:acc1.output[2]
-output_4[3] <= acc:acc1.output[3]
+output_4[0] <= alu:alu1.output[0]
+output_4[1] <= alu:alu1.output[1]
+output_4[2] <= alu:alu1.output[2]
+output_4[3] <= alu:alu1.output[3]
 
 
 |cpu|dp:datapath|alu:alu1
@@ -246,78 +206,224 @@ clk => output[0]~reg0.CLK
 clk => output[1]~reg0.CLK
 clk => output[2]~reg0.CLK
 clk => output[3]~reg0.CLK
-entrada1[0] => Add0.IN4
-entrada1[0] => Add2.IN8
 entrada1[0] => output.IN0
 entrada1[0] => output.IN0
+entrada1[0] => Mux3.IN3
+entrada1[0] => Mux3.IN4
 entrada1[0] => Mux3.IN5
-entrada1[0] => Mux3.IN6
-entrada1[0] => Mux3.IN7
-entrada1[1] => Add0.IN3
-entrada1[1] => Add2.IN7
+entrada1[0] => somador_4bits:soma.B[0]
+entrada1[0] => somador_4bits:sub.B[0]
 entrada1[1] => output.IN0
 entrada1[1] => output.IN0
+entrada1[1] => Mux2.IN3
+entrada1[1] => Mux2.IN4
 entrada1[1] => Mux2.IN5
-entrada1[1] => Mux2.IN6
-entrada1[1] => Mux2.IN7
-entrada1[2] => Add0.IN2
-entrada1[2] => Add2.IN6
+entrada1[1] => somador_4bits:soma.B[1]
+entrada1[1] => somador_4bits:sub.B[1]
 entrada1[2] => output.IN0
 entrada1[2] => output.IN0
+entrada1[2] => Mux1.IN3
+entrada1[2] => Mux1.IN4
 entrada1[2] => Mux1.IN5
-entrada1[2] => Mux1.IN6
-entrada1[2] => Mux1.IN7
-entrada1[3] => Add0.IN1
-entrada1[3] => Add2.IN5
+entrada1[2] => somador_4bits:soma.B[2]
+entrada1[2] => somador_4bits:sub.B[2]
 entrada1[3] => output.IN0
 entrada1[3] => output.IN0
+entrada1[3] => Mux0.IN3
+entrada1[3] => Mux0.IN4
 entrada1[3] => Mux0.IN5
-entrada1[3] => Mux0.IN6
-entrada1[3] => Mux0.IN7
-entrada2[0] => Add0.IN8
+entrada1[3] => somador_4bits:soma.B[3]
+entrada1[3] => somador_4bits:sub.B[3]
 entrada2[0] => output.IN1
 entrada2[0] => output.IN1
-entrada2[0] => Mux3.IN8
-entrada2[0] => Add1.IN7
-entrada2[0] => Mux3.IN1
-entrada2[1] => Add0.IN7
+entrada2[0] => Mux3.IN6
+entrada2[0] => somador_4bits:soma.A[0]
+entrada2[0] => somador_4bits:sub.A[0]
+entrada2[0] => Mux3.IN2
 entrada2[1] => output.IN1
 entrada2[1] => output.IN1
-entrada2[1] => Mux2.IN8
-entrada2[1] => Add1.IN6
-entrada2[1] => Mux2.IN1
-entrada2[2] => Add0.IN6
+entrada2[1] => Mux2.IN6
+entrada2[1] => somador_4bits:soma.A[1]
+entrada2[1] => somador_4bits:sub.A[1]
+entrada2[1] => Mux2.IN2
 entrada2[2] => output.IN1
 entrada2[2] => output.IN1
-entrada2[2] => Mux1.IN8
-entrada2[2] => Add1.IN5
-entrada2[2] => Mux1.IN1
-entrada2[3] => Add0.IN5
+entrada2[2] => Mux1.IN6
+entrada2[2] => somador_4bits:soma.A[2]
+entrada2[2] => somador_4bits:sub.A[2]
+entrada2[2] => Mux1.IN2
 entrada2[3] => output.IN1
 entrada2[3] => output.IN1
-entrada2[3] => Mux0.IN8
-entrada2[3] => Mux0.IN4
-entrada2[3] => Add1.IN8
-sel[0] => Mux0.IN12
-sel[0] => Mux1.IN12
-sel[0] => Mux2.IN12
-sel[0] => Mux3.IN12
-sel[1] => Mux0.IN11
-sel[1] => Mux1.IN11
-sel[1] => Mux2.IN11
-sel[1] => Mux3.IN11
-sel[2] => Mux0.IN10
-sel[2] => Mux1.IN10
-sel[2] => Mux2.IN10
-sel[2] => Mux3.IN10
-sel[3] => Mux0.IN9
-sel[3] => Mux1.IN9
-sel[3] => Mux2.IN9
-sel[3] => Mux3.IN9
+entrada2[3] => Mux0.IN6
+entrada2[3] => somador_4bits:soma.A[3]
+entrada2[3] => somador_4bits:sub.A[3]
+entrada2[3] => Mux0.IN2
+sel[0] => Mux0.IN10
+sel[0] => Mux1.IN10
+sel[0] => Mux2.IN10
+sel[0] => Mux3.IN10
+sel[1] => Mux0.IN9
+sel[1] => Mux1.IN9
+sel[1] => Mux2.IN9
+sel[1] => Mux3.IN9
+sel[2] => Mux0.IN8
+sel[2] => Mux1.IN8
+sel[2] => Mux2.IN8
+sel[2] => Mux3.IN8
+sel[3] => Mux0.IN7
+sel[3] => Mux1.IN7
+sel[3] => Mux2.IN7
+sel[3] => Mux3.IN7
 output[0] <= output[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 output[1] <= output[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 output[2] <= output[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 output[3] <= output[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu|dp:datapath|alu:alu1|somador_4bits:soma
+A[0] => FA:FA_0.a
+A[1] => FA:FA_1.a
+A[2] => FA:FA_2.a
+A[3] => FA:FA_3.a
+B[0] => FA:FA_0.b
+B[1] => FA:FA_1.b
+B[2] => FA:FA_2.b
+B[3] => FA:FA_3.b
+cin => FA:FA_0.cin
+s[0] <= FA:FA_0.s
+s[1] <= FA:FA_1.s
+s[2] <= FA:FA_2.s
+s[3] <= FA:FA_3.s
+cout <= FA:FA_3.cout
+
+
+|cpu|dp:datapath|alu:alu1|somador_4bits:soma|FA:FA_0
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu|dp:datapath|alu:alu1|somador_4bits:soma|FA:FA_1
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu|dp:datapath|alu:alu1|somador_4bits:soma|FA:FA_2
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu|dp:datapath|alu:alu1|somador_4bits:soma|FA:FA_3
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu|dp:datapath|alu:alu1|somador_4bits:sub
+A[0] => FA:FA_0.a
+A[1] => FA:FA_1.a
+A[2] => FA:FA_2.a
+A[3] => FA:FA_3.a
+B[0] => FA:FA_0.b
+B[1] => FA:FA_1.b
+B[2] => FA:FA_2.b
+B[3] => FA:FA_3.b
+cin => FA:FA_0.cin
+s[0] <= FA:FA_0.s
+s[1] <= FA:FA_1.s
+s[2] <= FA:FA_2.s
+s[3] <= FA:FA_3.s
+cout <= FA:FA_3.cout
+
+
+|cpu|dp:datapath|alu:alu1|somador_4bits:sub|FA:FA_0
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu|dp:datapath|alu:alu1|somador_4bits:sub|FA:FA_1
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu|dp:datapath|alu:alu1|somador_4bits:sub|FA:FA_2
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cpu|dp:datapath|alu:alu1|somador_4bits:sub|FA:FA_3
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN0
+cin => s.IN1
+cin => cout.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cpu|dp:datapath|rf:rf1

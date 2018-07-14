@@ -1,5 +1,5 @@
 Assembler report for cpu
-Mon Jun 18 14:23:33 2018
+Tue Jun 19 10:44:03 2018
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Jun 18 14:23:33 2018 ;
+; Assembler Status      ; Successful - Tue Jun 19 10:44:03 2018 ;
 ; Revision Name         ; cpu                                   ;
 ; Top-level Entity Name ; cpu                                   ;
 ; Family                ; Cyclone II                            ;
@@ -94,8 +94,8 @@ applicable agreement for further details.
 ; Option         ; Setting          ;
 +----------------+------------------+
 ; Device         ; EP2C35F672C6     ;
-; JTAG usercode  ; 0x00311A30       ;
-; Checksum       ; 0x00311A30       ;
+; JTAG usercode  ; 0x0031387D       ;
+; Checksum       ; 0x0031387D       ;
 +----------------+------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+--------------+
 ; Device             ; EPCS16       ;
 ; JTAG usercode      ; 0x00000000   ;
-; Checksum           ; 0x1C75AA86   ;
+; Checksum           ; 0x1C75E0D8   ;
 ; Compression Ratio  ; 3            ;
 +--------------------+--------------+
 
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Mon Jun 18 14:23:31 2018
+    Info: Processing started: Tue Jun 19 10:44:01 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off cpu -c cpu
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 555 megabytes
-    Info: Processing ended: Mon Jun 18 14:23:33 2018
+    Info: Peak virtual memory: 556 megabytes
+    Info: Processing ended: Tue Jun 19 10:44:03 2018
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

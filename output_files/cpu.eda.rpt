@@ -1,5 +1,5 @@
 EDA Netlist Writer report for cpu
-Mon Jun 18 14:23:38 2018
+Tue Jun 19 10:44:08 2018
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Jun 18 14:23:38 2018 ;
+; EDA Netlist Writer Status ; Successful - Tue Jun 19 10:44:08 2018 ;
 ; Revision Name             ; cpu                                   ;
 ; Top-level Entity Name     ; cpu                                   ;
 ; Family                    ; Cyclone II                            ;
@@ -66,16 +66,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+-----------------------------------------------------------------------+
-; Simulation Generated Files                                            ;
-+-----------------------------------------------------------------------+
-; Generated Files                                                       ;
-+-----------------------------------------------------------------------+
-; /home/luiza/Documents/cpu-master/simulation/modelsim/cpu.vho          ;
-; /home/luiza/Documents/cpu-master/simulation/modelsim/cpu_fast.vho     ;
-; /home/luiza/Documents/cpu-master/simulation/modelsim/cpu_vhd.sdo      ;
-; /home/luiza/Documents/cpu-master/simulation/modelsim/cpu_vhd_fast.sdo ;
-+-----------------------------------------------------------------------+
++------------------------------------------------------------+
+; Simulation Generated Files                                 ;
++------------------------------------------------------------+
+; Generated Files                                            ;
++------------------------------------------------------------+
+; /home/willane/cpuv0.2/simulation/modelsim/cpu.vho          ;
+; /home/willane/cpuv0.2/simulation/modelsim/cpu_fast.vho     ;
+; /home/willane/cpuv0.2/simulation/modelsim/cpu_vhd.sdo      ;
+; /home/willane/cpuv0.2/simulation/modelsim/cpu_vhd_fast.sdo ;
++------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -84,12 +84,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Mon Jun 18 14:23:37 2018
+    Info: Processing started: Tue Jun 19 10:44:07 2018
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off cpu -c cpu
-Info (204026): Generated files "cpu.vho", "cpu_fast.vho", "cpu_vhd.sdo" and "cpu_vhd_fast.sdo" in directory "/home/luiza/Documents/cpu-master/simulation/modelsim/" for EDA simulation tool
+Info (204026): Generated files "cpu.vho", "cpu_fast.vho", "cpu_vhd.sdo" and "cpu_vhd_fast.sdo" in directory "/home/willane/cpuv0.2/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 803 megabytes
-    Info: Processing ended: Mon Jun 18 14:23:38 2018
+    Info: Peak virtual memory: 808 megabytes
+    Info: Processing ended: Tue Jun 19 10:44:08 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
